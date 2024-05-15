@@ -1,35 +1,91 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
 }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
 header {
-    background-color: #4CAF50;
+    background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
-nav ul {
-    list-style-type: none;
+
+header h1 {
     margin: 0;
-    padding: 0;
-    text-align: center;
 }
+
+header p {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
 }
-main {
-    padding: 20px;
-}
-footer {
-    background-color: #f1f1f1;
+
+.hero {
+    background: url('../images/ai-background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
     text-align: center;
-    padding: 10px 0;
+}
+
+.latest-work {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.project-item h3 {
+    margin-top: 0;
+}
+
+.project-item p {
+    font-size: 0.9em;
+}
+
+.project-item a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
     position: fixed;
     width: 100%;
     bottom: 0;
