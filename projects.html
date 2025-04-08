@@ -1,47 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects - Oscar Bocanegra</title>
+    <title>Proyectos | Oscar Bocanegra - Data Engineer & AI Specialist</title>
+    <meta name="description" content="Explora los proyectos de Oscar Bocanegra en Data Engineering, Big Data, Inteligencia Artificial y Machine Learning.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header class="header-modern">
         <div class="container">
-            <h1>My Projects</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Oscar Bocanegra</h1>
+                    <p>Data Engineer | AI Specialist | Solutions Architect</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Sobre Mí</a></li>
+                        <li><a href="projects.html" class="active">Proyectos</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li>
+                            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
+
     <main>
-        <section class="projects-list">
+        <section class="projects-hero">
             <div class="container">
-                <h2>Highlighted Projects</h2>
-                <div class="projects-grid">
-                    <!-- Add detailed descriptions of your projects -->
-                    <div class="project-item">
-                        <h3>Project Title 1</h3>
-                        <p>Detailed description of the project, including technologies used, challenges faced, and outcomes achieved.</p>
-                    </div>
-                    <div class="project-item">
-                        <h3>Project Title 2</h3>
-                        <p>Detailed description of the project, including technologies used, challenges faced, and outcomes achieved.</p>
-                    </div>
-                    <!-- Add more project items as needed -->
+                <div class="projects-hero-content">
+                    <h2>Portafolio de proyectos</h2>
+                    <p class="subtitle">Soluciones innovadoras en Data Engineering e Inteligencia Artificial</p>
                 </div>
             </div>
         </section>
+
+        <section class="projects-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="project-filter active" data-filter="all">Todos</button>
+                    <button class="project-filter" data-filter="data-engineering">Data Engineering</button>
+                    <button class="project-filter" data-filter="machine-learning">Machine Learning</button>
+                    <button class="project-filter" data-filter="big-data">Big Data</button>
+                    <button class="project-filter" data-filter="cloud">Cloud & DevOps</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyecto 1 - Plataforma en tiempo real -->
+        <section id="real-time-platform" class="project-detail data-engineering big-data">
+            <div class="container">
+                <div class="project-card-full">
+                    <h2 class="project-title">Plataforma de Datos en Tiempo Real</h2>
+                    <div class="project-meta">
+                        <span class="project-category">Data Engineering | Big Data</span>
+                        <span class="project-date">2023</span>
+                    </div>
+                    
+                    <div class="project-content-grid">
+                        <div class="project-main-content">
+                            <div class="project-image-full">
+                                <i class="fas fa-chart-network"></i>
+                            </div>
+                            
+                            <div class="project-description">
+                                <h3>Descripción</h3>
+                                <p>Diseño e implementación de una arquitectura escalable para procesamiento de datos en streaming que permite análisis en tiempo real para una compañía de telecomunicaciones. El sistema procesa más de 5TB de datos diarios provenientes de múltiples fuentes y alimenta dashboards operativos críticos para el negocio.</p>
+                                
+                                <h3>Desafío</h3>
+                                <p>La empresa necesitaba transformar su infraestructura de procesamiento por lotes a una solución en tiempo real para detectar anomalías en la red, optimizar la calidad del servicio y mejorar la experiencia del cliente. El principal reto consistió en diseñar un sistema capaz de procesar millones de eventos por segundo con latencia mínima y alta disponibilidad.</p>
+                                
+                                <h3>Solución</h3>
+                                <p>Se implementó una arquitectura de microservicios basada en Apache Kafka como backbone de mensajería, Spark Streaming para el procesamiento en tiempo real, y Elasticsearch como almacenamiento para consultas de baja latencia. El diseño incorporó patrones de tolerancia a fallos, almacenamiento de respaldo en Amazon S3 y un sistema de monitorización en tiempo real.</p>
+                                
+                                <ul class="solution-highlights">
+                                    <li>Ingesta de datos de más de 20 fuentes heterogéneas mediante conectores personalizados</li>
+                                    <li>Pipeline de procesamiento escalable horizontalmente en clusters de Kubernetes</li>
+                                    <li>Implementación de algoritmos de detección de anomalías y aprendizaje en línea</li>
+                                    <li>Sistema de alertas automatizado basado en umbrales dinámicos</li>
+                                    <li>Despliegue automatizado mediante CI/CD con verificaciones de calidad</li>
+                                </ul>
+
+                                <h3>Resultados</h3>
+                                <p>La plataforma permitió reducir el tiempo de detección de incidencias críticas de horas a segundos, mejorando significativamente los KPIs de servicio. Se logró:</p>
+                                <ul class="project-results">
+                                    <li>Reducción del 65% en el tiempo medio de resolución de incidencias</li>
+                                    <li>Mejora del 30% en los SLAs de disponibilidad de red</li>
+                                    <li>Ahorro estimado de 1.2M€ anuales en costos operativos</li>
+                                    <li>Disminución del 25% en las reclamaciones por interrupciones de servicio</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="project-sidebar">
+                            <div class="tech-stack-sidebar">
+                                <h3>Tecnologías</h3>
+                                <ul class="tech-list">
+                                    <li><span class="tech-icon"><i class="fab fa-aws"></i></span> AWS (EC2, S3, CloudWatch)</li>
+                                    <li><span class="tech-icon"><i class="fas fa-server"></i></span> Apache Kafka</li>
+                                    <li><span class="tech-icon"><i class="fas fa-fire"></i></span> Spark Streaming</li>
+                                    <li><span class="tech-icon"><i class="fas fa-search"></i></span> Elasticsearch</li>
+                                    <li><span class="tech-icon"><i class="fab fa-python"></i></span> Python</li>
+                                    <li><span class="tech-icon"><i class="fas fa-chart-bar"></i></span> Grafana</li>
+                                    <li><span class="tech-icon"><i class="fas fa-box"></i></span> Docker & Kubernetes</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-highlights">
+                                <h3>Lo más destacado</h3>
+                                <ul>
+                                    <li>Procesamiento de 100K+ eventos por segundo</li>
+                                    <li>Latencia media < 500ms</li>
+                                    <li>Disponibilidad 99.99%</li>
+                                    <li>Escalamiento automático</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyecto 2 - Recomendador ML -->
+        <section id="ml-recommendation" class="project-detail machine-learning">
+            <div class="container">
+                <div class="project-card-full">
+                    <h2 class="project-title">Motor de Recomendación Basado en Machine Learning</h2>
+                    <div class="project-meta">
+                        <span class="project-category">Machine Learning | Data Science</span>
+                        <span class="project-date">2022</span>
+                    </div>
+                    
+                    <div class="project-content-grid">
+                        <div class="project-main-content">
+                            <div class="project-image-full">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            
+                            <div class="project-description">
+                                <h3>Descripción</h3>
+                                <p>Desarrollo de un sistema de recomendación avanzado para una plataforma de e-commerce que personaliza la experiencia de compra analizando patrones de comportamiento de millones de usuarios. El motor combina técnicas de filtrado colaborativo y modelos de deep learning para ofrecer recomendaciones altamente relevantes en tiempo real.</p>
+                                
+                                <h3>Desafío</h3>
+                                <p>El cliente enfrentaba el problema del "cold start" con nuevos productos y usuarios, además de necesitar recomendaciones contextuales que consideraran factores como ubicación, temporada y tendencias. Adicionalmente, el sistema debía poder explicar sus recomendaciones y actualizar modelos continuamente.</p>
+                                
+                                <h3>Solución</h3>
+                                <p>Se implementó un enfoque híbrido combinando algoritmos de factorización matricial con redes neuronales profundas para capturar relaciones complejas entre usuarios, productos y contexto. La arquitectura incluye:</p>
+                                
+                                <ul class="solution-highlights">
+                                    <li>Pipeline de procesamiento de datos que integra histórico de navegación, compras y datos demográficos</li>
+                                    <li>Modelo de embeddings de productos y usuarios con TensorFlow</li>
+                                    <li>Componente de modelado contextual basado en variables temporales y geográficas</li>
+                                    <li>Sistema de inferencia en tiempo real para servir recomendaciones con baja latencia</li>
+                                    <li>Framework de explicabilidad para justificar recomendaciones generadas</li>
+                                    <li>Retroalimentación continua y reentrenamiento automático mediante MLOps</li>
+                                </ul>
+
+                                <h3>Resultados</h3>
+                                <p>El nuevo sistema de recomendación generó un impacto significativo en los indicadores clave de negocio:</p>
+                                <ul class="project-results">
+                                    <li>Incremento del 27% en la tasa de conversión</li>
+                                    <li>Aumento del 18% en el valor promedio de compra</li>
+                                    <li>Mejora del 35% en la precisión de las recomendaciones comparado con el sistema anterior</li>
+                                    <li>Reducción del 40% en el problema de "cold start" para nuevos productos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="project-sidebar">
+                            <div class="tech-stack-sidebar">
+                                <h3>Tecnologías</h3>
+                                <ul class="tech-list">
+                                    <li><span class="tech-icon"><i class="fab fa-python"></i></span> Python</li>
+                                    <li><span class="tech-icon"><i class="fab fa-google"></i></span> TensorFlow</li>
+                                    <li><span class="tech-icon"><i class="fas fa-chart-line"></i></span> MLflow</li>
+                                    <li><span class="tech-icon"><i class="fab fa-google-drive"></i></span> Google Cloud Platform</li>
+                                    <li><span class="tech-icon"><i class="fas fa-database"></i></span> BigQuery</li>
+                                    <li><span class="tech-icon"><i class="fas fa-cogs"></i></span> Kubeflow</li>
+                                    <li><span class="tech-icon"><i class="fas fa-code-branch"></i></span> Git & GitHub Actions</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-highlights">
+                                <h3>Lo más destacado</h3>
+                                <ul>
+                                    <li>100M+ interacciones procesadas diariamente</li>
+                                    <li>1M+ usuarios activos</li>
+                                    <li>Latencia < 100ms por petición</li>
+                                    <li>F1-Score 0.87 en recomendaciones</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyecto 3 - Data Lake -->
+        <section id="enterprise-data-lake" class="project-detail data-engineering cloud">
+            <div class="container">
+                <div class="project-card-full">
+                    <h2 class="project-title">Data Lake Empresarial con Arquitectura Medallón</h2>
+                    <div class="project-meta">
+                        <span class="project-category">Data Engineering | Cloud Architecture</span>
+                        <span class="project-date">2021</span>
+                    </div>
+                    
+                    <div class="project-content-grid">
+                        <div class="project-main-content">
+                            <div class="project-image-full">
+                                <i class="fas fa-warehouse"></i>
+                            </div>
+                            
+                            <div class="project-description">
+                                <h3>Descripción</h3>
+                                <p>Diseño e implementación de un data lake moderno con arquitectura medallón (Bronze-Silver-Gold) para una empresa Fortune 500, procesando petabytes de datos estructurados y no estructurados. La solución permite transitar de almacenamiento masivo a datos accionables mediante una gobernanza robusta.</p>
+                                
+                                <h3>Desafío</h3>
+                                <p>El cliente operaba múltiples data marts y almacenes dispersos con problemas de calidad de datos, procesos manuales y silos de información. Necesitaban una plataforma unificada de datos que garantizara consistencia, seguridad y acceso democratizado a la información, cumpliendo con normativas regulatorias estrictas.</p>
+                                
+                                <h3>Solución</h3>
+                                <p>Se implementó un data lake en la nube basado en arquitectura medallón que separa los datos en capas de refinamiento progresivo:</p>
+                                
+                                <ul class="solution-highlights">
+                                    <li>Capa Bronze: Ingesta de datos crudos con esquema-on-read y registro de metadatos</li>
+                                    <li>Capa Silver: Datos validados, normalizados y enriquecidos</li>
+                                    <li>Capa Gold: Modelos dimensionales y vistas analíticas para consumo de negocio</li>
+                                    <li>Sistema centralizado de gobernanza con catálogo, linaje y políticas de seguridad</li>
+                                    <li>Automatización de pipelines con Databricks y Azure Data Factory</li>
+                                    <li>Framework de calidad de datos integrado en cada fase de procesamiento</li>
+                                </ul>
+
+                                <h3>Resultados</h3>
+                                <p>La implementación del data lake moderno transformó las capacidades analíticas de la organización:</p>
+                                <ul class="project-results">
+                                    <li>Reducción del 70% en el tiempo de entrega de nuevos productos de datos</li>
+                                    <li>Consolidación de más de 50 fuentes de datos anteriormente aisladas</li>
+                                    <li>Ahorro del 40% en costos de infraestructura gracias a la arquitectura cloud</li>
+                                    <li>Mejora del 85% en la disponibilidad de datos para equipos analíticos</li>
+                                    <li>Establecimiento de un verdadero modelo de autoservicio para usuarios de negocio</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="project-sidebar">
+                            <div class="tech-stack-sidebar">
+                                <h3>Tecnologías</h3>
+                                <ul class="tech-list">
+                                    <li><span class="tech-icon"><i class="fab fa-microsoft"></i></span> Azure (Data Lake Storage, Synapse)</li>
+                                    <li><span class="tech-icon"><i class="fas fa-file-code"></i></span> Delta Lake</li>
+                                    <li><span class="tech-icon"><i class="fas fa-bolt"></i></span> Databricks</li>
+                                    <li><span class="tech-icon"><i class="fab fa-python"></i></span> PySpark</li>
+                                    <li><span class="tech-icon"><i class="fas fa-layer-group"></i></span> Azure Data Factory</li>
+                                    <li><span class="tech-icon"><i class="fas fa-search"></i></span> Azure Purview</li>
+                                    <li><span class="tech-icon"><i class="fas fa-lock"></i></span> Azure Key Vault</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-highlights">
+                                <h3>Lo más destacado</h3>
+                                <ul>
+                                    <li>5+ PB de datos gestionados</li>
+                                    <li>50+ sistemas integrados</li>
+                                    <li>2000+ usuarios de negocio</li>
+                                    <li>Cumplimiento GDPR y sectorial</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyecto 4 - NLP -->
+        <section id="nlp-analytics" class="project-detail machine-learning">
+            <div class="container">
+                <div class="project-card-full">
+                    <h2 class="project-title">Análisis Avanzado de Opiniones con NLP</h2>
+                    <div class="project-meta">
+                        <span class="project-category">Machine Learning | NLP</span>
+                        <span class="project-date">2020</span>
+                    </div>
+                    
+                    <div class="project-content-grid">
+                        <div class="project-main-content">
+                            <div class="project-image-full">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            
+                            <div class="project-description">
+                                <h3>Descripción</h3>
+                                <p>Desarrollo de una solución de análisis de opiniones basada en NLP para una empresa líder del sector retail, capaz de procesar miles de comentarios diarios de clientes en múltiples idiomas para obtener insights accionables sobre la percepción de marca y productos.</p>
+                                
+                                <h3>Desafío</h3>
+                                <p>La empresa recibía más de 15,000 comentarios diarios a través de diversos canales (redes sociales, encuestas, reseñas, emails) en diferentes idiomas, haciendo imposible un análisis manual efectivo. Los sistemas tradicionales de análisis de sentimiento no capturaban aspectos específicos ni contextuales de los productos.</p>
+                                
+                                <h3>Solución</h3>
+                                <p>Se implementó una plataforma de procesamiento de lenguaje natural con capacidades multilingües basada en transformers que incluye:</p>
+                                
+                                <ul class="solution-highlights">
+                                    <li>Sistema de extracción y consolidación de comentarios de múltiples fuentes</li>
+                                    <li>Pipeline de preprocesamiento con normalización lingüística y traducción automática</li>
+                                    <li>Análisis de sentimiento granular por aspectos específicos de productos/servicios</li>
+                                    <li>Identificación automática de tendencias emergentes y anomalías en la percepción</li>
+                                    <li>Dashboard interactivo con visualización de evolución temporal y drill-down</li>
+                                    <li>Sistema de alertas para detección temprana de crisis reputacionales</li>
+                                </ul>
+
+                                <h3>Resultados</h3>
+                                <p>La plataforma transformó la capacidad de respuesta de la empresa ante las opiniones de sus clientes:</p>
+                                <ul class="project-results">
+                                    <li>Identificación de más de 200 oportunidades de mejora en productos y servicios</li>
+                                    <li>Reducción del 60% en el tiempo de respuesta ante comentarios negativos</li>
+                                    <li>Mejora del 22% en el NPS (Net Promoter Score)</li>
+                                    <li>Incremento del 15% en la tasa de resolución de problemas reportados</li>
+                                    <li>Detección temprana de 5 incidentes potencialmente críticos para la marca</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="project-sidebar">
+                            <div class="tech-stack-sidebar">
+                                <h3>Tecnologías</h3>
+                                <ul class="tech-list">
+                                    <li><span class="tech-icon"><i class="fab fa-python"></i></span> Python</li>
+                                    <li><span class="tech-icon"><i class="fas fa-language"></i></span> BERT/RoBERTa</li>
+                                    <li><span class="tech-icon"><i class="fab fa-hubspot"></i></span> spaCy</li>
+                                    <li><span class="tech-icon"><i class="fas fa-server"></i></span> FastAPI</li>
+                                    <li><span class="tech-icon"><i class="fab fa-react"></i></span> React</li>
+                                    <li><span class="tech-icon"><i class="fas fa-database"></i></span> MongoDB</li>
+                                    <li><span class="tech-icon"><i class="fab fa-aws"></i></span> AWS Comprehend</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-highlights">
+                                <h3>Lo más destacado</h3>
+                                <ul>
+                                    <li>15K+ comentarios analizados diariamente</li>
+                                    <li>Soporte para 7 idiomas</li>
+                                    <li>Precisión > 92% en clasificación</li>
+                                    <li>Procesamiento en tiempo real</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>¿Interesado en colaborar en un proyecto?</h2>
+                <p>Estoy disponible para consultoría y desarrollo en proyectos de Data Engineering, Machine Learning e Inteligencia Artificial.</p>
+                <a href="contact.html" class="btn primary-btn large-btn">Contactar</a>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Oscar Bocanegra</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Oscar Bocanegra</h3>
+                    <p>Data Engineer & AI Specialist</p>
+                    <p>Email: contacto@oscargbocanegra.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/oscargbocanegra" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/oscargbocanegra/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/oscargbocanegra" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Sobre Mí</a></li>
+                        <li><a href="projects.html">Proyectos</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Oscar Bocanegra. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
     <script src="js/scripts.js"></script>

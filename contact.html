@@ -1,41 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - Oscar Bocanegra</title>
+    <title>Contacto | Oscar Bocanegra - Data Engineer & AI Specialist</title>
+    <meta name="description" content="Ponte en contacto con Oscar Bocanegra para consultas sobre proyectos de Data Engineering, Machine Learning e Inteligencia Artificial.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header class="header-modern">
         <div class="container">
-            <h1>Contact Me</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Oscar Bocanegra</h1>
+                    <p>Data Engineer | AI Specialist | Solutions Architect</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Sobre Mí</a></li>
+                        <li><a href="projects.html">Proyectos</a></li>
+                        <li><a href="contact.html" class="active">Contacto</a></li>
+                        <li>
+                            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
+
     <main>
-        <section class="contact">
+        <section class="contact-hero">
             <div class="container">
-                <h2>Get in Touch</h2>
-                <p>You can reach me at:</p>
-                <ul>
-                    <li>Email: <a href="mailto:oscargiovanni@gmail.com">oscargiovanni@gmail.com</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/oscargbocanegra/" target="_blank">LinkedIn Profile</a></li>
-                    <!-- Add more contact methods if necessary -->
-                </ul>
+                <div class="contact-hero-content">
+                    <h2>Hablemos sobre tu proyecto</h2>
+                    <p class="subtitle">Estoy disponible para consultoría y proyectos de Data Engineering e IA</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-options">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Información de contacto</h2>
+                        <p>Si estás interesado en trabajar juntos o simplemente quieres hacer una consulta, no dudes en ponerte en contacto conmigo a través de cualquiera de estos medios.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:contacto@oscargbocanegra.com">contacto@oscargbocanegra.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>LinkedIn</h3>
+                                    <p><a href="https://www.linkedin.com/in/oscargbocanegra/" target="_blank">linkedin.com/in/oscargbocanegra</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>GitHub</h3>
+                                    <p><a href="https://github.com/oscargbocanegra" target="_blank">github.com/oscargbocanegra</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Ubicación</h3>
+                                    <p>Madrid, España (Disponible remoto)</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="availability">
+                            <h3>Disponibilidad</h3>
+                            <ul class="availability-list">
+                                <li><span class="check-icon"><i class="fas fa-check"></i></span>Proyectos de ingeniería de datos</li>
+                                <li><span class="check-icon"><i class="fas fa-check"></i></span>Consultoría en arquitectura de datos</li>
+                                <li><span class="check-icon"><i class="fas fa-check"></i></span>Desarrollo de modelos de ML/AI</li>
+                                <li><span class="check-icon"><i class="fas fa-check"></i></span>Formación y mentorías técnicas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <h2>Envíame un mensaje</h2>
+                        <p>Completa el formulario y me pondré en contacto contigo lo antes posible.</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre completo</label>
+                                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="tu.email@ejemplo.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject" placeholder="¿De qué se trata tu mensaje?" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto o consulta" rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <label for="privacy">He leído y acepto la <a href="#">política de privacidad</a></label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn primary-btn">Enviar mensaje</button>
+                            
+                            <div id="formMessage" class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Preguntas frecuentes</h2>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Qué tipo de proyectos de datos aceptas?</h3>
+                        <div class="faq-answer">
+                            <p>Trabajo principalmente en proyectos que involucran arquitectura de datos, ETL/ELT, data lakes, data warehouses, sistemas de big data y soluciones de machine learning e inteligencia artificial. Me especializo en soluciones escalables y tecnologías cloud.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Cómo es tu proceso de trabajo?</h3>
+                        <div class="faq-answer">
+                            <p>Mi metodología incluye una fase de descubrimiento para entender las necesidades del proyecto, seguida de planificación, implementación iterativa con feedback continuo, pruebas exhaustivas y documentación detallada. Priorizo la comunicación clara y las entregas de calidad.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Trabajas solo o con un equipo?</h3>
+                        <div class="faq-answer">
+                            <p>Dependiendo del alcance y requisitos del proyecto, puedo trabajar individualmente o coordinar un equipo de especialistas. Para proyectos grandes, cuento con una red de profesionales de confianza con experiencia en diversas áreas técnicas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Ofreces servicios de mantenimiento después del proyecto?</h3>
+                        <div class="faq-answer">
+                            <p>Sí, ofrezco servicios de soporte y mantenimiento post-implementación, así como capacitación para equipos internos. El alcance de estos servicios se define en el contrato del proyecto según las necesidades específicas del cliente.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Oscar Bocanegra</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Oscar Bocanegra</h3>
+                    <p>Data Engineer & AI Specialist</p>
+                    <p>Email: contacto@oscargbocanegra.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/oscargbocanegra" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/oscargbocanegra/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/oscargbocanegra" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Sobre Mí</a></li>
+                        <li><a href="projects.html">Proyectos</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Oscar Bocanegra. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
     <script src="js/scripts.js"></script>

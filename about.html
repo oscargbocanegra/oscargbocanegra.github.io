@@ -1,37 +1,356 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Oscar Bocanegra</title>
+    <title>Sobre Mí | Oscar Bocanegra - Data Engineer & AI Specialist</title>
+    <meta name="description" content="Conoce más sobre Oscar Bocanegra, su trayectoria profesional y experiencia en Data Engineering e Inteligencia Artificial.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header class="header-modern">
         <div class="container">
-            <h1>About Me</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Oscar Bocanegra</h1>
+                    <p>Data Engineer | AI Specialist | Solutions Architect</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html" class="active">Sobre Mí</a></li>
+                        <li><a href="projects.html">Proyectos</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li>
+                            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
+
     <main>
-        <section class="about-me">
+        <section class="about-hero">
             <div class="container">
-                <img src="images/profile.jpg" alt="Profile Picture" class="profile-img">
-                <p>Hello! I am Oscar Bocanegra, an AI specialist with a passion for developing innovative machine learning solutions...</p>
-                <!-- Add more details about your background, skills, and experience -->
+                <div class="about-hero-content">
+                    <h2>Mi Historia</h2>
+                    <p class="subtitle">Combinando pasión por los datos y la innovación tecnológica</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-intro">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <div class="profile-image">
+                            <!-- Aquí irá tu foto de perfil -->
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <h2>Sobre Oscar Bocanegra</h2>
+                        <p>Soy un <strong>Data Engineer</strong> y especialista en <strong>Inteligencia Artificial</strong> con más de 10 años de experiencia diseñando e implementando soluciones de datos escalables para empresas de diversos sectores. Mi pasión reside en transformar grandes volúmenes de datos en insights accionables y construir sistemas inteligentes que automatizan procesos y generan valor para las organizaciones.</p>
+                        
+                        <p>Mi experiencia abarca todo el ciclo de vida de los datos: desde la ingeniería y arquitectura de los sistemas de datos hasta el desarrollo de modelos avanzados de machine learning para resolver problemas de negocio complejos. He liderado equipos multidisciplinarios y gestionado proyectos en entornos empresariales de alta exigencia.</p>
+                        
+                        <div class="personal-details">
+                            <div class="detail-item">
+                                <i class="fas fa-code"></i>
+                                <div>
+                                    <h4>Tecnologías favoritas</h4>
+                                    <p>Python, Spark, TensorFlow, AWS</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>Formación</h4>
+                                    <p>Master en Inteligencia Artificial (UNIR)</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Ubicación</h4>
+                                    <p>Madrid, España (Disponible para remoto)</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links about-social">
+                            <a href="https://github.com/oscargbocanegra" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/oscargbocanegra/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/oscargbocanegra" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="professional-journey">
+            <div class="container">
+                <h2 class="section-title">Trayectoria Profesional</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Lead Data Engineer</h3>
+                            <h4>Empresa Tecnológica Global</h4>
+                            <p class="timeline-date">2021 - Presente</p>
+                            <ul class="achievement-list">
+                                <li>Dirección del diseño e implementación de la arquitectura de datos empresarial que procesa más de 10TB diarios.</li>
+                                <li>Liderazgo de un equipo de 8 ingenieros de datos para desarrollar soluciones de datos en tiempo real.</li>
+                                <li>Implementación de prácticas de DataOps y MLOps que redujeron los tiempos de entrega en un 40%.</li>
+                                <li>Desarrollo de modelos de machine learning que optimizaron procesos críticos de negocio.</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span>Apache Spark</span>
+                                <span>Kafka</span>
+                                <span>AWS</span>
+                                <span>Snowflake</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Senior Data Engineer</h3>
+                            <h4>Consultora de Tecnología</h4>
+                            <p class="timeline-date">2018 - 2021</p>
+                            <ul class="achievement-list">
+                                <li>Diseño e implementación de data lakes para clientes del sector financiero y retail.</li>
+                                <li>Desarrollo de pipelines de datos escalables y tolerantes a fallos utilizando tecnologías cloud.</li>
+                                <li>Creación de dashboards y visualizaciones avanzadas para la toma de decisiones ejecutivas.</li>
+                                <li>Mentoría de ingenieros junior y capacitación de equipos técnicos.</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span>Python</span>
+                                <span>PySpark</span>
+                                <span>Databricks</span>
+                                <span>Azure</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Data Engineer</h3>
+                            <h4>Empresa de E-commerce</h4>
+                            <p class="timeline-date">2016 - 2018</p>
+                            <ul class="achievement-list">
+                                <li>Implementación del sistema ETL para consolidar datos de múltiples fuentes.</li>
+                                <li>Desarrollo de algoritmos de recomendación para el motor de búsqueda de productos.</li>
+                                <li>Optimización de consultas SQL que mejoraron el rendimiento en un 60%.</li>
+                                <li>Construcción de procesos automatizados para la generación de informes.</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span>SQL</span>
+                                <span>Python</span>
+                                <span>Docker</span>
+                                <span>Airflow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="education-certification">
+            <div class="container">
+                <h2 class="section-title">Educación y Certificaciones</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Master en Inteligencia Artificial</h3>
+                            <p class="education-institution">Universidad Internacional de La Rioja (UNIR)</p>
+                            <p class="education-date">2020 - 2022</p>
+                            <p>Especialización en aprendizaje automático, procesamiento de lenguaje natural y visión por computador.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Ingeniería Informática</h3>
+                            <p class="education-institution">Universidad Politécnica</p>
+                            <p class="education-date">2012 - 2016</p>
+                            <p>Formación sólida en algoritmos, estructuras de datos, bases de datos y desarrollo de software.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certifications-container">
+                    <h3 class="subsection-title">Certificaciones Profesionales</h3>
+                    <div class="certification-grid">
+                        <div class="certification-item">
+                            <div class="certification-logo">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h4>AWS Certified Data Analytics Specialty</h4>
+                                <p>Amazon Web Services</p>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <div class="certification-logo">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h4>Azure Data Engineer Associate</h4>
+                                <p>Microsoft</p>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <div class="certification-logo">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h4>TensorFlow Developer Certificate</h4>
+                                <p>Google</p>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <div class="certification-logo">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h4>Databricks Certified Data Engineer Professional</h4>
+                                <p>Databricks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-values">
+            <div class="container">
+                <div class="skills-values-grid">
+                    <div class="core-skills">
+                        <h2>Habilidades Principales</h2>
+                        <div class="skill-list-about">
+                            <div class="skill-category-about">
+                                <h3>Data Engineering</h3>
+                                <ul>
+                                    <li>Arquitecturas de datos modernos</li>
+                                    <li>Desarrollo de ETL/ELT</li>
+                                    <li>Data Lakes & Data Warehouses</li>
+                                    <li>Procesamiento en tiempo real</li>
+                                    <li>Optimización de rendimiento</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category-about">
+                                <h3>Machine Learning</h3>
+                                <ul>
+                                    <li>Supervisado y No Supervisado</li>
+                                    <li>Deep Learning</li>
+                                    <li>NLP</li>
+                                    <li>MLOps</li>
+                                    <li>Evaluación de modelos</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category-about">
+                                <h3>Cloud & DevOps</h3>
+                                <ul>
+                                    <li>AWS, Azure, GCP</li>
+                                    <li>Contenedores y orquestación</li>
+                                    <li>CI/CD</li>
+                                    <li>Infraestructura como código</li>
+                                    <li>Monitorización y logging</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="core-values">
+                        <h2>Valores Profesionales</h2>
+                        <div class="values-list">
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="value-content">
+                                    <h3>Innovación</h3>
+                                    <p>Busco constantemente nuevas formas de resolver problemas complejos, aplicando las tecnologías emergentes y metodologías más eficientes.</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="value-content">
+                                    <h3>Colaboración</h3>
+                                    <p>Creo firmemente en el poder del trabajo en equipo y la comunicación efectiva para lograr resultados excepcionales.</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="value-content">
+                                    <h3>Aprendizaje Continuo</h3>
+                                    <p>Me comprometo a mantenerme actualizado en un campo tecnológico en constante evolución, ampliando continuamente mis conocimientos.</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="value-content">
+                                    <h3>Orientación a Resultados</h3>
+                                    <p>Me enfoco en entregar soluciones que generen un impacto medible y significativo para los objetivos de negocio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta">
+            <div class="container">
+                <h2>¿Interesado en colaborar?</h2>
+                <p>Estoy abierto a nuevas oportunidades y proyectos desafiantes en el ámbito de Data Engineering e Inteligencia Artificial.</p>
+                <a href="contact.html" class="btn primary-btn large-btn">Contáctame</a>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Oscar Bocanegra</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Oscar Bocanegra</h3>
+                    <p>Data Engineer & AI Specialist</p>
+                    <p>Email: contacto@oscargbocanegra.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/oscargbocanegra" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/oscargbocanegra/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/oscargbocanegra" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Sobre Mí</a></li>
+                        <li><a href="projects.html">Proyectos</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Oscar Bocanegra. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
     <script src="js/scripts.js"></script>
