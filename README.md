@@ -1,14 +1,15 @@
-### Hello, welcome to my profile 👋
+### ¡Hola, bienvenido a mi perfil! 👋
 
-## About me
-I am a passionate professional constantly learning in the field of Data Engineering and Artificial Intelligence. My goal is to develop skills and knowledge to transform data into solutions with real impact.
+## Sobre mí
+Soy un profesional apasionado en constante aprendizaje en el campo de la Ingeniería de Datos e Inteligencia Artificial. Mi objetivo es desarrollar habilidades y conocimientos para transformar datos en soluciones con impacto real.
 
-## What am I working on? 🔭
-- Development of Machine Learning and data processing projects
-- Implementation of ETL solutions and Data Pipelines
-- Study of advanced AI and machine learning techniques
+## ¿En qué estoy trabajando? 🔭
+- Desarrollo de proyectos de Machine Learning y procesamiento de datos
+- Implementación de soluciones ETL y Data Pipelines
+- Estudio de técnicas avanzadas de IA y aprendizaje automático
+- Máster en Inteligencia Artificial en UNIR (Universidad Internacional de La Rioja)
 
-## I am constantly learning 🌱
+## Estoy constantemente aprendiendo 🌱
 <p align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg" alt="apache" width="40" height="40"/>
@@ -23,38 +24,44 @@ I am a passionate professional constantly learning in the field of Data Engineer
   <img src="https://www.vectorlogo.zone/logos/apache_airflow/apache_airflow-icon.svg" alt="airflow" width="40" height="40"/>
 </p>
 
-- **🔍 Data Engineering**: Apache Spark, ETL, large-scale data processing
-- **🧠 Machine Learning**: Classification algorithms, regression, supervised and unsupervised techniques
-- **🤖 Artificial Intelligence**: Natural Language Processing (NLP) and automated reasoning
-- **☁️ Cloud**: AWS, Azure and cloud services for data solution deployment
-- **🔄 Orchestration**: Kubernetes, Airflow for container orchestration and workflows
-- **🔧 Tools**: Python, Docker, testing systems and automation
+- **🔍 Ingeniería de Datos**: Apache Spark, ETL, procesamiento de datos a gran escala
+- **🧠 Machine Learning**: Algoritmos de clasificación, regresión, técnicas supervisadas y no supervisadas
+- **🤖 Inteligencia Artificial**: Procesamiento de Lenguaje Natural (NLP) y razonamiento automatizado
+- **☁️ Cloud**: AWS, Azure y servicios en la nube para el despliegue de soluciones de datos
+- **🔄 Orquestación**: Kubernetes, Airflow para orquestación de contenedores y flujos de trabajo
+- **🔧 Herramientas**: Python, Docker, sistemas de testing y automatización
 
-## Technologies and tools
-- Python and its libraries for data analysis (Pandas, NumPy, Scikit-learn)
-- Apache Spark for Big Data processing
-- Docker for application virtualization and deployment
-- Testing and process automation
+## Tecnologías y herramientas
+- Python y sus bibliotecas para análisis de datos (Pandas, NumPy, Scikit-learn)
+- Apache Spark para procesamiento de Big Data
+- Docker para virtualización y despliegue de aplicaciones
+- Testing y automatización de procesos
+- HTML y desarrollo web básico
 
-## Let's connect! 📫
-Feel free to contact me for collaborations or to exchange ideas on Data Engineering and Artificial Intelligence.
+## ¡Conectemos! 📫
+No dudes en contactarme para colaboraciones o para intercambiar ideas sobre Ingeniería de Datos e Inteligencia Artificial.
 
-## My Current Projects 🚀
+## Mis proyectos actuales 🚀
 
-Here you can find some of the projects I'm currently working on:
+Aquí puedes encontrar algunos de los proyectos en los que estoy trabajando actualmente:
 
-### Master's Degree in Artificial Intelligence (UNIR)
-- [TFM Project](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/01-tfm) - Master's final project focusing on data processing pipelines and AI concepts identification
-- [Machine Learning](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/02-aprendizaje-automatico) - Exercises and notebooks on regression, classification metrics, Naive Bayes, and decision trees
-- [Automated Reasoning & Planning](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/04-Razonamiento-planificacion-automatica) - Research and implementation of automated reasoning techniques
-- [Natural Language Processing](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/07-Procesamiento-Lenguaje-Natural) - NLP techniques and applications
+### Máster en Inteligencia Artificial (UNIR)
+- [Proyecto TFM](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/01-tfm) - Proyecto final del máster enfocado en pipelines de procesamiento de datos e identificación de conceptos de IA
+- [Aprendizaje Automático](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/02-aprendizaje-automatico) - Ejercicios y notebooks sobre regresión, métricas de clasificación, Naive Bayes y árboles de decisión
+- [Razonamiento y Planificación Automatizada](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/04-Razonamiento-planificacion-automatica) - Investigación e implementación de técnicas de razonamiento automatizado
+- [Procesamiento de Lenguaje Natural](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/07-Procesamiento-Lenguaje-Natural) - Técnicas y aplicaciones de NLP
 
-### Learning Path
-- [Machine Learning](https://github.com/oscargbocanegra/Learning/tree/main/01-MachineLearning) - Deep learning and data science projects with Python
-- [Apache Spark](https://github.com/oscargbocanegra/Learning/tree/main/02-Spark) - Big data processing with Apache Spark 3
-- [Python](https://github.com/oscargbocanegra/Learning/tree/main/03-Python) - Various Python projects and learning materials
-- [Docker](https://github.com/oscargbocanegra/Learning/tree/main/04-docker) - Containerization and infrastructure as code
-- [Testing & Automation](https://github.com/oscargbocanegra/Learning/tree/main/06-testing-automation) - Automated testing frameworks and techniques
+### Ruta de Aprendizaje
+- [Machine Learning](https://github.com/oscargbocanegra/Learning/tree/main/01-MachineLearning) - Proyectos de deep learning y ciencia de datos con Python
+- [Apache Spark](https://github.com/oscargbocanegra/Learning/tree/main/02-Spark) - Procesamiento de big data con Apache Spark 3
+- [Python](https://github.com/oscargbocanegra/Learning/tree/main/03-Python) - Varios proyectos y materiales de aprendizaje de Python
+- [Docker](https://github.com/oscargbocanegra/Learning/tree/main/04-docker) - Contenedorización e infraestructura como código
+- [HTML](https://github.com/oscargbocanegra/Learning/tree/main/05-html) - Desarrollo web y fundamentos de HTML
+- [Testing y Automatización](https://github.com/oscargbocanegra/Learning/tree/main/06-testing-automation) - Frameworks y técnicas de pruebas automatizadas
+- [Linux](https://github.com/oscargbocanegra/Learning/tree/main/linux) - Administración y comandos de Linux
 
-Feel free to explore these repositories and contribute if you're interested!
+### Portfolio Personal
+Este sitio web (oscargbocanegra.github.io) sirve como mi portfolio personal donde comparto mis proyectos y experiencia profesional.
+
+¡No dudes en explorar estos repositorios y contribuir si estás interesado!
 
