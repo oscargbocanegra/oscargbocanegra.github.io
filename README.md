@@ -35,7 +35,7 @@ Soy un profesional apasionado en constante aprendizaje en el campo de la Ingenie
 - Python y sus bibliotecas para análisis de datos (Pandas, NumPy, Scikit-learn)
 - Apache Spark para procesamiento de Big Data
 - Docker para virtualización y despliegue de aplicaciones
-- Testing y automatización de procesos
+- Testing y automatización de procesos.
 - HTML y desarrollo web básico
 
 ## ¡Conectemos! 📫
