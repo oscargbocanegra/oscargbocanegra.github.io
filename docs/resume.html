@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de vida – Oscar Giovanni Bocanegra Hurtado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .resume-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 0;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            min-height: calc(100vh - 40px);
+            border: none;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            border-right: none;
+        }
+
+        .sidebar::before {
+            display: none;
+        }
+
+        .sidebar::after {
+            display: none;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 0;
+            position: relative;
+            background: #34495e;
+            padding: 40px 30px;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 3rem;
+            color: #2c3e50;
+            font-weight: 700;
+            box-shadow: none;
+            border: 4px solid #ffffff;
+            position: relative;
+            backdrop-filter: none;
+        }
+
+        .profile-avatar::before {
+            display: none;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
+            text-shadow: none;
+            letter-spacing: normal;
+        }
+
+        .profile-title {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 400;
+            color: #bdc3c7;
+            text-shadow: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 0;
+            position: relative;
+            padding: 30px;
+            border-bottom: 1px solid #34495e;
+        }
+
+        .sidebar-section:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-section h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sidebar-section h2::before {
+            display: none;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 4px 0;
+            transition: none;
+        }
+
+        .contact-item:hover {
+            background: none;
+            border-radius: 0;
+            padding-left: 0;
+            transform: none;
+        }
+
+        .contact-item i {
+            width: 20px;
+            margin-right: 12px;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .contact-item a {
+            color: #bdc3c7;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #ffffff;
+        }
+
+        .contact-item span {
+            color: #bdc3c7;
+            font-size: 0.85rem;
+        }
+
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            height: 4px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: #ffffff;
+            border-radius: 2px;
+            position: relative;
+            animation: skillLoad 1.5s ease-in-out;
+            box-shadow: none;
+        }
+
+        @keyframes skillLoad {
+            from { width: 0; }
+        }
+
+        .skill-progress::after {
+            display: none;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .certification-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            margin: 3px 3px 3px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-weight: 400;
+            transition: none;
+        }
+
+        .certification-badge:hover {
+            background: rgba(255,255,255,0.15);
+            transform: none;
+        }
+
+        .languages-grid {
+            display: block;
+        }
+
+        .language-item {
+            text-align: left;
+            padding: 8px 0;
+            background: none;
+            border-radius: 0;
+            border: none;
+            backdrop-filter: none;
+            transition: none;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .language-item:hover {
+            background: none;
+            transform: none;
+        }
+
+        .language-flag {
+            font-size: 1.2rem;
+            margin-right: 12px;
+            margin-bottom: 0;
+            display: inline;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            padding: 40px 50px;
+            background: #ffffff;
+            overflow-y: auto;
+        }
+
+        .header-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2c3e50;
+            position: relative;
+        }
+
+        .name-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            text-shadow: none;
+            letter-spacing: normal;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .professional-title {
+            font-size: 1rem;
+            color: #7f8c8d;
+            font-weight: 500;
+            margin-bottom: 15px;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+            max-width: 100%;
+        }
+
+        .stats-grid {
+            display: none;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #f8faff 0%, #e3f2fd 100%);
+            padding: 24px;
+            border-radius: 20px;
+            color: #0d47a1;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(13, 71, 161, 0.12), 
+                        0 4px 16px rgba(13, 71, 161, 0.08);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(13, 71, 161, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(13, 71, 161, 0.05) 0%, transparent 70%);
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            display: block;
+            position: relative;
+            z-index: 1;
+            color: #0d47a1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            position: relative;
+            z-index: 1;
+            color: #1565c0;
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2c3e50;
+        }
+
+        .section-title::after {
+            display: none;
+        }
+
+        .tech-category {
+            margin-bottom: 20px;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            border-left: none;
+            box-shadow: none;
+            border: none;
+        }
+
+        .tech-category h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tech-badge {
+            background: #2c3e50;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 400;
+            box-shadow: none;
+            transition: none;
+            border: none;
+        }
+
+        .tech-badge:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            border-left: none;
+            position: relative;
+            transition: none;
+            border: none;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 20px;
+        }
+
+        .experience-item:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            letter-spacing: normal;
+        }
+
+        .company-name {
+            font-size: 1rem;
+            color: #7f8c8d;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .job-period {
+            background: #2c3e50;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .job-achievements {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .job-achievements li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .job-achievements li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2c3e50;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .education-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            margin-bottom: 15px;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            border-left: none;
+            box-shadow: none;
+            border: none;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 15px;
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .education-content h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .education-content p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+
+        .education-year {
+            background: #2c3e50;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            align-self: start;
+            font-size: 0.85rem;
+            box-shadow: none;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #ecf0f1;
+            border-radius: 4px;
+            color: #2c3e50;
+            border: none;
+            box-shadow: none;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #2c3e50;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: none;
+            text-transform: uppercase;
+            letter-spacing: normal;
+        }
+
+        .download-btn:hover {
+            background: #34495e;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .resume-container {
+                grid-template-columns: 1fr;
+                border-radius: 15px;
+            }
+            
+            .sidebar {
+                padding: 30px 25px;
+            }
+            
+            .main-content {
+                padding: 30px 25px;
+            }
+            
+            .name-title {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .education-item {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white !important;
+                padding: 0;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: none;
+                min-height: auto;
+            }
+            
+            .sidebar {
+                background: #1a237e !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .download-section {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <div class="profile-name">Oscar Giovanni Bocanegra</div>
+                <div class="profile-title">Senior Data Engineer | Big Data & AI Expert</div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2><i class="fas fa-address-book"></i> Contacto</h2>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+57 312 412 4433</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:oscargiovanni@gmail.com">oscargiovanni@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/oscargbocanegra" target="_blank">oscargbocanegra</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/oscargbocanegra" target="_blank">oscargbocanegra</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Colombia</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2><i class="fas fa-star"></i> Aptitudes Principales</h2>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Gestión de Datos de Ingeniería</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Infraestructura de Datos</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Diseño de Software</span>
+                        <span>82%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Apache Spark</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>AWS</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2><i class="fas fa-globe-americas"></i> Idiomas</h2>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <span class="language-flag">🇪🇸</span>
+                        <div>Español: <strong>Nativo</strong></div>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-flag">🇺🇸</span>
+                        <div>Inglés: <strong>Intermedio</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2><i class="fas fa-certificate"></i> Certificaciones</h2>
+                <div class="certification-badge">Elastic Stack 7</div>
+                <div class="certification-badge">Stratio Generative AI Data Fabric Basics</div>
+                <div class="certification-badge">Microsoft Azure Fundamentals</div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2><i class="fas fa-cogs"></i> Habilidades Técnicas</h2>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: #ffffff; text-transform: uppercase;">Big Data</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 15px;">
+                        <span class="certification-badge">Apache Spark</span>
+                        <span class="certification-badge">Hadoop</span>
+                        <span class="certification-badge">Kafka</span>
+                        <span class="certification-badge">ETL/ELT</span>
+                        <span class="certification-badge">Data Lakes</span>
+                        <span class="certification-badge">HDFS</span>
+                        <span class="certification-badge">AVRO</span>
+                        <span class="certification-badge">PARQUET</span>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: #ffffff; text-transform: uppercase;">Cloud</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 15px;">
+                        <span class="certification-badge">AWS S3</span>
+                        <span class="certification-badge">AWS Glue</span>
+                        <span class="certification-badge">AWS Redshift</span>
+                        <span class="certification-badge">AWS Lambda</span>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: #ffffff; text-transform: uppercase;">Lenguajes</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 15px;">
+                        <span class="certification-badge">Python</span>
+                        <span class="certification-badge">PySpark</span>
+                        <span class="certification-badge">Pandas</span>
+                        <span class="certification-badge">Java</span>
+                        <span class="certification-badge">Scala</span>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: #ffffff; text-transform: uppercase;">Bases de Datos</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 15px;">
+                        <span class="certification-badge">SQL</span>
+                        <span class="certification-badge">NoSQL</span>
+                        <span class="certification-badge">MongoDB</span>
+                        <span class="certification-badge">Oracle</span>
+                        <span class="certification-badge">MySQL</span>
+                        <span class="certification-badge">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: #ffffff; text-transform: uppercase;">DevOps & Automatización</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 15px;">
+                        <span class="certification-badge">Apache Airflow</span>
+                        <span class="certification-badge">Docker</span>
+                        <span class="certification-badge">Ansible</span>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: #ffffff; text-transform: uppercase;">Metodologías</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+                        <span class="certification-badge">Agile</span>
+                        <span class="certification-badge">DevOps</span>
+                        <span class="certification-badge">CRISP-DM</span>
+                        <span class="certification-badge">UML</span>
+                        <span class="certification-badge">Data Mesh</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2><i class="fas fa-trophy"></i> Honores</h2>
+                <div style="padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px; text-align: center;">
+                    <i class="fas fa-award" style="font-size: 1.5rem; margin-bottom: 8px; color: #1976d2;"></i>
+                    <div style="font-size: 0.9rem; font-weight: 500;">Evaluador BBVA Open Talent</div>
+                    <div style="font-size: 0.8rem; opacity: 0.8;">2018</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header-section">
+                <h1 class="name-title">Oscar Giovanni Bocanegra Hurtado</h1>
+                <p class="professional-title">Senior Data Engineer | Big Data & AI Expert | AWS | Software Engineer | Tech Lead | Automation</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Extracto Profesional</h2>
+                
+                <p style="font-size: 1rem; line-height: 1.7; margin-bottom: 15px;">
+                    Soy un profesional con más de 5 años de experiencia liderando proyectos estratégicos en <strong>Big Data y Transformación Digital</strong>. Mi enfoque se centra en diseñar, construir e implementar arquitecturas de datos escalables que transforman la información en decisiones estratégicas, optimizando procesos y acelerando la transición hacia un modelo Data Driven.
+                </p>
+                <p style="font-size: 1rem; line-height: 1.7;">
+                    He demostrado un impacto comprobado en mis roles anteriores, liderando proyectos que mejoraron la eficiencia en el manejo de datos en un <strong>30%</strong> y redujeron los tiempos de procesamiento en un <strong>40%</strong>. He implementado estrategias que permitieron a las organizaciones adoptar prácticas ágiles y DevOps para una mayor adaptabilidad, y he asegurado la entrega de proyectos clave</strong>, alineados con los objetivos estratégicos del negocio.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Experiencia Profesional</h2>
+                
+                <!-- SMX Services & Consulting -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">SMX Services & Consulting, Inc.</div>
+                            <div class="job-title">Senior Data Engineer</div>
+                        </div>
+                        <div class="job-period">Ene 2024 - Presente</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> Estados Unidos • <i class="fas fa-clock"></i> 1 año 8 meses
+                    </div>
+                    <ul class="job-achievements">
+                        <li>Lidero la transformación y optimización de la infraestructura de datos, con especial énfasis en la migración de proyectos on‑premise a la nube.</li>
+                        <li>Diseño, optimizo y monitoreo pipelines de datos ETL/ELT en arquitecturas basadas en AWS, garantizando flujos fiables y eficientes.</li>
+                        <li>Utilizo herramientas de orquestación como Apache Airflow para automatizar y gestionar flujos de trabajo de datos escalables.</li>
+                        <li>Colaboro con el equipo de Arquitectura Cloud en la creación y mantenimiento de pipelines de datos.</li>
+                    </ul>
+                </div>
+
+                <!-- StratioBD -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">StratioBD</div>
+                            <div class="job-title">Big Data Engineer</div>
+                        </div>
+                        <div class="job-period">Abr 2022 - Ene 2024</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> Colombia, Mexico, Ecuador • <i class="fas fa-clock"></i> 1 año 10 meses
+                    </div>
+                    <ul class="job-achievements">
+                        <li>Ingeniero Data Engineer del equipo de Analítica Big Data para los clientes de BanBajío (México) y Banco Internacional (Ecuador), optimizando procesos y fomentando la colaboración entre equipos y stakeholders.</li>
+                        <li><strong>25% reducción</strong> en tiempos de entrega mediante la orquestación de casos de uso y POCs con optimización de procesos.</li>
+                        <li><strong>40% automatización</strong> de tareas manuales a través del diseño de pipelines de datos inteligentes.</li>
+                        <li><strong>30% mejora</strong> en precisión de KPIs implementando modelos de IA con metodologías CRISP-DM.</li>
+                    </ul>
+                </div>
+
+                <!-- Consulting eSoluzion -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">Consulting eSoluzion</div>
+                            <div class="job-title">Big Data Engineer</div>
+                        </div>
+                        <div class="job-period">Jun 2021 - Abr 2022</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> España • <i class="fas fa-clock"></i> 11 meses
+                    </div>
+                    <ul class="job-achievements">
+                        <li>Ingeniero Big Data Líder para cliente BBVA - España, enfocado en la optimización del ciclo de vida de los datos, incorporando tecnologías Cloud y Legacy.</li>
+                        <li>Lideré las iniciativas de transformación Data Driven, optimizando el ciclo de vida de los datos con tecnologías Cloud y Legacy.</li>
+                        <li>Colaboré en la integración de tecnologías Cloud y Legacy, asegurando una transición fluida en la transformación Data Driven.</li>
+                        <li>Stack Tecnológico clave: HDFS, AVRO, PARQUET, PYSPARK, PYTHON SPARK, AWS y GCP.</li>
+                    </ul>
+                </div>
+
+                <!-- SETI S.A.S -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">SETI S.A.S</div>
+                            <div class="job-title">Data Technical Team Leader</div>
+                        </div>
+                        <div class="job-period">Oct 2019 - May 2021</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 1 año 8 meses
+                    </div>
+                    <ul class="job-achievements">
+                        <li><strong>30% reducción</strong> en costos operativos liderando la implementación de un Data Lake para ATH Colombia y mejorando la calidad de datos para toma de decisiones estratégicas.</li>
+                        <li>Diseño y desarrollo del Data Lake: Apoyé la planificación y ejecución del diseño del Data Lake, asegurando la alineación con los objetivos estratégicos de la entidad financiera.</li>
+                        <li>Integración de fuentes de datos: Garanticé la calidad y coherencia de información al integrar datos internos y externos.</li>
+                        <li>Implementación de soluciones analíticas: Diseñé y dirigí dashboards y modelos predictivos para extraer insights significativos.</li>
+                        <li>Gestión de proyectos y equipos: Supervisé y coordiné equipos para asegurar la ejecución eficiente del proyecto.</li>
+                        <li>Cumplimiento normativo: Aseguré la adherencia a requisitos regulatorios y normativos en el sector financiero.</li>
+                    </ul>
+                </div>
+
+                <!-- BBVA Lead -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">BBVA</div>
+                            <div class="job-title">Lead Software Development Engineer</div>
+                        </div>
+                        <div class="job-period">Ago 2017 - Sep 2019</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> Colombia • <i class="fas fa-clock"></i> 2 años 2 meses
+                    </div>
+                    <ul class="job-achievements">
+                        <li>Lideré la implementación del proyecto <strong>Gestor Documental</strong> en BBVA Colombia, utilizando tecnologías como MongoDB y Docker, logrando una transformación digital alineada con los objetivos estratégicos.</li>
+                        <li>Implementé soluciones robustas y escalables utilizando herramientas como MongoDB, Ansible, Docker y Nuxeo.</li>
+                        <li>Gestioné e implementé metodologías ágiles, tradicionales y DevOps para optimizar el ciclo de vida del desarrollo.</li>
+                        <li>Coordiné equipos multidisciplinarios, garantizando alineación con los objetivos estratégicos del negocio.</li>
+                        <li>Contribuí al proceso de transformación digital de BBVA Colombia, asegurando que el proyecto estuviera alineado con las iniciativas estratégicas.</li>
+                    </ul>
+                </div>
+
+                <!-- BBVA Principal -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">BBVA</div>
+                            <div class="job-title">Principal Software Development Engineer</div>
+                        </div>
+                        <div class="job-period">Ago 2014 - Ago 2017</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 3 años 1 mes
+                    </div>
+                    <ul class="job-achievements">
+                        <li><strong>20% mejora</strong> en eficiencia operativa desarrollando y optimizando soluciones tecnológicas utilizando herramientas modernas como Docker y MongoDB.</li>
+                        <li>Trabajé con stack completo: HTML, CSS, JavaScript, Java, Lotusscript, Oracle, MySQL, SQL Server, MongoDB, Docker y Ansible.</li>
+                        <li>Implementé metodologías ágiles y tradicionales según las necesidades específicas de cada proyecto.</li>
+                        <li>Coordiné con equipos multidisciplinarios para asegurar una ejecución eficiente.</li>
+                        <li>Implementé prácticas de aseguramiento de calidad para entregar software de alto rendimiento.</li>
+                        <li>Utilicé herramientas como Docker y Ansible para optimizar el despliegue continuo.</li>
+                    </ul>
+                </div>
+
+                <!-- GLOKAL CONSULTING -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">GLOKAL CONSULTING</div>
+                            <div class="job-title">Desarrollador de Software de TI</div>
+                        </div>
+                        <div class="job-period">Abr 2013 - Ago 2014</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 1 año 5 meses
+                    </div>
+                    <ul class="job-achievements">
+                        <li>Responsable del análisis, diseño y desarrollo de software para cumplir con las necesidades de los usuarios.</li>
+                        <li>Lideré el mantenimiento, adecuación, estabilización y mejoras de aplicativos existentes.</li>
+                        <li>Realicé análisis detallados de requisitos para diseñar soluciones efectivas.</li>
+                        <li>Trabajé estrechamente con usuarios para alinear proyectos con expectativas.</li>
+                        <li>Utilicé tecnologías tanto de frontend como de backend para soluciones eficientes.</li>
+                    </ul>
+                </div>
+
+                <!-- ANTSS LTDA -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">ANTSS LTDA</div>
+                            <div class="job-title">Desarrollador de Software de TI</div>
+                        </div>
+                        <div class="job-period">Abr 2012 - Dic 2012</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 9 meses
+                    </div>
+                    <ul class="job-achievements">
+                        <li>Lideré un proyecto clave con la empresa de energía Tunja (EBSA).</li>
+                        <li>Responsable del análisis detallado y levantamiento de información para comprender los requisitos del proyecto.</li>
+                        <li>Utilicé metodologías UML y RUP para diseñar soluciones sólidas y bien estructuradas.</li>
+                        <li>Implementé la solución con tecnologías Java para garantizar un desarrollo eficiente y sostenible.</li>
+                        <li>Trabajé con CSS y ZK para mejorar la interfaz de usuario y la experiencia general.</li>
+                        <li>Garanticé la gestión segura y eficiente de información con base de datos Oracle.</li>
+                    </ul>
+                </div>
+
+                <!-- WORLD OFFICE -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">WORLD OFFICE</div>
+                            <div class="job-title">Técnico de Soporte a Usuarios</div>
+                        </div>
+                        <div class="job-period">Mar 2009 - Mar 2011</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 2 años 1 mes
+                    </div>
+                    <ul class="job-achievements">
+                        <li>Soporte técnico a nivel del producto contable World Office.</li>
+                        <li>Interacción con el cliente mediante audios o sesiones personalizadas donde se busca la mejora constante.</li>
+                        <li>Estabilización del producto tomando como referencia lo compartido por el usuario.</li>
+                    </ul>
+                </div>
+
+                <!-- NOVAG INGENIERIA -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">NOVAG INGENIERIA</div>
+                            <div class="job-title">Técnico de Soporte a Usuarios</div>
+                        </div>
+                        <div class="job-period">Jun 2008 - Feb 2009</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 9 meses
+                    </div>
+                    <ul class="job-achievements">
+                        <li>Soporte Técnico en proyecto CPE computadores para educar (Zona Santander).</li>
+                        <li>Mantenimiento preventivo, actualización de sistemas operativos para el proyecto CPE.</li>
+                        <li>Proyecto Altamira Movistar: Instalación centro de cómputo cableado estructurado, fibra óptica instalación de servidores.</li>
+                        <li>Proyecto Telecom: Mantenimiento, preventivo de estaciones de trabajo Desktop y laptop configuración, actualización, y migración de procesos.</li>
+                    </ul>
+                </div>
+
+                <!-- Bancolombia -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company-name">Bancolombia</div>
+                            <div class="job-title">Auxiliar Responsable de Operaciones</div>
+                        </div>
+                        <div class="job-period">Feb 1999 - Abr 2007</div>
+                    </div>
+                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                        <i class="fas fa-map-marker-alt"></i> Colombia • <i class="fas fa-clock"></i> 8 años 3 meses
+                    </div>
+                    <ul class="job-achievements">
+                        <li><strong>Mayo 2004 – Abril 2007:</strong> Auxiliar de cuadre de canje para las oficinas de Bogotá y sabana. Supervisión de las oficinas, monitoreo de transacciones con banco república por medio de programa Sebra, emisario de Bancolombia ante la entidad banco república.</li>
+                        <li><strong>Junio 2002 – Mayo 2004:</strong> Auxiliar de Imágenes, cuadre de documentos físicos de oficina, atención de solicitudes generadas por oficina, generación de extractos para clientes, atención de oficios públicos, soporte back office, manejo de plataforma AS 400.</li>
+                        <li><strong>Febrero 1999 – Junio 2002:</strong> Auxiliar atención de archivo inactivo a diferentes áreas del banco, clasificación de documentos por tiempos de conservación, depuración de archivo por tiempo cumplido según el tipo de documentos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Educación</h2>
+                
+                <div class="education-item">
+                    <div class="education-year">2023 - 2025</div>
+                    <div class="education-content">
+                        <h3>Máster Universitario en Inteligencia Artificial</h3>
+                        <p>UNIR – La Universidad en Internet</p>
+                        <p>Inteligencia Artificial</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-year">2019 - 2020</div>
+                    <div class="education-content">
+                        <h3>Master Executive en Business Intelligence y Big Data</h3>
+                        <p>Instituto Europeo de Posgrado – IEP</p>
+                        <p>Tecnología en la gestión empresarial/Procesamiento de datos</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-year">2018 - 2018</div>
+                    <div class="education-content">
+                        <h3>Grado en Ingeniería</h3>
+                        <p>Fundación Universitaria San Martín</p>
+                        <p>Gestión de proyectos de tecnología de la información</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-year">2012 - 2018</div>
+                    <div class="education-content">
+                        <h3>Ingeniería de Sistemas</h3>
+                        <p>Fundación Universitaria San Martín</p>
+                        <p>Ingeniería Informática</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-year">1997 - 2000</div>
+                    <div class="education-content">
+                        <h3>Técnico Profesional en Ingeniería de Sistemas</h3>
+                        <p>Instituto Superior de Carreras Técnicas INSUTEC</p>
+                        <p>Facultad de Ingeniería de Sistemas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h3 style="margin-bottom: 15px;">Descargar CV</h3>
+                <a href="cv-oscar-bocanegra.pdf" class="download-btn" download="CV-Oscar-Giovanni-Bocanegra.pdf">
+                    <i class="fas fa-download"></i>
+                    Descargar PDF
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
