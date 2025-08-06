@@ -568,6 +568,38 @@
             box-shadow: none;
         }
 
+        /* Language Toggle Button */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .language-toggle button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .language-toggle button:hover {
+            background: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        /* Hide elements by default */
+        .lang-en {
+            display: none;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             body {
@@ -764,17 +796,24 @@
     </style>
 </head>
 <body>
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+        <button id="langToggle" onclick="toggleLanguage()">EN</button>
+    </div>
+    
     <div class="resume-container">
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="profile-section">
                 <div class="profile-name">Oscar Giovanni Bocanegra</div>
-                <div class="profile-title">Senior Data Engineer | Big Data & AI Expert</div>
+                <div class="profile-title lang-es">Senior Data Engineer | Big Data & AI Expert</div>
+                <div class="profile-title lang-en">Senior Data Engineer | Big Data & AI Expert</div>
             </div>
 
             <!-- 1. Contacto -->
             <div class="sidebar-section">
-                <h2><i class="fas fa-address-book"></i> Contacto</h2>
+                <h2 class="lang-es"><i class="fas fa-address-book"></i> Contacto</h2>
+                <h2 class="lang-en"><i class="fas fa-address-book"></i> Contact</h2>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
                     <span>+57 312 412 4433</span>
@@ -799,50 +838,68 @@
 
             <!-- 2. Educación -->
             <div class="sidebar-section">
-                <h2><i class="fas fa-graduation-cap"></i> Educación</h2>
+                <h2 class="lang-es"><i class="fas fa-graduation-cap"></i> Educación</h2>
+                <h2 class="lang-en"><i class="fas fa-graduation-cap"></i> Education</h2>
                 
                 <div style="margin-bottom: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
                     <div style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 6px; text-align: center;">2023 - 2025</div>
-                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Máster en Inteligencia Artificial</h4>
-                    <p style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">UNIR – La Universidad en Internet</p>
-                    <p style="font-size: 0.7rem; color: #95a5a6;">Inteligencia Artificial</p>
+                    <h4 class="lang-es" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Máster en Inteligencia Artificial</h4>
+                    <h4 class="lang-en" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Master's in Artificial Intelligence</h4>
+                    <p class="lang-es" style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">UNIR – La Universidad en Internet</p>
+                    <p class="lang-en" style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">UNIR – The Internet University</p>
+                    <p class="lang-es" style="font-size: 0.7rem; color: #95a5a6;">Inteligencia Artificial</p>
+                    <p class="lang-en" style="font-size: 0.7rem; color: #95a5a6;">Artificial Intelligence</p>
                 </div>
 
                 <div style="margin-bottom: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
                     <div style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 6px; text-align: center;">2019 - 2020</div>
-                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Master Executive BI y Big Data</h4>
-                    <p style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Instituto Europeo de Posgrado – IEP</p>
-                    <p style="font-size: 0.7rem; color: #95a5a6;">Tecnología en gestión empresarial</p>
+                    <h4 class="lang-es" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Master Executive BI y Big Data</h4>
+                    <h4 class="lang-en" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Executive Master BI & Big Data</h4>
+                    <p class="lang-es" style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Instituto Europeo de Posgrado – IEP</p>
+                    <p class="lang-en" style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">European Institute of Postgraduate Studies – IEP</p>
+                    <p class="lang-es" style="font-size: 0.7rem; color: #95a5a6;">Tecnología en gestión empresarial</p>
+                    <p class="lang-en" style="font-size: 0.7rem; color: #95a5a6;">Business Management Technology</p>
                 </div>
 
                 <div style="margin-bottom: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
                     <div style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 6px; text-align: center;">2012 - 2018</div>
-                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Ingeniería de Sistemas</h4>
-                    <p style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Fundación Universitaria San Martín</p>
-                    <p style="font-size: 0.7rem; color: #95a5a6;">Ingeniería Informática</p>
+                    <h4 class="lang-es" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Ingeniería de Sistemas</h4>
+                    <h4 class="lang-en" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Systems Engineering</h4>
+                    <p class="lang-es" style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Fundación Universitaria San Martín</p>
+                    <p class="lang-en" style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">San Martín University Foundation</p>
+                    <p class="lang-es" style="font-size: 0.7rem; color: #95a5a6;">Ingeniería Informática</p>
+                    <p class="lang-en" style="font-size: 0.7rem; color: #95a5a6;">Computer Engineering</p>
                 </div>
 
                 <div style="margin-bottom: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
                     <div style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 6px; text-align: center;">2018</div>
-                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Grado en Ingeniería</h4>
-                    <p style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Fundación Universitaria San Martín</p>
-                    <p style="font-size: 0.7rem; color: #95a5a6;">Gestión de proyectos de TI</p>
+                    <h4 class="lang-es" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Grado en Ingeniería</h4>
+                    <h4 class="lang-en" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Engineering Degree</h4>
+                    <p class="lang-es" style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Fundación Universitaria San Martín</p>
+                    <p class="lang-en" style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">San Martín University Foundation</p>
+                    <p class="lang-es" style="font-size: 0.7rem; color: #95a5a6;">Gestión de proyectos de TI</p>
+                    <p class="lang-en" style="font-size: 0.7rem; color: #95a5a6;">IT Project Management</p>
                 </div>
 
                 <div style="margin-bottom: 0;">
                     <div style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 6px; text-align: center;">1997 - 2000</div>
-                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Técnico Profesional</h4>
-                    <p style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Instituto Superior INSUTEC</p>
-                    <p style="font-size: 0.7rem; color: #95a5a6;">Ingeniería de Sistemas</p>
+                    <h4 class="lang-es" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Técnico Profesional</h4>
+                    <h4 class="lang-en" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Professional Technician</h4>
+                    <p class="lang-es" style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Instituto Superior INSUTEC</p>
+                    <p class="lang-en" style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">INSUTEC Higher Institute</p>
+                    <p class="lang-es" style="font-size: 0.7rem; color: #95a5a6;">Ingeniería de Sistemas</p>
+                    <p class="lang-en" style="font-size: 0.7rem; color: #95a5a6;">Systems Engineering</p>
                 </div>
             </div>
 
             <!-- 3. Aptitudes Principales -->
             <div class="sidebar-section">
-                <h2><i class="fas fa-star"></i> Aptitudes Principales</h2>
+                <h2 class="lang-es"><i class="fas fa-star"></i> Aptitudes Principales</h2>
+                <h2 class="lang-en"><i class="fas fa-star"></i> Key Skills</h2>
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>Gestión de Datos de Ingeniería</span>
+                        <span class="lang-es">Gestión de Datos de Ingeniería</span>
+                        <span class="lang-en">Engineering Data Management</span>
                         <span>70%</span>
                     </div>
                     <div class="skill-bar">
@@ -851,7 +908,8 @@
                 </div>
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>Infraestructura de Datos</span>
+                        <span class="lang-es">Infraestructura de Datos</span>
+                        <span class="lang-en">Data Infrastructure</span>
                         <span>60%</span>
                     </div>
                     <div class="skill-bar">
@@ -860,7 +918,8 @@
                 </div>
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>Diseño de Software</span>
+                        <span class="lang-es">Diseño de Software</span>
+                        <span class="lang-en">Software Design</span>
                         <span>80%</span>
                     </div>
                     <div class="skill-bar">
@@ -880,7 +939,8 @@
 
             <!-- 4. Habilidades Técnicas -->
             <div class="sidebar-section" style="margin-top: 20px;">
-                <h2><i class="fas fa-cogs"></i> Habilidades Técnicas</h2>
+                <h2 class="lang-es"><i class="fas fa-cogs"></i> Habilidades Técnicas</h2>
+                <h2 class="lang-en"><i class="fas fa-cogs"></i> Technical Skills</h2>
                 
                 <div class="skill-item">
                     <div class="skill-name">
@@ -965,7 +1025,8 @@
 
             <!-- 5. Certificaciones -->
             <div class="sidebar-section" style="margin-top: 20px;">
-                <h2><i class="fas fa-certificate"></i> Certificaciones</h2>
+                <h2 class="lang-es"><i class="fas fa-certificate"></i> Certificaciones</h2>
+                <h2 class="lang-en"><i class="fas fa-certificate"></i> Certifications</h2>
                 
                 <div class="skill-item">
                     <div class="skill-name">
@@ -1000,13 +1061,17 @@
 
             <!-- 6. Idiomas -->
             <div class="sidebar-section" style="margin-top: 20px;">
-                <h2><i class="fas fa-globe-americas"></i> 
+                <h2 class="lang-es"><i class="fas fa-globe-americas"></i> 
                 Idiomas
+                </h2>
+                <h2 class="lang-en"><i class="fas fa-globe-americas"></i> 
+                Languages
                 </h2>
                 
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>🇪🇸 Español</span>
+                        <span class="lang-es">🇪🇸 Español</span>
+                        <span class="lang-en">🇪🇸 Spanish</span>
                         <span>100%</span>
                     </div>
                     <div class="skill-bar">
@@ -1016,7 +1081,8 @@
                 
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>🇺🇸 Inglés</span>
+                        <span class="lang-es">🇺🇸 Inglés</span>
+                        <span class="lang-en">🇺🇸 English</span>
                         <span>40%</span>
                     </div>
                     <div class="skill-bar">
@@ -1027,10 +1093,12 @@
 
             <!-- 7. Honores -->
             <div class="sidebar-section page-break-before" style="margin-top: 20px;">
-                <h2><i class="fas fa-trophy"></i> Honores</h2>
+                <h2 class="lang-es"><i class="fas fa-trophy"></i> Honores</h2>
+                <h2 class="lang-en"><i class="fas fa-trophy"></i> Honors</h2>
                 <div style="padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px; text-align: center;">
                     <i class="fas fa-award" style="font-size: 1.5rem; margin-bottom: 8px; color: #1976d2;"></i>
-                    <div style="font-size: 0.9rem; font-weight: 500;">Evaluador BBVA Open Talent</div>
+                    <div class="lang-es" style="font-size: 0.9rem; font-weight: 500;">Evaluador BBVA Open Talent</div>
+                    <div class="lang-en" style="font-size: 0.9rem; font-weight: 500;">BBVA Open Talent Evaluator</div>
                     <div style="font-size: 0.8rem; opacity: 0.8;">2018</div>
                 </div>
             </div>
@@ -1038,8 +1106,11 @@
             <!-- 8. Descargar CV -->
             <div class="sidebar-section" style="margin-top: 20px;">
                 <h2 style="cursor: pointer; transition: color 0.3s ease;">
-                    <a href="cv-oscar-bocanegra.pdf" download="CV-Oscar-Giovanni-Bocanegra.pdf" style="color: inherit; text-decoration: none; display: flex; align-items: center;">
-                        <i class="fas fa-download"></i> Descargar CV
+                    <a href="cv-oscar-bocanegra.pdf" download="CV-Oscar-Giovanni-Bocanegra-ES.pdf" style="color: inherit; text-decoration: none; display: flex; align-items: center;" class="lang-es">
+                        <span><i class="fas fa-download"></i> Descargar CV</span>
+                    </a>
+                    <a href="cv-oscar-bocanegra-en.pdf" download="CV-Oscar-Giovanni-Bocanegra-EN.pdf" style="color: inherit; text-decoration: none; display: flex; align-items: center;" class="lang-en">
+                        <span><i class="fas fa-download"></i> Download CV</span>
                     </a>
                 </h2>
             </div>
@@ -1053,36 +1124,54 @@
             </div>
 
             <div class="section">
-                <h2 class="section-title">Extracto Profesional</h2>
+                <h2 class="section-title lang-es">Extracto Profesional</h2>
+                <h2 class="section-title lang-en">Professional Summary</h2>
                 
-                <p style="font-size: 1rem; line-height: 1.7; margin-bottom: 15px;">
+                <p class="lang-es" style="font-size: 1rem; line-height: 1.7; margin-bottom: 15px;">
                     Soy un profesional con más de 5 años de experiencia liderando proyectos estratégicos en <strong>Big Data y Transformación Digital</strong>. Mi enfoque se centra en diseñar, construir e implementar arquitecturas de datos escalables que transforman la información en decisiones estratégicas, optimizando procesos y acelerando la transición hacia un modelo Data Driven.
                 </p>
-                <p style="font-size: 1rem; line-height: 1.7;">
+                <p class="lang-es" style="font-size: 1rem; line-height: 1.7;">
                     He demostrado un impacto comprobado en mis roles anteriores, liderando proyectos que mejoraron la eficiencia en el manejo de datos en un <strong>30%</strong> y redujeron los tiempos de procesamiento en un <strong>40%</strong>. He implementado estrategias que permitieron a las organizaciones adoptar prácticas ágiles y DevOps para una mayor adaptabilidad, y he asegurado la entrega de proyectos clave</strong>, alineados con los objetivos estratégicos del negocio.
+                </p>
+
+                <p class="lang-en" style="font-size: 1rem; line-height: 1.7; margin-bottom: 15px;">
+                    I am a professional with over 5 years of experience leading strategic projects in <strong>Big Data and Digital Transformation</strong>. My focus is on designing, building, and implementing scalable data architectures that transform information into strategic decisions, optimizing processes and accelerating the transition to a Data Driven model.
+                </p>
+                <p class="lang-en" style="font-size: 1rem; line-height: 1.7;">
+                    I have demonstrated proven impact in my previous roles, leading projects that improved data handling efficiency by <strong>30%</strong> and reduced processing times by <strong>40%</strong>. I have implemented strategies that enabled organizations to adopt agile and DevOps practices for greater adaptability, and ensured the delivery of key projects aligned with strategic business objectives.
                 </p>
             </div>
 
             <div class="section">
-                <h2 class="section-title">Experiencia Profesional</h2>
+                <h2 class="section-title lang-es">Experiencia Profesional</h2>
+                <h2 class="section-title lang-en">Professional Experience</h2>
                 
                 <!-- SMX Services & Consulting -->
                 <div class="experience-item">
                     <div class="job-header">
                         <div>
                             <div class="company-name">SMX Services & Consulting, Inc.</div>
-                            <div class="job-title">Senior Data Engineer</div>
+                            <div class="job-title lang-es">Senior Data Engineer</div>
+                            <div class="job-title lang-en">Senior Data Engineer</div>
                         </div>
-                        <div class="job-period">Ene 2024 - Presente</div>
+                        <div class="job-period lang-es">Ene 2024 - Presente</div>
+                        <div class="job-period lang-en">Jan 2024 - Present</div>
                     </div>
                     <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
-                        <i class="fas fa-map-marker-alt"></i> Estados Unidos - Remoto • <i class="fas fa-clock"></i> 1 año 8 meses
+                        <span class="lang-es"><i class="fas fa-map-marker-alt"></i> Estados Unidos - Remoto • <i class="fas fa-clock"></i> 1 año 8 meses</span>
+                        <span class="lang-en"><i class="fas fa-map-marker-alt"></i> United States - Remote • <i class="fas fa-clock"></i> 1 year 8 months</span>
                     </div>
-                    <ul class="job-achievements">
+                    <ul class="job-achievements lang-es">
                         <li>Lidero la transformación y optimización de la infraestructura de datos, con especial énfasis en la migración de proyectos on‑premise a la nube.</li>
                         <li>Diseño, optimizo y monitoreo pipelines de datos ETL/ELT en arquitecturas basadas en AWS, garantizando flujos fiables y eficientes.</li>
                         <li>Utilizo herramientas de orquestación como Apache Airflow para automatizar y gestionar flujos de trabajo de datos escalables.</li>
                         <li>Colaboro con el equipo de Arquitectura Cloud en la creación y mantenimiento de pipelines de datos.</li>
+                    </ul>
+                    <ul class="job-achievements lang-en">
+                        <li>Lead the transformation and optimization of data infrastructure, with special emphasis on migrating on-premise projects to the cloud.</li>
+                        <li>Design, optimize and monitor ETL/ELT data pipelines in AWS-based architectures, ensuring reliable and efficient flows.</li>
+                        <li>Use orchestration tools like Apache Airflow to automate and manage scalable data workflows.</li>
+                        <li>Collaborate with the Cloud Architecture team in creating and maintaining data pipelines.</li>
                     </ul>
                 </div>
 
@@ -1091,18 +1180,27 @@
                     <div class="job-header">
                         <div>
                             <div class="company-name">StratioBD</div>
-                            <div class="job-title">Big Data Engineer</div>
+                            <div class="job-title lang-es">Big Data Engineer</div>
+                            <div class="job-title lang-en">Big Data Engineer</div>
                         </div>
-                        <div class="job-period">Abr 2022 - Ene 2024</div>
+                        <div class="job-period lang-es">Abr 2022 - Ene 2024</div>
+                        <div class="job-period lang-en">Apr 2022 - Jan 2024</div>
                     </div>
                     <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
-                        <i class="fas fa-map-marker-alt"></i> Colombia, Mexico, Ecuador - Remoto • <i class="fas fa-clock"></i> 1 año 10 meses
+                        <span class="lang-es"><i class="fas fa-map-marker-alt"></i> Colombia, Mexico, Ecuador - Remoto • <i class="fas fa-clock"></i> 1 año 10 meses</span>
+                        <span class="lang-en"><i class="fas fa-map-marker-alt"></i> Colombia, Mexico, Ecuador - Remote • <i class="fas fa-clock"></i> 1 year 10 months</span>
                     </div>
-                    <ul class="job-achievements">
+                    <ul class="job-achievements lang-es">
                         <li>Ingeniero Data Engineer del equipo de Analítica Big Data para los clientes de BanBajío (México) y Banco Internacional (Ecuador), optimizando procesos y fomentando la colaboración entre equipos y stakeholders.</li>
                         <li><strong>25% reducción</strong> en tiempos de entrega mediante la orquestación de casos de uso y POCs con optimización de procesos.</li>
                         <li><strong>40% automatización</strong> de tareas manuales a través del diseño de pipelines de datos inteligentes.</li>
                         <li><strong>30% mejora</strong> en precisión de KPIs implementando modelos de IA con metodologías CRISP-DM.</li>
+                    </ul>
+                    <ul class="job-achievements lang-en">
+                        <li>Data Engineer in the Big Data Analytics team for BanBajío (Mexico) and Banco Internacional (Ecuador) clients, optimizing processes and fostering collaboration between teams and stakeholders.</li>
+                        <li><strong>25% reduction</strong> in delivery times through orchestration of use cases and POCs with process optimization.</li>
+                        <li><strong>40% automation</strong> of manual tasks through intelligent data pipeline design.</li>
+                        <li><strong>30% improvement</strong> in KPI accuracy by implementing AI models with CRISP-DM methodologies.</li>
                     </ul>
                 </div>
 
@@ -1111,18 +1209,27 @@
                     <div class="job-header">
                         <div>
                             <div class="company-name">Consulting eSoluzion</div>
-                            <div class="job-title">Big Data Engineer</div>
+                            <div class="job-title lang-es">Big Data Engineer</div>
+                            <div class="job-title lang-en">Big Data Engineer</div>
                         </div>
-                        <div class="job-period">Jun 2021 - Abr 2022</div>
+                        <div class="job-period lang-es">Jun 2021 - Abr 2022</div>
+                        <div class="job-period lang-en">Jun 2021 - Apr 2022</div>
                     </div>
                     <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
-                        <i class="fas fa-map-marker-alt"></i> España - Remoto • <i class="fas fa-clock"></i> 11 meses
+                        <span class="lang-es"><i class="fas fa-map-marker-alt"></i> España - Remoto • <i class="fas fa-clock"></i> 11 meses</span>
+                        <span class="lang-en"><i class="fas fa-map-marker-alt"></i> Spain - Remote • <i class="fas fa-clock"></i> 11 months</span>
                     </div>
-                    <ul class="job-achievements">
+                    <ul class="job-achievements lang-es">
                         <li>Ingeniero Big Data Líder para cliente BBVA - España, enfocado en la optimización del ciclo de vida de los datos, incorporando tecnologías Cloud y Legacy.</li>
                         <li>Lideré las iniciativas de transformación Data Driven, optimizando el ciclo de vida de los datos con tecnologías Cloud y Legacy.</li>
                         <li>Colaboré en la integración de tecnologías Cloud y Legacy, asegurando una transición fluida en la transformación Data Driven.</li>
                         <li>Stack Tecnológico clave: HDFS, AVRO, PARQUET, PYSPARK, PYTHON SPARK, AWS y GCP.</li>
+                    </ul>
+                    <ul class="job-achievements lang-en">
+                        <li>Lead Big Data Engineer for BBVA client - Spain, focused on optimizing data lifecycle, incorporating Cloud and Legacy technologies.</li>
+                        <li>Led Data Driven transformation initiatives, optimizing data lifecycle with Cloud and Legacy technologies.</li>
+                        <li>Collaborated on Cloud and Legacy technology integration, ensuring smooth transition in Data Driven transformation.</li>
+                        <li>Key Technology Stack: HDFS, AVRO, PARQUET, PYSPARK, PYTHON SPARK, AWS and GCP.</li>
                     </ul>
                 </div>
 
@@ -1131,20 +1238,31 @@
                     <div class="job-header">
                         <div>
                             <div class="company-name">SETI S.A.S</div>
-                            <div class="job-title">Data Technical Team Leader</div>
+                            <div class="job-title lang-es">Data Technical Team Leader</div>
+                            <div class="job-title lang-en">Data Technical Team Leader</div>
                         </div>
-                        <div class="job-period">Oct 2019 - May 2021</div>
+                        <div class="job-period lang-es">Oct 2019 - May 2021</div>
+                        <div class="job-period lang-en">Oct 2019 - May 2021</div>
                     </div>
                     <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
-                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 1 año 8 meses
+                        <span class="lang-es"><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 1 año 8 meses</span>
+                        <span class="lang-en"><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 1 year 8 months</span>
                     </div>
-                    <ul class="job-achievements">
+                    <ul class="job-achievements lang-es">
                         <li><strong>30% reducción</strong> en costos operativos liderando la implementación de un Data Lake para ATH Colombia y mejorando la calidad de datos para toma de decisiones estratégicas.</li>
                         <li>Diseño y desarrollo del Data Lake: Apoyé la planificación y ejecución del diseño del Data Lake, asegurando la alineación con los objetivos estratégicos de la entidad financiera.</li>
                         <li>Integración de fuentes de datos: Garanticé la calidad y coherencia de información al integrar datos internos y externos.</li>
                         <li>Implementación de soluciones analíticas: Diseñé y dirigí dashboards y modelos predictivos para extraer insights significativos.</li>
                         <li>Gestión de proyectos y equipos: Supervisé y coordiné equipos para asegurar la ejecución eficiente del proyecto.</li>
                         <li>Cumplimiento normativo: Aseguré la adherencia a requisitos regulatorios y normativos en el sector financiero.</li>
+                    </ul>
+                    <ul class="job-achievements lang-en">
+                        <li><strong>30% reduction</strong> in operational costs leading the implementation of a Data Lake for ATH Colombia and improving data quality for strategic decision making.</li>
+                        <li>Data Lake design and development: Supported the planning and execution of Data Lake design, ensuring alignment with the financial entity's strategic objectives.</li>
+                        <li>Data source integration: Ensured quality and consistency of information by integrating internal and external data.</li>
+                        <li>Implementation of analytical solutions: Designed and led dashboards and predictive models to extract meaningful insights.</li>
+                        <li>Project and team management: Supervised and coordinated teams to ensure efficient project execution.</li>
+                        <li>Regulatory compliance: Ensured adherence to regulatory and normative requirements in the financial sector.</li>
                     </ul>
                 </div>
 
@@ -1153,19 +1271,29 @@
                     <div class="job-header">
                         <div>
                             <div class="company-name">BBVA</div>
-                            <div class="job-title">Lead Software Development Engineer</div>
+                            <div class="job-title lang-es">Lead Software Development Engineer</div>
+                            <div class="job-title lang-en">Lead Software Development Engineer</div>
                         </div>
-                        <div class="job-period">Ago 2017 - Sep 2019</div>
+                        <div class="job-period lang-es">Ago 2017 - Sep 2019</div>
+                        <div class="job-period lang-en">Aug 2017 - Sep 2019</div>
                     </div>
                     <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
-                        <i class="fas fa-map-marker-alt"></i> Colombia • <i class="fas fa-clock"></i> 2 años 2 meses
+                        <span class="lang-es"><i class="fas fa-map-marker-alt"></i> Colombia • <i class="fas fa-clock"></i> 2 años 2 meses</span>
+                        <span class="lang-en"><i class="fas fa-map-marker-alt"></i> Colombia • <i class="fas fa-clock"></i> 2 years 2 months</span>
                     </div>
-                    <ul class="job-achievements">
+                    <ul class="job-achievements lang-es">
                         <li>Lideré la implementación del proyecto <strong>Gestor Documental</strong> en BBVA Colombia, utilizando tecnologías como MongoDB y Docker, logrando una transformación digital alineada con los objetivos estratégicos.</li>
                         <li>Implementé soluciones robustas y escalables utilizando herramientas como MongoDB, Ansible, Docker y Nuxeo.</li>
                         <li>Gestioné e implementé metodologías ágiles, tradicionales y DevOps para optimizar el ciclo de vida del desarrollo.</li>
                         <li>Coordiné equipos multidisciplinarios, garantizando alineación con los objetivos estratégicos del negocio.</li>
                         <li>Contribuí al proceso de transformación digital de BBVA Colombia, asegurando que el proyecto estuviera alineado con las iniciativas estratégicas.</li>
+                    </ul>
+                    <ul class="job-achievements lang-en">
+                        <li>Led the implementation of the <strong>Document Management</strong> project at BBVA Colombia, using technologies like MongoDB and Docker, achieving digital transformation aligned with strategic objectives.</li>
+                        <li>Implemented robust and scalable solutions using tools like MongoDB, Ansible, Docker and Nuxeo.</li>
+                        <li>Managed and implemented agile, traditional and DevOps methodologies to optimize the development lifecycle.</li>
+                        <li>Coordinated multidisciplinary teams, ensuring alignment with strategic business objectives.</li>
+                        <li>Contributed to BBVA Colombia's digital transformation process, ensuring the project was aligned with strategic initiatives.</li>
                     </ul>
                 </div>
 
@@ -1174,20 +1302,31 @@
                     <div class="job-header">
                         <div>
                             <div class="company-name">BBVA</div>
-                            <div class="job-title">Principal Software Development Engineer</div>
+                            <div class="job-title lang-es">Principal Software Development Engineer</div>
+                            <div class="job-title lang-en">Principal Software Development Engineer</div>
                         </div>
-                        <div class="job-period">Ago 2014 - Ago 2017</div>
+                        <div class="job-period lang-es">Ago 2014 - Ago 2017</div>
+                        <div class="job-period lang-en">Aug 2014 - Aug 2017</div>
                     </div>
                     <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
-                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 3 años 1 mes
+                        <span class="lang-es"><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 3 años 1 mes</span>
+                        <span class="lang-en"><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 3 years 1 month</span>
                     </div>
-                    <ul class="job-achievements">
+                    <ul class="job-achievements lang-es">
                         <li><strong>20% mejora</strong> en eficiencia operativa desarrollando y optimizando soluciones tecnológicas utilizando herramientas modernas como Docker y MongoDB.</li>
                         <li>Trabajé con stack completo: HTML, CSS, JavaScript, Java, Lotusscript, Oracle, MySQL, SQL Server, MongoDB, Docker y Ansible.</li>
                         <li>Implementé metodologías ágiles y tradicionales según las necesidades específicas de cada proyecto.</li>
                         <li>Coordiné con equipos multidisciplinarios para asegurar una ejecución eficiente.</li>
                         <li>Implementé prácticas de aseguramiento de calidad para entregar software de alto rendimiento.</li>
                         <li>Utilicé herramientas como Docker y Ansible para optimizar el despliegue continuo.</li>
+                    </ul>
+                    <ul class="job-achievements lang-en">
+                        <li><strong>20% improvement</strong> in operational efficiency by developing and optimizing technological solutions using modern tools like Docker and MongoDB.</li>
+                        <li>Worked with full stack: HTML, CSS, JavaScript, Java, Lotusscript, Oracle, MySQL, SQL Server, MongoDB, Docker and Ansible.</li>
+                        <li>Implemented agile and traditional methodologies according to the specific needs of each project.</li>
+                        <li>Coordinated with multidisciplinary teams to ensure efficient execution.</li>
+                        <li>Implemented quality assurance practices to deliver high-performance software.</li>
+                        <li>Used tools like Docker and Ansible to optimize continuous deployment.</li>
                     </ul>
                 </div>
 
@@ -1196,19 +1335,29 @@
                     <div class="job-header">
                         <div>
                             <div class="company-name">GLOKAL CONSULTING</div>
-                            <div class="job-title">Desarrollador de Software de TI</div>
+                            <div class="job-title lang-es">Desarrollador de Software de TI</div>
+                            <div class="job-title lang-en">IT Software Developer</div>
                         </div>
-                        <div class="job-period">Abr 2013 - Ago 2014</div>
+                        <div class="job-period lang-es">Abr 2013 - Ago 2014</div>
+                        <div class="job-period lang-en">Apr 2013 - Aug 2014</div>
                     </div>
                     <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
-                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 1 año 5 meses
+                        <span class="lang-es"><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 1 año 5 meses</span>
+                        <span class="lang-en"><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 1 year 5 months</span>
                     </div>
-                    <ul class="job-achievements">
+                    <ul class="job-achievements lang-es">
                         <li>Responsable del análisis, diseño y desarrollo de software para cumplir con las necesidades de los usuarios.</li>
                         <li>Lideré el mantenimiento, adecuación, estabilización y mejoras de aplicativos existentes.</li>
                         <li>Realicé análisis detallados de requisitos para diseñar soluciones efectivas.</li>
                         <li>Trabajé estrechamente con usuarios para alinear proyectos con expectativas.</li>
                         <li>Utilicé tecnologías tanto de frontend como de backend para soluciones eficientes.</li>
+                    </ul>
+                    <ul class="job-achievements lang-en">
+                        <li>Responsible for analysis, design and software development to meet user needs.</li>
+                        <li>Led maintenance, adaptation, stabilization and improvements of existing applications.</li>
+                        <li>Performed detailed requirements analysis to design effective solutions.</li>
+                        <li>Worked closely with users to align projects with expectations.</li>
+                        <li>Used both frontend and backend technologies for efficient solutions.</li>
                     </ul>
                 </div>
 
@@ -1217,20 +1366,50 @@
                     <div class="job-header">
                         <div>
                             <div class="company-name">ANTSS LTDA</div>
-                            <div class="job-title">Desarrollador de Software de TI</div>
+                            <div class="job-title lang-es">Desarrollador de Software de TI</div>
+                            <div class="job-title lang-en">IT Software Developer</div>
                         </div>
-                        <div class="job-period">Abr 2012 - Dic 2012</div>
+                        <div class="job-period lang-es">Abr 2012 - Dic 2012</div>
+                        <div class="job-period lang-en">Apr 2012 - Dec 2012</div>
                     </div>
                     <div style="color: #7f8c8d; margin-bottom: 8px; font-style: italic; font-size: 0.85rem;">
-                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 9 meses
+                        <span class="lang-es"><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 9 meses</span>
+                        <span class="lang-en"><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 9 months</span>
                     </div>
-                    <p style="font-size: 0.9rem; margin-bottom: 8px;">
+                    <p class="lang-es" style="font-size: 0.9rem; margin-bottom: 8px;">
                         Proyecto con la empresa de energía Tunja (EBSA). Análisis, diseño y desarrollo con metodologías UML y RUP. Stack: Java, CSS, ZK, Oracle.
+                    </p>
+                    <p class="lang-en" style="font-size: 0.9rem; margin-bottom: 8px;">
+                        Project with Tunja energy company (EBSA). Analysis, design and development with UML and RUP methodologies. Stack: Java, CSS, ZK, Oracle.
                     </p>
                 </div>
 
             </div>
         </div>
     </div>
+
+    <script>
+        let currentLang = 'es';
+
+        function toggleLanguage() {
+            const langToggle = document.getElementById('langToggle');
+            const esElements = document.querySelectorAll('.lang-es');
+            const enElements = document.querySelectorAll('.lang-en');
+
+            if (currentLang === 'es') {
+                // Switch to English
+                esElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = 'block');
+                langToggle.textContent = 'ES';
+                currentLang = 'en';
+            } else {
+                // Switch to Spanish
+                esElements.forEach(el => el.style.display = 'block');
+                enElements.forEach(el => el.style.display = 'none');
+                langToggle.textContent = 'EN';
+                currentLang = 'es';
+            }
+        }
+    </script>
 </body>
 </html>
