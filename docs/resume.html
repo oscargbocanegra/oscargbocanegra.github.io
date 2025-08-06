@@ -31,7 +31,7 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             overflow: hidden;
             display: grid;
-            grid-template-columns: 350px 1fr;
+            grid-template-columns: 293px 1fr;
             min-height: calc(100vh - 40px);
             border: none;
         }
@@ -607,9 +607,16 @@
 
         /* Print Styles */
         @media print {
+            @page {
+                size: A4;
+                margin: 0.5in 0.4in;
+            }
+
             body {
                 background: white !important;
                 padding: 0;
+                font-size: 11px !important;
+                line-height: 1.4 !important;
             }
             
             .resume-container {
@@ -617,16 +624,141 @@
                 border-radius: 0;
                 max-width: none;
                 min-height: auto;
+                display: grid;
+                grid-template-columns: 227px 1fr;
+                gap: 15px;
             }
             
             .sidebar {
-                background: #1a237e !important;
+                background: #2c3e50 !important;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
+                padding: 0;
+                font-size: 9px;
+            }
+
+            .sidebar-section {
+                padding: 10px 15px;
+                margin-bottom: 0;
+            }
+
+            .sidebar-section h2 {
+                font-size: 0.8rem;
+                margin-bottom: 8px;
+                padding-bottom: 4px;
+            }
+
+            .profile-section {
+                padding: 18px 15px;
+            }
+
+            .profile-name {
+                font-size: 1rem;
+                margin-bottom: 4px;
+            }
+
+            .profile-title {
+                font-size: 0.65rem;
+            }
+
+            .contact-item, .skill-item, .language-item {
+                margin-bottom: 5px;
+                font-size: 8.5px;
+            }
+
+            .certification-badge {
+                font-size: 0.6rem;
+                padding: 2px 5px;
+                margin: 1px;
+            }
+
+            .download-btn {
+                font-size: 0.7rem !important;
+                padding: 5px 8px !important;
+            }
+
+            .main-content {
+                padding: 0;
+                font-size: 11px !important;
+            }
+
+            .header-section {
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+            }
+
+            .name-title {
+                font-size: 1.5rem;
+                margin-bottom: 6px;
+                line-height: 1.1;
+            }
+
+            .professional-title {
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+            }
+
+            .section {
+                margin-bottom: 15px;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+                padding-bottom: 4px;
+            }
+
+            /* Ajustar el extracto profesional al mismo tamaño que las experiencias */
+            .section p {
+                font-size: 0.85rem !important;
+                line-height: 1.3 !important;
+                margin-bottom: 8px;
+            }
+
+            /* EXPERIENCIA PROFESIONAL - Sin restricciones de page-break */
+            .experience-item {
+                margin-bottom: 12px;
+                padding-bottom: 8px;
+                font-size: 11px !important;
+            }
+
+            .job-header {
+                margin-bottom: 6px;
+            }
+
+            .job-title {
+                font-size: 0.95rem !important;
+                margin-bottom: 3px;
+            }
+
+            .company-name {
+                font-size: 0.85rem !important;
+            }
+
+            .job-period {
+                font-size: 0.75rem !important;
+                padding: 3px 8px;
+            }
+
+            .job-achievements {
+                margin-top: 5px;
+            }
+
+            .job-achievements li {
+                margin-bottom: 3px;
+                padding-left: 15px;
+                font-size: 0.85rem !important;
+                line-height: 1.3 !important;
+            }
+
+            /* Permitir salto de página solo después de la 4ta experiencia */
+            .experience-item:nth-child(4) {
+                page-break-after: page;
             }
             
-            .download-section {
-                display: none;
+            /* Forzar salto de página antes de la sección Idiomas */
+            .page-break-before {
+                page-break-before: always;
             }
         }
     </style>
@@ -640,6 +772,7 @@
                 <div class="profile-title">Senior Data Engineer | Big Data & AI Expert</div>
             </div>
 
+            <!-- 1. Contacto -->
             <div class="sidebar-section">
                 <h2><i class="fas fa-address-book"></i> Contacto</h2>
                 <div class="contact-item">
@@ -664,6 +797,47 @@
                 </div>
             </div>
 
+            <!-- 2. Educación -->
+            <div class="sidebar-section">
+                <h2><i class="fas fa-graduation-cap"></i> Educación</h2>
+                
+                <div style="margin-bottom: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <div style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 6px; text-align: center;">2023 - 2025</div>
+                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Máster en Inteligencia Artificial</h4>
+                    <p style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">UNIR – La Universidad en Internet</p>
+                    <p style="font-size: 0.7rem; color: #95a5a6;">Inteligencia Artificial</p>
+                </div>
+
+                <div style="margin-bottom: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <div style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 6px; text-align: center;">2019 - 2020</div>
+                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Master Executive BI y Big Data</h4>
+                    <p style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Instituto Europeo de Posgrado – IEP</p>
+                    <p style="font-size: 0.7rem; color: #95a5a6;">Tecnología en gestión empresarial</p>
+                </div>
+
+                <div style="margin-bottom: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <div style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 6px; text-align: center;">2012 - 2018</div>
+                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Ingeniería de Sistemas</h4>
+                    <p style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Fundación Universitaria San Martín</p>
+                    <p style="font-size: 0.7rem; color: #95a5a6;">Ingeniería Informática</p>
+                </div>
+
+                <div style="margin-bottom: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <div style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 6px; text-align: center;">2018</div>
+                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Grado en Ingeniería</h4>
+                    <p style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Fundación Universitaria San Martín</p>
+                    <p style="font-size: 0.7rem; color: #95a5a6;">Gestión de proyectos de TI</p>
+                </div>
+
+                <div style="margin-bottom: 0;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 6px; text-align: center;">1997 - 2000</div>
+                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Técnico Profesional</h4>
+                    <p style="font-size: 0.75rem; color: #bdc3c7; margin-bottom: 2px;">Instituto Superior INSUTEC</p>
+                    <p style="font-size: 0.7rem; color: #95a5a6;">Ingeniería de Sistemas</p>
+                </div>
+            </div>
+
+            <!-- 3. Aptitudes Principales -->
             <div class="sidebar-section">
                 <h2><i class="fas fa-star"></i> Aptitudes Principales</h2>
                 <div class="skill-item">
@@ -713,27 +887,7 @@
                 </div>
             </div>
 
-            <div class="sidebar-section">
-                <h2><i class="fas fa-globe-americas"></i> Idiomas</h2>
-                <div class="languages-grid">
-                    <div class="language-item">
-                        <span class="language-flag">🇪🇸</span>
-                        <div>Español: <strong>Nativo</strong></div>
-                    </div>
-                    <div class="language-item">
-                        <span class="language-flag">🇺🇸</span>
-                        <div>Inglés: <strong>Intermedio</strong></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sidebar-section">
-                <h2><i class="fas fa-certificate"></i> Certificaciones</h2>
-                <div class="certification-badge">Elastic Stack 7</div>
-                <div class="certification-badge">Stratio Generative AI Data Fabric Basics</div>
-                <div class="certification-badge">Microsoft Azure Fundamentals</div>
-            </div>
-
+            <!-- 4. Habilidades Técnicas -->
             <div class="sidebar-section">
                 <h2><i class="fas fa-cogs"></i> Habilidades Técnicas</h2>
                 
@@ -805,12 +959,49 @@
                 </div>
             </div>
 
+            <!-- 5. Certificaciones -->
+            <div class="sidebar-section">
+                <h2><i class="fas fa-certificate"></i> Certificaciones</h2>
+                <div class="certification-badge">Elastic Stack 7</div>
+                <div class="certification-badge">Stratio Generative AI Data Fabric Basics</div>
+                <div class="certification-badge">Microsoft Azure Fundamentals</div>
+            </div>
+
+            <!-- 6. Idiomas -->
+            <div class="sidebar-section page-break-before">
+                <h2><i class="fas fa-globe-americas"></i> 
+                Idiomas
+                </h2>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <span class="language-flag">🇪🇸</span>
+                        <div>Español: <strong>Nativo</strong></div>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-flag">🇺🇸</span>
+                        <div>Inglés: <strong>Intermedio</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Honores -->
             <div class="sidebar-section">
                 <h2><i class="fas fa-trophy"></i> Honores</h2>
                 <div style="padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px; text-align: center;">
                     <i class="fas fa-award" style="font-size: 1.5rem; margin-bottom: 8px; color: #1976d2;"></i>
                     <div style="font-size: 0.9rem; font-weight: 500;">Evaluador BBVA Open Talent</div>
                     <div style="font-size: 0.8rem; opacity: 0.8;">2018</div>
+                </div>
+            </div>
+
+            <!-- 8. Descargar CV -->
+            <div class="sidebar-section">
+                <h2><i class="fas fa-download"></i> Descargar CV</h2>
+                <div style="text-align: center;">
+                    <a href="cv-oscar-bocanegra.pdf" class="download-btn" download="CV-Oscar-Giovanni-Bocanegra.pdf" style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; color: #2c3e50; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; border: none; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-transform: uppercase; letter-spacing: 0.5px;">
+                        <i class="fas fa-download"></i>
+                        Descargar PDF
+                    </a>
                 </div>
             </div>
         </div>
@@ -991,133 +1182,14 @@
                         </div>
                         <div class="job-period">Abr 2012 - Dic 2012</div>
                     </div>
-                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
+                    <div style="color: #7f8c8d; margin-bottom: 8px; font-style: italic; font-size: 0.85rem;">
                         <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 9 meses
                     </div>
-                    <ul class="job-achievements">
-                        <li>Lideré un proyecto clave con la empresa de energía Tunja (EBSA).</li>
-                        <li>Responsable del análisis detallado y levantamiento de información para comprender los requisitos del proyecto.</li>
-                        <li>Utilicé metodologías UML y RUP para diseñar soluciones sólidas y bien estructuradas.</li>
-                        <li>Implementé la solución con tecnologías Java para garantizar un desarrollo eficiente y sostenible.</li>
-                        <li>Trabajé con CSS y ZK para mejorar la interfaz de usuario y la experiencia general.</li>
-                        <li>Garanticé la gestión segura y eficiente de información con base de datos Oracle.</li>
-                    </ul>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;">
+                        Proyecto con la empresa de energía Tunja (EBSA). Análisis, diseño y desarrollo con metodologías UML y RUP. Stack: Java, CSS, ZK, Oracle.
+                    </p>
                 </div>
 
-                <!-- WORLD OFFICE -->
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div>
-                            <div class="company-name">WORLD OFFICE</div>
-                            <div class="job-title">Técnico de Soporte a Usuarios</div>
-                        </div>
-                        <div class="job-period">Mar 2009 - Mar 2011</div>
-                    </div>
-                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
-                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 2 años 1 mes
-                    </div>
-                    <ul class="job-achievements">
-                        <li>Soporte técnico a nivel del producto contable World Office.</li>
-                        <li>Interacción con el cliente mediante audios o sesiones personalizadas donde se busca la mejora constante.</li>
-                        <li>Estabilización del producto tomando como referencia lo compartido por el usuario.</li>
-                    </ul>
-                </div>
-
-                <!-- NOVAG INGENIERIA -->
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div>
-                            <div class="company-name">NOVAG INGENIERIA</div>
-                            <div class="job-title">Técnico de Soporte a Usuarios</div>
-                        </div>
-                        <div class="job-period">Jun 2008 - Feb 2009</div>
-                    </div>
-                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
-                        <i class="fas fa-map-marker-alt"></i> Bogotá, Colombia • <i class="fas fa-clock"></i> 9 meses
-                    </div>
-                    <ul class="job-achievements">
-                        <li>Soporte Técnico en proyecto CPE computadores para educar (Zona Santander).</li>
-                        <li>Mantenimiento preventivo, actualización de sistemas operativos para el proyecto CPE.</li>
-                        <li>Proyecto Altamira Movistar: Instalación centro de cómputo cableado estructurado, fibra óptica instalación de servidores.</li>
-                        <li>Proyecto Telecom: Mantenimiento, preventivo de estaciones de trabajo Desktop y laptop configuración, actualización, y migración de procesos.</li>
-                    </ul>
-                </div>
-
-                <!-- Bancolombia -->
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div>
-                            <div class="company-name">Bancolombia</div>
-                            <div class="job-title">Auxiliar Responsable de Operaciones</div>
-                        </div>
-                        <div class="job-period">Feb 1999 - Abr 2007</div>
-                    </div>
-                    <div style="color: #7f8c8d; margin-bottom: 15px; font-style: italic;">
-                        <i class="fas fa-map-marker-alt"></i> Colombia • <i class="fas fa-clock"></i> 8 años 3 meses
-                    </div>
-                    <ul class="job-achievements">
-                        <li><strong>Mayo 2004 – Abril 2007:</strong> Auxiliar de cuadre de canje para las oficinas de Bogotá y sabana. Supervisión de las oficinas, monitoreo de transacciones con banco república por medio de programa Sebra, emisario de Bancolombia ante la entidad banco república.</li>
-                        <li><strong>Junio 2002 – Mayo 2004:</strong> Auxiliar de Imágenes, cuadre de documentos físicos de oficina, atención de solicitudes generadas por oficina, generación de extractos para clientes, atención de oficios públicos, soporte back office, manejo de plataforma AS 400.</li>
-                        <li><strong>Febrero 1999 – Junio 2002:</strong> Auxiliar atención de archivo inactivo a diferentes áreas del banco, clasificación de documentos por tiempos de conservación, depuración de archivo por tiempo cumplido según el tipo de documentos.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">Educación</h2>
-                
-                <div class="education-item">
-                    <div class="education-year">2023 - 2025</div>
-                    <div class="education-content">
-                        <h3>Máster Universitario en Inteligencia Artificial</h3>
-                        <p>UNIR – La Universidad en Internet</p>
-                        <p>Inteligencia Artificial</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-year">2019 - 2020</div>
-                    <div class="education-content">
-                        <h3>Master Executive en Business Intelligence y Big Data</h3>
-                        <p>Instituto Europeo de Posgrado – IEP</p>
-                        <p>Tecnología en la gestión empresarial/Procesamiento de datos</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-year">2018 - 2018</div>
-                    <div class="education-content">
-                        <h3>Grado en Ingeniería</h3>
-                        <p>Fundación Universitaria San Martín</p>
-                        <p>Gestión de proyectos de tecnología de la información</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-year">2012 - 2018</div>
-                    <div class="education-content">
-                        <h3>Ingeniería de Sistemas</h3>
-                        <p>Fundación Universitaria San Martín</p>
-                        <p>Ingeniería Informática</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-year">1997 - 2000</div>
-                    <div class="education-content">
-                        <h3>Técnico Profesional en Ingeniería de Sistemas</h3>
-                        <p>Instituto Superior de Carreras Técnicas INSUTEC</p>
-                        <p>Facultad de Ingeniería de Sistemas</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="download-section">
-                <h3 style="margin-bottom: 15px;">Descargar CV</h3>
-                <a href="cv-oscar-bocanegra.pdf" class="download-btn" download="CV-Oscar-Giovanni-Bocanegra.pdf">
-                    <i class="fas fa-download"></i>
-                    Descargar PDF
-                </a>
             </div>
         </div>
     </div>
