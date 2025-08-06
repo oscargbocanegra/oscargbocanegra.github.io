@@ -1106,11 +1106,8 @@
             <!-- 8. Descargar CV -->
             <div class="sidebar-section" style="margin-top: 20px;">
                 <h2 style="cursor: pointer; transition: color 0.3s ease;">
-                    <a href="cv-oscar-bocanegra.pdf" download="CV-Oscar-Giovanni-Bocanegra-ES.pdf" style="color: inherit; text-decoration: none; display: flex; align-items: center;" class="lang-es">
-                        <span><i class="fas fa-download"></i> Descargar CV</span>
-                    </a>
-                    <a href="cv-oscar-bocanegra-en.pdf" download="CV-Oscar-Giovanni-Bocanegra-EN.pdf" style="color: inherit; text-decoration: none; display: flex; align-items: center;" class="lang-en">
-                        <span><i class="fas fa-download"></i> Download CV</span>
+                    <a id="downloadLink" href="cv-oscar-bocanegra.pdf" download="CV-Oscar-Giovanni-Bocanegra-ES.pdf" style="color: inherit; text-decoration: none; display: flex; align-items: center;">
+                        <span id="downloadText"><i class="fas fa-download"></i> Descargar CV</span>
                     </a>
                 </h2>
             </div>
@@ -1395,6 +1392,8 @@
             const langToggle = document.getElementById('langToggle');
             const esElements = document.querySelectorAll('.lang-es');
             const enElements = document.querySelectorAll('.lang-en');
+            const downloadLink = document.getElementById('downloadLink');
+            const downloadText = document.getElementById('downloadText');
 
             if (currentLang === 'es') {
                 // Switch to English
@@ -1402,12 +1401,22 @@
                 enElements.forEach(el => el.style.display = 'block');
                 langToggle.textContent = 'ES';
                 currentLang = 'en';
+                
+                // Update download link for English
+                downloadLink.href = 'cv-oscar-bocanegra-en.pdf';
+                downloadLink.download = 'CV-Oscar-Giovanni-Bocanegra-EN.pdf';
+                downloadText.innerHTML = '<i class="fas fa-download"></i> Download CV';
             } else {
                 // Switch to Spanish
                 esElements.forEach(el => el.style.display = 'block');
                 enElements.forEach(el => el.style.display = 'none');
                 langToggle.textContent = 'EN';
                 currentLang = 'es';
+                
+                // Update download link for Spanish
+                downloadLink.href = 'cv-oscar-bocanegra.pdf';
+                downloadLink.download = 'CV-Oscar-Giovanni-Bocanegra-ES.pdf';
+                downloadText.innerHTML = '<i class="fas fa-download"></i> Descargar CV';
             }
         }
     </script>
