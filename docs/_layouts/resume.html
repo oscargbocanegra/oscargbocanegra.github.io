@@ -15,32 +15,16 @@
     {{ content }}
 
     <script>
-        let currentLang = 'es';
-
         function toggleLanguage() {
+            const isEN = document.body.classList.toggle('lang-en-active');
             const langToggle = document.getElementById('langToggle');
-            const esElements = document.querySelectorAll('.lang-es');
-            const enElements = document.querySelectorAll('.lang-en');
-            const downloadLink = document.getElementById('downloadLink');
             const downloadText = document.getElementById('downloadText');
+            langToggle.textContent = isEN ? 'ES' : 'EN';
+            downloadText.textContent = isEN ? 'Download CV' : 'Descargar CV';
+        }
 
-            if (currentLang === 'es') {
-                esElements.forEach(el => el.style.display = 'none');
-                enElements.forEach(el => el.style.display = 'block');
-                langToggle.textContent = 'ES';
-                currentLang = 'en';
-                downloadLink.href = 'cv-oscar-bocanegra-en.pdf';
-                downloadLink.download = 'CV-Oscar-Giovanni-Bocanegra-EN.pdf';
-                downloadText.textContent = 'Download CV';
-            } else {
-                esElements.forEach(el => el.style.display = 'block');
-                enElements.forEach(el => el.style.display = 'none');
-                langToggle.textContent = 'EN';
-                currentLang = 'es';
-                downloadLink.href = 'cv-oscar-bocanegra.pdf';
-                downloadLink.download = 'CV-Oscar-Giovanni-Bocanegra-ES.pdf';
-                downloadText.textContent = 'Descargar CV';
-            }
+        function downloadCV() {
+            window.print();
         }
     </script>
 </body>

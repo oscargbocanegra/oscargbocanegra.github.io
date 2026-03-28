@@ -28,7 +28,6 @@ body {
     overflow: hidden;
     display: grid;
     grid-template-columns: 293px 1fr;
-    min-height: calc(100vh - 40px);
 }
 
 /* Sidebar Styles */
@@ -52,29 +51,45 @@ body {
 
 .profile-section {
     text-align: center;
-    margin-bottom: 0;
     position: relative;
     background: rgba(255,255,255,0.02);
-    padding: 40px 30px;
+    padding: 36px 24px 28px;
     border-bottom: 1px solid rgba(255,255,255,0.05);
     z-index: 2;
 }
 
-.profile-name {
-    font-size: 1.5rem;
+.profile-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(59,130,246,0.15);
+    border: 2px solid rgba(59,130,246,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 8px;
+    letter-spacing: 1px;
+    color: #93c5fd;
+    font-family: 'Inter', sans-serif;
+}
+
+.profile-role {
+    font-size: 0.88rem;
+    font-weight: 700;
     color: #ffffff;
+    margin-bottom: 6px;
+    line-height: 1.3;
     letter-spacing: -0.01em;
 }
 
-.profile-title {
-    font-size: 0.8rem;
-    opacity: 0.9;
-    font-weight: 500;
+.profile-stack {
+    font-size: 0.68rem;
     color: #60a5fa;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-weight: 500;
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
 .sidebar-section {
@@ -228,6 +243,14 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
     border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.sidebar-download-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
 }
 
 .sidebar-download-btn i {
@@ -500,10 +523,13 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
-/* Hide elements by default */
-.lang-en {
-    display: none;
-}
+/* Language visibility — controlled by body class */
+/* Default: ES visible, EN hidden */
+.lang-en { display: none; }
+
+/* When body has .lang-en-active: EN visible, ES hidden */
+body.lang-en-active .lang-en { display: revert; }
+body.lang-en-active .lang-es { display: none; }
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -542,163 +568,498 @@ body {
     }
 }
 
-/* Print Styles */
+/* =====================================================
+   SIDEBAR — Nuevos componentes
+   ===================================================== */
+
+/* Educación compacta */
+.edu-item {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.edu-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.edu-year {
+    display: inline-block;
+    background: rgba(59,130,246,0.2);
+    color: #93c5fd;
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+}
+.edu-degree {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 2px;
+    line-height: 1.3;
+}
+.edu-school {
+    font-size: 0.7rem;
+    color: #94a3b8;
+}
+
+/* Tech badges */
+.badge-group-label {
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 10px 0 5px 0;
+}
+.badge-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+.tech-pill {
+    display: inline-block;
+    background: rgba(59,130,246,0.15);
+    color: #93c5fd;
+    border: 1px solid rgba(59,130,246,0.25);
+    padding: 2px 7px;
+    border-radius: 3px;
+    font-size: 0.68rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Certificaciones */
+.cert-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    margin-bottom: 7px;
+    line-height: 1.3;
+}
+.cert-item i {
+    color: #3b82f6;
+    font-size: 0.65rem;
+    flex-shrink: 0;
+}
+
+/* Idiomas */
+.lang-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+    font-size: 0.78rem;
+}
+.lang-flag {
+    font-size: 1rem;
+}
+.lang-name {
+    color: #f1f5f9;
+    font-weight: 500;
+    flex: 1;
+}
+.lang-level {
+    color: #60a5fa;
+    font-size: 0.68rem;
+    font-weight: 500;
+}
+
+/* =====================================================
+   MAIN CONTENT — Nuevos componentes
+   ===================================================== */
+
+/* Job meta (ubicación) */
+.job-meta {
+    color: #64748b;
+    font-size: 0.82rem;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+.job-meta i {
+    margin-right: 4px;
+    font-size: 0.75rem;
+}
+
+/* Experiencia compacta (2012-2014) */
+.experience-compact .company-name {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+.compact-exp {
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-top: 4px;
+}
+
+/* Honor */
+.honor-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: #334155;
+    line-height: 1.5;
+}
+.honor-icon {
+    color: #2563eb;
+    font-size: 1.1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* =====================================================
+   PRINT / PDF STYLES
+   Objetivo: 2 páginas máximo, respiración, legibilidad
+   ===================================================== */
 @media print {
     @page {
         size: A4;
-        margin: 0.5in 0.4in;
+        margin: 14mm 12mm 14mm 12mm;
     }
 
+    /* --- Ocultar UI chrome --- */
+    .language-toggle,
+    .sidebar-download-btn {
+        display: none !important;
+    }
+
+    /* --- Reset body --- */
     body {
         background: white !important;
-        padding: 0;
-        font-size: 11px !important;
-        line-height: 1.4 !important;
-    }
-
-    .resume-container {
-        box-shadow: none;
-        border-radius: 0;
-        max-width: none;
-        min-height: auto;
-        display: grid;
-        grid-template-columns: 227px 1fr;
-        gap: 15px;
-    }
-
-    .sidebar {
-        background: #2c3e50 !important;
+        padding: 0 !important;
+        margin: 0 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        padding: 0;
-        font-size: 9px;
     }
 
-    .sidebar-section {
-        padding: 10px 15px;
-        margin-bottom: 0;
+    /* --- Layout principal: sidebar angosto, main amplio --- */
+    /* El fondo azul va en el CONTAINER como gradiente de 2 columnas,
+       así cubre toda la altura del PDF sin importar cuántas páginas haya */
+    .resume-container {
+        display: grid !important;
+        grid-template-columns: 190px 1fr !important;
+        gap: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        max-width: none !important;
+        min-height: auto !important;
+        width: 100% !important;
+        align-items: start !important;
+        background: linear-gradient(to right, #1a2744 190px, #ffffff 190px) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
-    .sidebar-section h2 {
-        font-size: 0.8rem;
-        margin-bottom: 8px;
-        padding-bottom: 4px;
+    /* ---- SIDEBAR ---- */
+    .sidebar {
+        background: transparent !important;
+        padding: 0 !important;
+        height: fit-content !important;
+        align-self: start !important;
+        overflow: visible !important;
+    }
+
+    .sidebar::before {
+        display: none !important;
     }
 
     .profile-section {
-        padding: 18px 15px;
+        padding: 18px 14px 14px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
     }
 
-    .profile-name {
-        font-size: 1rem;
-        margin-bottom: 4px;
+    .profile-avatar {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 0.78rem !important;
+        margin-bottom: 10px !important;
+        border: 1.5px solid rgba(59,130,246,0.5) !important;
+        background: rgba(59,130,246,0.15) !important;
+        color: #93c5fd !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
-    .profile-title {
-        font-size: 0.65rem;
+    .profile-role {
+        font-size: 0.72rem !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        margin-bottom: 4px !important;
+        line-height: 1.3 !important;
     }
 
-    .contact-item, .skill-item, .language-item {
-        margin-bottom: 5px;
-        font-size: 8.5px;
+    .profile-stack {
+        font-size: 0.58rem !important;
+        color: #60a5fa !important;
+        line-height: 1.5 !important;
     }
 
-    .certification-badge {
-        font-size: 0.6rem;
-        padding: 2px 5px;
-        margin: 1px;
+    .sidebar-section {
+        padding: 10px 14px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+        break-inside: avoid;
     }
 
-    .download-btn {
+    .sidebar-section:last-child {
+        border-bottom: none !important;
+        padding-bottom: 16px !important;
+    }
+
+    .sidebar-section h2 {
+        font-size: 0.58rem !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 8px !important;
+        padding-bottom: 4px !important;
+        color: #94a3b8 !important;
+    }
+
+    .sidebar-section h2::after {
+        width: 20px !important;
+        height: 1px !important;
+        background: #3b82f6 !important;
+    }
+
+    /* Contacto */
+    .contact-item {
+        margin-bottom: 6px !important;
+        padding: 2px 0 !important;
+    }
+
+    .contact-item i {
         font-size: 0.7rem !important;
-        padding: 5px 8px !important;
+        width: 14px !important;
+        margin-right: 7px !important;
+        color: #60a5fa !important;
     }
 
+    .contact-item a,
+    .contact-item span {
+        font-size: 0.68rem !important;
+        color: #cbd5e1 !important;
+        word-break: break-all !important;
+    }
+
+    /* Skills como badges, no como barras */
+    .skill-item {
+        margin-bottom: 4px !important;
+    }
+
+    .skill-bar {
+        display: none !important;
+    }
+
+    .skill-name {
+        font-size: 0.65rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    .skill-name span:last-child {
+        display: none !important;
+    }
+
+    /* Educación sidebar */
+    .sidebar-section [style*="margin-bottom: 15px"] {
+        margin-bottom: 8px !important;
+        padding-bottom: 6px !important;
+    }
+
+    /* ---- MAIN CONTENT ---- */
     .main-content {
-        padding: 0;
-        font-size: 11px !important;
+        padding: 16px 20px 16px 18px !important;
+        background: #ffffff !important;
+        overflow: visible !important;
     }
 
     .header-section {
-        margin-bottom: 15px;
-        padding-bottom: 10px;
+        margin-bottom: 12px !important;
+        padding-bottom: 10px !important;
     }
 
     .name-title {
-        font-size: 1.5rem;
-        margin-bottom: 6px;
-        line-height: 1.1;
+        font-size: 1.4rem !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        margin-bottom: 4px !important;
+        line-height: 1.1 !important;
     }
 
     .professional-title {
-        font-size: 0.85rem;
-        margin-bottom: 8px;
+        font-size: 0.72rem !important;
+        color: #475569 !important;
+        line-height: 1.5 !important;
+        margin-bottom: 0 !important;
     }
 
+    /* Secciones */
     .section {
-        margin-bottom: 15px;
+        margin-bottom: 12px !important;
+    }
+
+    /* Solo secciones pequeñas evitan romperse */
+    .section:not(:has(.experience-item)) {
+        break-inside: avoid;
     }
 
     .section-title {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-        padding-bottom: 4px;
+        font-size: 0.68rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 1.2px !important;
+        color: #1a2744 !important;
+        margin-bottom: 8px !important;
+        padding-bottom: 4px !important;
+        border-bottom: 1.5px solid #e2e8f0 !important;
+        text-transform: uppercase !important;
     }
 
-    .section p {
-        font-size: 0.85rem !important;
-        line-height: 1.3 !important;
-        margin-bottom: 8px;
+    /* Extracto profesional */
+    .section > p {
+        font-size: 0.72rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 5px !important;
+        color: #334155 !important;
     }
 
+    /* Experiencia */
     .experience-item {
-        margin-bottom: 12px;
-        padding: 8px 10px;
-        font-size: 11px !important;
+        margin-bottom: 10px !important;
+        padding: 0 0 10px 0 !important;
+        border-bottom: 1px solid #f1f5f9 !important;
         background: none !important;
-        border-radius: 0 !important;
-        border-left: 2px solid #2c3e50 !important;
-        border-image: none !important;
         box-shadow: none !important;
-        transform: none !important;
+        break-inside: avoid;
+    }
+
+    .experience-item:last-child {
+        border-bottom: none !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
     }
 
     .job-header {
-        margin-bottom: 6px;
-    }
-
-    .job-title {
-        font-size: 0.95rem !important;
-        margin-bottom: 3px;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        margin-bottom: 2px !important;
+        gap: 6px !important;
     }
 
     .company-name {
-        font-size: 0.85rem !important;
+        font-size: 0.72rem !important;
+        font-weight: 700 !important;
+        color: #2563eb !important;
+        margin-bottom: 1px !important;
+    }
+
+    .job-title {
+        font-size: 0.78rem !important;
+        font-weight: 600 !important;
+        color: #0f172a !important;
+        margin-bottom: 1px !important;
     }
 
     .job-period {
-        font-size: 0.75rem !important;
-        padding: 3px 8px;
+        font-size: 0.62rem !important;
+        padding: 2px 7px !important;
+        background: #f1f5f9 !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #475569 !important;
+        border-radius: 3px !important;
+        white-space: nowrap !important;
     }
 
     .job-achievements {
-        margin-top: 5px;
+        margin-top: 4px !important;
+        list-style: none !important;
     }
 
     .job-achievements li {
-        margin-bottom: 3px;
-        padding-left: 15px;
-        font-size: 0.85rem !important;
-        line-height: 1.3 !important;
+        font-size: 0.7rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 3px !important;
+        padding-left: 12px !important;
+        color: #334155 !important;
     }
 
-    /* Permitir salto de página solo después de la 4ta experiencia */
-    .experience-item:nth-child(4) {
-        page-break-after: page;
+    .job-achievements li::before {
+        width: 4px !important;
+        height: 4px !important;
+        top: 6px !important;
+        background: #3b82f6 !important;
     }
 
-    /* Forzar salto de página antes de la sección Idiomas */
+    /* Salto de página controlado */
     .page-break-before {
-        page-break-before: always;
+        break-before: page !important;
+    }
+
+    /* Nuevos componentes en print */
+    .edu-item {
+        margin-bottom: 6px !important;
+        padding-bottom: 5px !important;
+    }
+    .edu-year {
+        font-size: 0.58rem !important;
+        padding: 1px 5px !important;
+    }
+    .edu-degree {
+        font-size: 0.68rem !important;
+    }
+    .edu-school {
+        font-size: 0.62rem !important;
+    }
+
+    .badge-group-label {
+        font-size: 0.55rem !important;
+        margin: 6px 0 3px 0 !important;
+    }
+    .tech-pill {
+        font-size: 0.6rem !important;
+        padding: 1px 5px !important;
+        background: rgba(59,130,246,0.15) !important;
+        color: #93c5fd !important;
+        border: 1px solid rgba(59,130,246,0.25) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .cert-item {
+        font-size: 0.62rem !important;
+        margin-bottom: 4px !important;
+    }
+
+    .lang-item {
+        font-size: 0.65rem !important;
+        margin-bottom: 4px !important;
+    }
+
+    .job-meta {
+        font-size: 0.65rem !important;
+        margin-bottom: 4px !important;
+    }
+
+    .compact-exp {
+        font-size: 0.65rem !important;
+        line-height: 1.5 !important;
+        color: #475569 !important;
+    }
+
+    .honor-item {
+        padding: 7px 10px !important;
+        font-size: 0.68rem !important;
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        break-inside: avoid;
     }
 }
