@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // =====================
     // Tema claro/oscuro
+    // =====================
     const themeToggle = document.getElementById('theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Verificar si existe una preferencia guardada
+
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
@@ -12,8 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (prefersDarkScheme.matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
     }
-    
-    // Cambiar el tema al hacer clic en el botón
+
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             let theme;
@@ -28,184 +28,219 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Animaciones al hacer scroll
+    // =====================
+    // Animaciones al hacer scroll (fade in sections)
+    // =====================
     const animateOnScroll = () => {
-        const sections = document.querySelectorAll('.expertise, .skills-section, .featured-projects, .testimonials, .certifications, .cta');
-        
+        const sections = document.querySelectorAll(
+            '.expertise, .skills-section, .featured-projects, .testimonials, .certifications, .cta, .stats-section, .contact-options, .faq-section, .education-certification, .professional-journey, .skills-values, .about-intro'
+        );
         sections.forEach(section => {
             const sectionTop = section.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
-            
-            if (sectionTop < windowHeight * 0.85) {
+            if (sectionTop < windowHeight * 0.88) {
                 section.classList.add('animate-in');
             }
         });
     };
 
-    // Inicializar animaciones
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Ejecutar una vez al cargar la página
-    
-    // Testimonios slider
-    let currentTestimonial = 0;
-    const testimonials = document.querySelectorAll('.testimonial');
-    const totalTestimonials = testimonials.length;
-    
-    if (totalTestimonials > 2) { // Solo activar el slider si hay más de 2 testimonios
-        const rotateTestimonials = () => {
-            testimonials.forEach((testimonial, index) => {
-                testimonial.style.display = 'none';
+    window.addEventListener('scroll', animateOnScroll, { passive: true });
+    animateOnScroll();
+
+    // =====================
+    // Animación de barras de habilidades (fix: lee data-width del HTML)
+    // =====================
+    const skillBars = document.querySelectorAll('.skill-bar span[data-width]');
+    let skillBarsAnimated = false;
+
+    const animateSkillBars = () => {
+        if (skillBarsAnimated) return;
+        const firstBar = skillBars[0];
+        if (!firstBar) return;
+
+        const barTop = firstBar.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (barTop < windowHeight * 0.92) {
+            skillBarsAnimated = true;
+            skillBars.forEach((bar, i) => {
+                const targetWidth = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, i * 80);
             });
-            
-            testimonials[currentTestimonial].style.display = 'block';
-            testimonials[currentTestimonial === totalTestimonials - 1 ? 0 : currentTestimonial + 1].style.display = 'block';
-            
-            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+        }
+    };
+
+    window.addEventListener('scroll', animateSkillBars, { passive: true });
+    // Intentar al inicio también (si la sección ya es visible)
+    setTimeout(animateSkillBars, 400);
+
+    // =====================
+    // Contador animado para stats
+    // =====================
+    const animateCounters = () => {
+        const counters = document.querySelectorAll('.stat-number[data-target]');
+        if (counters.length === 0) return;
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'), 10);
+            const suffix = counter.getAttribute('data-suffix') || '';
+            const duration = 1800;
+            const step = Math.ceil(duration / target);
+            let current = 0;
+
+            const update = () => {
+                current += Math.max(1, Math.round(target / (duration / 16)));
+                if (current >= target) {
+                    counter.textContent = target + suffix;
+                    return;
+                }
+                counter.textContent = current + suffix;
+                requestAnimationFrame(update);
+            };
+            requestAnimationFrame(update);
+        });
+    };
+
+    // Disparar counters cuando la sección de stats entra en viewport
+    const statsSection = document.querySelector('.stats-section');
+    let statsAnimated = false;
+
+    if (statsSection) {
+        const checkStats = () => {
+            if (statsAnimated) return;
+            const top = statsSection.getBoundingClientRect().top;
+            if (top < window.innerHeight * 0.9) {
+                statsAnimated = true;
+                animateCounters();
+            }
         };
-        
-        setInterval(rotateTestimonials, 5000); // Cambiar testimonios cada 5 segundos
+        window.addEventListener('scroll', checkStats, { passive: true });
+        checkStats();
     }
 
+    // =====================
     // Navbar activa al hacer scroll
-    const sections = document.querySelectorAll('main > section');
+    // =====================
+    const sections = document.querySelectorAll('main > section[id]');
     const navLinks = document.querySelectorAll('nav ul li a');
-    
+
     const updateActiveNavLink = () => {
         let current = '';
-        
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (window.scrollY >= sectionTop - 100) {
+            if (window.scrollY >= sectionTop - 120) {
                 current = section.getAttribute('id') || '';
             }
         });
-        
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
+            const href = link.getAttribute('href') || '';
+            if (current && href.includes(current)) {
                 link.classList.add('active');
             }
         });
     };
-    
-    window.addEventListener('scroll', updateActiveNavLink);
-    
-    // Animaciones para las barras de habilidades
-    const skillBars = document.querySelectorAll('.skill-bar span');
-    
-    const animateSkillBars = () => {
-        skillBars.forEach(bar => {
-            const barTop = bar.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (barTop < windowHeight * 0.9) {
-                bar.style.width = bar.style.width || '0%';
-                bar.style.transition = 'width 1s ease-out';
-            }
-        });
-    };
-    
-    window.addEventListener('scroll', animateSkillBars);
-    
-    // Filtros para proyectos en la página de proyectos
+
+    window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+
+    // =====================
+    // Filtros para proyectos
+    // =====================
     const projectFilters = document.querySelectorAll('.project-filter');
     const projectItems = document.querySelectorAll('.project-item');
-    
+
     if (projectFilters.length > 0) {
         projectFilters.forEach(filter => {
-            filter.addEventListener('click', function() {
+            filter.addEventListener('click', function () {
                 const filterValue = this.getAttribute('data-filter');
-                
                 projectFilters.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
-                
                 projectItems.forEach(item => {
-                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
+                    item.style.display = (filterValue === 'all' || item.classList.contains(filterValue)) ? 'block' : 'none';
                 });
             });
         });
     }
-    
-    // Formulario de contacto (validación básica)
+
+    // =====================
+    // FAQ accordion
+    // =====================
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        }
+    });
+
+    // =====================
+    // Formulario de contacto
+    // =====================
     const contactForm = document.getElementById('contactForm');
-    
     if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
+        contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
-            
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
-            
             let isValid = true;
-            
-            // Validación básica
-            if (nameInput.value.trim() === '') {
-                isValid = false;
-                nameInput.classList.add('error');
-            } else {
-                nameInput.classList.remove('error');
-            }
-            
-            if (emailInput.value.trim() === '' || !isValidEmail(emailInput.value)) {
-                isValid = false;
-                emailInput.classList.add('error');
-            } else {
-                emailInput.classList.remove('error');
-            }
-            
-            if (messageInput.value.trim() === '') {
-                isValid = false;
-                messageInput.classList.add('error');
-            } else {
-                messageInput.classList.remove('error');
-            }
-            
+
+            [nameInput, emailInput, messageInput].forEach(input => {
+                if (!input) return;
+                if (input.value.trim() === '' || (input.type === 'email' && !isValidEmail(input.value))) {
+                    isValid = false;
+                    input.classList.add('error');
+                } else {
+                    input.classList.remove('error');
+                }
+            });
+
             if (isValid) {
-                // Aquí se puede agregar el código para enviar el formulario
-                // Por ahora, solo mostraremos un mensaje
                 const formMessage = document.getElementById('formMessage');
-                formMessage.textContent = '¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.';
-                formMessage.classList.add('success-message');
-                contactForm.reset();
-                
-                setTimeout(() => {
-                    formMessage.textContent = '';
-                    formMessage.classList.remove('success-message');
-                }, 5000);
+                if (formMessage) {
+                    formMessage.textContent = '¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.';
+                    formMessage.classList.add('success-message');
+                    contactForm.reset();
+                    setTimeout(() => {
+                        formMessage.textContent = '';
+                        formMessage.classList.remove('success-message');
+                    }, 6000);
+                }
             }
         });
     }
-    
-    // Función para validar email
+
     function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 });
 
-// Efecto de tipeo en la página principal
-if (document.querySelector('.hero-content h2')) {
-    const text = document.querySelector('.hero-content h2').textContent;
-    const typeSpeed = 50; // Velocidad de tipeo en ms
-    
-    if (window.innerWidth > 768) { // Solo en pantallas grandes
-        document.querySelector('.hero-content h2').textContent = '';
-        
-        let charIndex = 0;
-        function typeText() {
-            if (charIndex < text.length) {
-                document.querySelector('.hero-content h2').textContent += text.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeText, typeSpeed);
-            }
-        }
-        
-        // Iniciar el efecto después de un pequeño retraso
-        setTimeout(typeText, 500);
-    }
-}
+// =====================
+// Typing effect (preserva spans.highlight en el h2)
+// =====================
+(function () {
+    const heroH2 = document.querySelector('.hero-content h2');
+    if (!heroH2 || window.innerWidth <= 768) return;
+
+    // Clonar el nodo para extraer el HTML original
+    const originalHTML = heroH2.innerHTML;
+    const words = heroH2.textContent.split(' ');
+
+    // Reconstruir el contenido preservando el HTML (spans)
+    // Efecto: fade-in suave del h2 completo después de un delay
+    heroH2.style.opacity = '0';
+    heroH2.style.transform = 'translateY(12px)';
+    heroH2.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    heroH2.innerHTML = originalHTML; // Asegurar que el HTML con spans esté intacto
+
+    setTimeout(() => {
+        heroH2.style.opacity = '1';
+        heroH2.style.transform = 'translateY(0)';
+    }, 350);
+})();

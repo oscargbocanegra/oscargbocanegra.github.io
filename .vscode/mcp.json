@@ -1,17 +1,9 @@
 {
+	"inputs": [],
 	"servers": {
-		"playwright": {
-			"command": "npx",
-			"args": [
-				"-y",
-				"@executeautomation/playwright-mcp-server"
-			],
-			"type": "stdio"
-		},
 		"github": {
 			"url": "https://api.githubcopilot.com/mcp/",
 			"type": "http"
 		}
-	},
-	"inputs": []
+	}
 }
