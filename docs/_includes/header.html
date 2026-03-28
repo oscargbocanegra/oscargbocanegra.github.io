@@ -1,0 +1,44 @@
+<header class="header-modern">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <h1>{{ site.author }}</h1>
+                <p>Data Engineer | AI Specialist | Solutions Architect</p>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{{ '/index.html' | relative_url }}"
+                           {% if page.url == '/index.html' or page.url == '/' %}class="active"{% endif %}>
+                           Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/about.html' | relative_url }}"
+                           {% if page.url contains 'about' %}class="active"{% endif %}>
+                           Sobre Mí
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/projects.html' | relative_url }}"
+                           {% if page.url contains 'projects' %}class="active"{% endif %}>
+                           Proyectos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/contact.html' | relative_url }}"
+                           {% if page.url contains 'contact' %}class="active"{% endif %}>
+                           Contacto
+                        </a>
+                    </li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

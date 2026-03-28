@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+{% include head.html %}
+<body>
+    {% include header.html %}
+    <main>
+        {{ content }}
+    </main>
+    {% include footer.html %}
+    <script src="{{ '/js/scripts.js' | relative_url }}"></script>
+</body>
+</html>
