@@ -528,8 +528,15 @@ body {
 .lang-en { display: none; }
 
 /* When body has .lang-en-active: EN visible, ES hidden */
-body.lang-en-active .lang-en { display: revert; }
+body.lang-en-active .lang-en { display: block; }
 body.lang-en-active .lang-es { display: none; }
+
+/* Print: enforce language visibility explicitly */
+@media print {
+    .lang-en { display: none !important; }
+    body.lang-en-active .lang-en { display: block !important; }
+    body.lang-en-active .lang-es { display: none !important; }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
