@@ -8,3 +8,7 @@ linkedin_username: oscargbocanegra
 twitter_username: oscargbocanegra
 
 url: "https://oscargbocanegra.github.io"
+baseurl: ""
+
+plugins:
+  - jekyll-sitemap

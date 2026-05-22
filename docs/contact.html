@@ -5,140 +5,219 @@ description: "Ponte en contacto con Oscar Bocanegra para consultas sobre proyect
 ---
 
 <section class="contact-hero">
-    <div class="container">
-        <div class="contact-hero-content">
-            <h2>Hablemos sobre tu proyecto</h2>
-            <p class="subtitle">Estoy disponible para consultoría y proyectos de Data Engineering e IA</p>
-        </div>
+  <div class="container">
+    <div class="contact-hero-content">
+      <h2>Hablemos sobre tu proyecto</h2>
+      <p class="subtitle">
+        Estoy disponible para consultoría y proyectos de Data Engineering e IA
+      </p>
     </div>
+  </div>
 </section>
 
 <section class="contact-options">
-    <div class="container">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h2>Información de contacto</h2>
-                <p>Si estás interesado en trabajar juntos o simplemente quieres hacer una consulta, no dudes en ponerte en contacto conmigo a través de cualquiera de estos medios.</p>
-                
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>LinkedIn</h3>
-                            <p><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank">linkedin.com/in/{{ site.linkedin_username }}</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>GitHub</h3>
-                            <p><a href="https://github.com/{{ site.github_username }}" target="_blank">github.com/{{ site.github_username }}</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Ubicación</h3>
-                            <p>Disponible remoto</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="availability">
-                    <h3>Disponibilidad</h3>
-                    <ul class="availability-list">
-                        <li><span class="check-icon"><i class="fas fa-check"></i></span>Proyectos de ingeniería de datos</li>
-                        <li><span class="check-icon"><i class="fas fa-check"></i></span>Consultoría en arquitectura de datos</li>
-                        <li><span class="check-icon"><i class="fas fa-check"></i></span>Desarrollo de modelos de ML/AI</li>
-                        <li><span class="check-icon"><i class="fas fa-check"></i></span>Formación y mentorías técnicas</li>
-                    </ul>
-                </div>
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Información de contacto</h2>
+        <p>
+          Si estás interesado en trabajar juntos o simplemente quieres hacer una
+          consulta, no dudes en ponerte en contacto conmigo a través de
+          cualquiera de estos medios.
+        </p>
+
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
             </div>
-            
-            <div class="contact-form-container">
-                <h2>Envíame un mensaje</h2>
-                <p>Completa el formulario y me pondré en contacto contigo lo antes posible.</p>
-                
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nombre completo</label>
-                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="tu.email@ejemplo.com" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Asunto</label>
-                        <input type="text" id="subject" name="subject" placeholder="¿De qué se trata tu mensaje?">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto o consulta" rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn primary-btn" style="width:100%">Enviar mensaje <i class="fas fa-paper-plane" style="margin-left:8px"></i></button>
-                    
-                    <div id="formMessage" class="form-message"></div>
-                </form> 
+            <div class="contact-details">
+              <h3>Email</h3>
+              <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
             </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-details">
+              <h3>LinkedIn</h3>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/{{ site.linkedin_username }}</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-details">
+              <h3>GitHub</h3>
+              <p>
+                <a
+                  href="https://github.com/{{ site.github_username }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/{{ site.github_username }}</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Ubicación</h3>
+              <p>Disponible remoto</p>
+            </div>
+          </div>
         </div>
+
+        <div class="availability">
+          <h3>Disponibilidad</h3>
+          <ul class="availability-list">
+            <li>
+              <span class="check-icon"><i class="fas fa-check"></i></span
+              >Proyectos de ingeniería de datos
+            </li>
+            <li>
+              <span class="check-icon"><i class="fas fa-check"></i></span
+              >Consultoría en arquitectura de datos
+            </li>
+            <li>
+              <span class="check-icon"><i class="fas fa-check"></i></span
+              >Desarrollo de modelos de ML/AI
+            </li>
+            <li>
+              <span class="check-icon"><i class="fas fa-check"></i></span
+              >Formación y mentorías técnicas
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <h2>Canales directos</h2>
+        <p>
+          Prefiero contacto directo por correo o LinkedIn para responder con
+          contexto real y sin depender de un formulario automático.
+        </p>
+
+        <div class="availability">
+          <h3>Qué incluir en tu mensaje</h3>
+          <ul class="availability-list">
+            <li>
+              <span class="check-icon"><i class="fas fa-check"></i></span
+              >Contexto del proyecto o problema
+            </li>
+            <li>
+              <span class="check-icon"><i class="fas fa-check"></i></span
+              >Objetivo esperado y alcance
+            </li>
+            <li>
+              <span class="check-icon"><i class="fas fa-check"></i></span
+              >Tecnologías involucradas
+            </li>
+            <li>
+              <span class="check-icon"><i class="fas fa-check"></i></span>Plazo
+              o urgencia estimada
+            </li>
+          </ul>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+          "
+        >
+          <a
+            href="mailto:{{ site.email }}?subject=Consulta%20sobre%20proyecto"
+            class="btn primary-btn"
+            style="width: 100%"
+            >Escribirme por email
+            <i class="fas fa-envelope" style="margin-left: 8px"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn secondary-btn"
+            style="width: 100%"
+            >Escribirme por LinkedIn
+            <i class="fab fa-linkedin" style="margin-left: 8px"></i
+          ></a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="faq-section">
-    <div class="container">
-        <h2 class="section-title">Preguntas frecuentes</h2>
-        
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h3 class="faq-question">¿Qué tipo de proyectos de datos aceptas?</h3>
-                <div class="faq-answer">
-                    <p>Trabajo principalmente en proyectos que involucran arquitectura de datos, ETL/ELT, data lakes, data warehouses, sistemas de big data y soluciones de machine learning e inteligencia artificial. Me especializo en soluciones escalables y tecnologías cloud.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <h3 class="faq-question">¿Cómo es tu proceso de trabajo?</h3>
-                <div class="faq-answer">
-                    <p>Mi metodología incluye una fase de descubrimiento para entender las necesidades del proyecto, seguida de planificación, implementación iterativa con feedback continuo, pruebas exhaustivas y documentación detallada. Priorizo la comunicación clara y las entregas de calidad.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <h3 class="faq-question">¿Trabajas solo o con un equipo?</h3>
-                <div class="faq-answer">
-                    <p>Dependiendo del alcance y requisitos del proyecto, puedo trabajar individualmente o coordinar un equipo de especialistas. Para proyectos grandes, cuento con una red de profesionales de confianza con experiencia en diversas áreas técnicas.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <h3 class="faq-question">¿Ofreces servicios de mantenimiento después del proyecto?</h3>
-                <div class="faq-answer">
-                    <p>Sí, ofrezco servicios de soporte y mantenimiento post-implementación, así como capacitación para equipos internos. El alcance de estos servicios se define en el contrato del proyecto según las necesidades específicas del cliente.</p>
-                </div>
-            </div>
+  <div class="container">
+    <h2 class="section-title">Preguntas frecuentes</h2>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3 class="faq-question">¿Qué tipo de proyectos de datos aceptas?</h3>
+        <div class="faq-answer">
+          <p>
+            Trabajo principalmente en proyectos que involucran arquitectura de
+            datos, ETL/ELT, data lakes, data warehouses, sistemas de big data y
+            soluciones de machine learning e inteligencia artificial. Me
+            especializo en soluciones escalables y tecnologías cloud.
+          </p>
         </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">¿Cómo es tu proceso de trabajo?</h3>
+        <div class="faq-answer">
+          <p>
+            Mi metodología incluye una fase de descubrimiento para entender las
+            necesidades del proyecto, seguida de planificación, implementación
+            iterativa con feedback continuo, pruebas exhaustivas y documentación
+            detallada. Priorizo la comunicación clara y las entregas de calidad.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">¿Trabajas solo o con un equipo?</h3>
+        <div class="faq-answer">
+          <p>
+            Dependiendo del alcance y requisitos del proyecto, puedo trabajar
+            individualmente o coordinar un equipo de especialistas. Para
+            proyectos grandes, cuento con una red de profesionales de confianza
+            con experiencia en diversas áreas técnicas.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">
+          ¿Ofreces servicios de mantenimiento después del proyecto?
+        </h3>
+        <div class="faq-answer">
+          <p>
+            Sí, ofrezco servicios de soporte y mantenimiento
+            post-implementación, así como capacitación para equipos internos. El
+            alcance de estos servicios se define en el contrato del proyecto
+            según las necesidades específicas del cliente.
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

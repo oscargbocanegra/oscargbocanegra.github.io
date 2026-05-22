@@ -1,67 +1,110 @@
-### ¡Hola, bienvenido a mi perfil! 👋
+# oscargbocanegra.github.io
 
-## Sobre mí
-Soy un profesional apasionado en constante aprendizaje en el campo de la Ingeniería de Datos e Inteligencia Artificial. Mi objetivo es desarrollar habilidades y conocimientos para transformar datos en soluciones con impacto real.
+Portfolio site for Oscar Bocanegra, published with GitHub Pages from `docs/`.
 
-## ¿En qué estoy trabajando? 🔭
-- Desarrollo de proyectos de Machine Learning y procesamiento de datos
-- Implementación de soluciones ETL y Data Pipelines
-- Estudio de técnicas avanzadas de IA y aprendizaje automático
-- Máster en Inteligencia Artificial en UNIR (Universidad Internacional de La Rioja)
+## Quick path
 
-## Estoy constantemente aprendiendo 🌱
-<p align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg" alt="apache" width="40" height="40"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" alt="spark" width="40" height="40"/>
-  <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" alt="kubernetes" width="40" height="40"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" alt="azure" width="40" height="40"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter" width="40" height="40"/>
-  <img src="https://www.vectorlogo.zone/logos/apache_airflow/apache_airflow-icon.svg" alt="airflow" width="40" height="40"/>
-</p>
+1. Edit content under `docs/`.
+2. Keep `docs/resume.html` as the canonical CV page.
+3. Validate visible pages and links before publishing.
+4. Push changes to the branch that GitHub Pages serves.
 
-- **🔍 Ingeniería de Datos**: Apache Spark, ETL, procesamiento de datos a gran escala
-- **🧠 Machine Learning**: Algoritmos de clasificación, regresión, técnicas supervisadas y no supervisadas
-- **🤖 Inteligencia Artificial**: Procesamiento de Lenguaje Natural (NLP) y razonamiento automatizado
-- **☁️ Cloud**: AWS, Azure y servicios en la nube para el despliegue de soluciones de datos
-- **🔄 Orquestación**: Kubernetes, Airflow para orquestación de contenedores y flujos de trabajo
-- **🔧 Herramientas**: Python, Docker, sistemas de testing y automatización
+## What this repo contains
 
-## Tecnologías y herramientas
-- Python y sus bibliotecas para análisis de datos (Pandas, NumPy, Scikit-learn)
-- Apache Spark para procesamiento de Big Data
-- Docker para virtualización y despliegue de aplicaciones
-- Testing y automatización de procesos.
-- HTML y desarrollo web básico
+This repository is a static portfolio site with Jekyll-style layouts/includes and hand-authored content pages.
 
-## ¡Conectemos! 📫
-No dudes en contactarme para colaboraciones o para intercambiar ideas sobre Ingeniería de Datos e Inteligencia Artificial.
+| Area                          | Purpose                                                     |
+| ----------------------------- | ----------------------------------------------------------- |
+| `docs/`                       | Publish root for GitHub Pages                               |
+| `docs/_config.yml`            | Site metadata used by Liquid templates                      |
+| `docs/_layouts/`              | Shared page layouts                                         |
+| `docs/_includes/`             | Shared head, header, and footer partials                    |
+| `docs/*.html`                 | Main site pages                                             |
+| `docs/css/`                   | Shared styles, including resume-specific CSS                |
+| `docs/js/scripts.js`          | Site-wide frontend behavior                                 |
+| `docs/_data/site_profile.yml` | Shared site-level profile facts used by landing/about pages |
+| `openspec/`                   | Project planning/spec artifacts used for change management  |
+| `.pi/`                        | Pi runtime/project settings                                 |
 
-## Mis proyectos actuales 🚀
+## Current architecture
 
-Aquí puedes encontrar algunos de los proyectos en los que estoy trabajando actualmente:
+- **Site type:** static portfolio site
+- **Template layer:** Jekyll-compatible includes and layouts
+- **Publish root:** `docs/`
+- **Main landing page:** `docs/index.html`
+- **Standalone online CV:** `docs/resume.html` (kept online but not linked from the public navigation)
+- **Legacy CV URLs:** `docs/resume-old.html` and `docs/resume2.html` redirect to the canonical page after a Jekyll build
 
-### Máster en Inteligencia Artificial (UNIR)
-- [Proyecto TFM](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/01-tfm) - Proyecto final del máster enfocado en pipelines de procesamiento de datos e identificación de conceptos de IA
-- [Aprendizaje Automático](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/02-aprendizaje-automatico) - Ejercicios y notebooks sobre regresión, métricas de clasificación, Naive Bayes y árboles de decisión
-- [Razonamiento y Planificación Automatizada](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/04-Razonamiento-planificacion-automatica) - Investigación e implementación de técnicas de razonamiento automatizado
-- [Procesamiento de Lenguaje Natural](https://github.com/oscargbocanegra/Master-IA-Unir/tree/main/07-Procesamiento-Lenguaje-Natural) - Técnicas y aplicaciones de NLP
+## Main pages
 
-### Ruta de Aprendizaje
-- [Machine Learning](https://github.com/oscargbocanegra/Learning/tree/main/01-MachineLearning) - Proyectos de deep learning y ciencia de datos con Python
-- [Apache Spark](https://github.com/oscargbocanegra/Learning/tree/main/02-Spark) - Procesamiento de big data con Apache Spark 3
-- [Python](https://github.com/oscargbocanegra/Learning/tree/main/03-Python) - Varios proyectos y materiales de aprendizaje de Python
-- [Docker](https://github.com/oscargbocanegra/Learning/tree/main/04-docker) - Contenedorización e infraestructura como código
-- [HTML](https://github.com/oscargbocanegra/Learning/tree/main/05-html) - Desarrollo web y fundamentos de HTML
-- [Testing y Automatización](https://github.com/oscargbocanegra/Learning/tree/main/06-testing-automation) - Frameworks y técnicas de pruebas automatizadas
-- [Linux](https://github.com/oscargbocanegra/Learning/tree/main/linux) - Administración y comandos de Linux
+| Page                 | Role                                |
+| -------------------- | ----------------------------------- |
+| `docs/index.html`    | Landing page                        |
+| `docs/about.html`    | Professional profile and background |
+| `docs/projects.html` | Project portfolio with filters      |
+| `docs/contact.html`  | Direct contact channels             |
+| `docs/resume.html`   | Canonical CV                        |
 
-### Portfolio Personal
-Este sitio web (oscargbocanegra.github.io) sirve como mi portfolio personal donde comparto mis proyectos y experiencia profesional.
+## Editing rules
 
-¡No dudes en explorar estos repositorios y contribuir si estás interesado!
+### Content source of truth
 
+- Update **shared metadata** in `docs/_config.yml` when the author name, email, or social handles change.
+- Update **site-level shared facts** for landing/about pages in `docs/_data/site_profile.yml`.
+- Update the **standalone online CV** in `docs/resume.html`.
+- Do **not** introduce new CV variants unless there is a deliberate product reason.
+- Treat `index.html` as the main landing page and `resume.html` as a maintained CV destination reached by direct URL.
+- If a claim changes, check whether it belongs in:
+  - `docs/_data/site_profile.yml` (shared landing/about facts)
+  - `docs/resume.html` (standalone CV content)
+
+### Shared UI
+
+- Navigation lives in `docs/_includes/header.html`
+- Footer/social links live in `docs/_includes/footer.html`
+- Global JS lives in `docs/js/scripts.js`
+- Global site styling lives mainly in `docs/css/style.css`
+- Resume-specific styling lives in `docs/css/resume.css`
+
+## Local preview
+
+### Preferred local preview
+
+```bash
+bundle install
+bundle exec jekyll serve --source docs --destination .tmp/jekyll-preview
+```
+
+This repo now pins a minimal local Jekyll toolchain through `Gemfile`.
+Preview/build output under `.tmp/` is local-only and should not be treated as source.
+
+### If you do not want to install Ruby/Jekyll locally
+
+Use one of these paths:
+
+- preview through your GitHub Pages workflow/environment
+- review generated output after a Pages/Jekyll build
+- make content-only edits and validate manually in the published site
+
+Note: redirect pages such as `resume-old.html` and `resume2.html` rely on Jekyll/Liquid rendering. Opening the raw source files directly in a browser will not produce a valid redirect.
+
+## Validation checklist
+
+Before publishing, verify at least:
+
+- [ ] Navigation links work
+- [ ] Project filters on `projects.html` still work
+- [ ] Contact page does not promise unsupported form behavior
+- [ ] `resume.html` is still the canonical CV target for direct access
+- [ ] External links using `target="_blank"` also use `rel="noopener noreferrer"`
+- [ ] Public claims are consistent across homepage, about page, and CV
+
+## Known current constraints
+
+- No automated tests beyond a minimal Jekyll build check in CI
+- Link checking and HTML/content validation are still mostly manual
+- Some generated output may appear under `docs/_site/` locally, but it should remain generated output rather than source of truth
+
+## Maintainer guide
+
+See [`MAINTENANCE.md`](./MAINTENANCE.md) for the editing workflow, content ownership, and publishing checklist.

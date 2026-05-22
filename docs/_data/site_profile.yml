@@ -1,0 +1,22 @@
+profile:
+  years_experience: 13
+  projects_completed: 30
+  technologies_count: 20
+  masters_completed: 2
+  remote_status_es: "Disponible para remoto"
+  favorite_technologies_es: "Python, Spark, TensorFlow, AWS"
+
+education:
+  ai_master:
+    title_es: "Máster en Inteligencia Artificial"
+    institution: "Universidad Internacional de La Rioja (UNIR)"
+    date_es: "2023 - 2025"
+  bigdata_master:
+    title_es: "Executive Master en Big Data & Business Intelligence"
+    institution: "Instituto Europeo de Posgrado"
+    date_es: "2020 - 2022"
+
+certifications:
+  featured:
+    title: "Azure Data Engineer Associate"
+    issuer: "Microsoft"

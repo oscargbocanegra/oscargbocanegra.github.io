@@ -6,7 +6,10 @@ docs/.jekyll-metadata
 # Ruby / Bundler
 .bundle/
 vendor/
+.tmp/
 
 # OS
 .DS_Store
 Thumbs.db
+# Local Pi runtime state
+.atl/

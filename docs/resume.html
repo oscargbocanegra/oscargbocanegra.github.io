@@ -5,19 +5,27 @@ description: "Hoja de vida ejecutiva de Oscar Giovanni Bocanegra, Senior Data & 
 ---
 
 <style>
-/* =====================================================
+  /* =====================================================
    Resume 2 — Executive Data & AI Style
    Paleta: #123047 navy · #2F6F9F blue · #555555 secondary
            #222222 text · #D9E2EA line
    ===================================================== */
 
-body { background: #f8fafc; }
+  body {
+    background: #f8fafc;
+  }
 
-.r2 { box-sizing: border-box; }
-.r2 *, .r2 *::before, .r2 *::after { box-sizing: border-box; }
+  .r2 {
+    box-sizing: border-box;
+  }
+  .r2 *,
+  .r2 *::before,
+  .r2 *::after {
+    box-sizing: border-box;
+  }
 
-.r2 {
-    font-family: 'Inter', 'Aptos', 'Calibri', Arial, sans-serif;
+  .r2 {
+    font-family: "Inter", "Aptos", "Calibri", Arial, sans-serif;
     font-size: 9.5pt;
     color: #222222;
     background: #ffffff;
@@ -25,18 +33,18 @@ body { background: #f8fafc; }
     margin: 0 auto;
     padding: 36px 50px;
     line-height: 1.12;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
     border-radius: 4px;
-}
+  }
 
-/* ── LANGUAGE TOGGLE ── */
-.r2-lang-toggle {
+  /* ── LANGUAGE TOGGLE ── */
+  .r2-lang-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 100;
-}
-.r2-lang-toggle button {
+  }
+  .r2-lang-toggle button {
     background: #123047;
     color: white;
     border: none;
@@ -45,31 +53,33 @@ body { background: #f8fafc; }
     font-size: 9pt;
     cursor: pointer;
     font-family: inherit;
-}
-.r2-lang-toggle button:hover { background: #0F2A3D; }
+  }
+  .r2-lang-toggle button:hover {
+    background: #0f2a3d;
+  }
 
-/* ── HEADER ── */
-.r2-header {
+  /* ── HEADER ── */
+  .r2-header {
     margin-bottom: 18px;
     padding-bottom: 14px;
     border-bottom: 2px solid #123047;
-}
-.r2-name {
+  }
+  .r2-name {
     font-size: 20pt;
     font-weight: 700;
     color: #123047;
     letter-spacing: -0.3px;
     margin-bottom: 3px;
     line-height: 1.15;
-}
-.r2-title {
+  }
+  .r2-title {
     font-size: 10pt;
     font-weight: 600;
-    color: #2F6F9F;
+    color: #2f6f9f;
     margin-bottom: 8px;
     line-height: 1.3;
-}
-.r2-contact {
+  }
+  .r2-contact {
     font-size: 8.5pt;
     color: #555555;
     display: flex;
@@ -77,189 +87,209 @@ body { background: #f8fafc; }
     gap: 0 4px;
     align-items: center;
     line-height: 1.4;
-}
-.r2-contact a { color: #555555; text-decoration: none; }
-.r2-contact a:hover { color: #2F6F9F; text-decoration: underline; }
-.r2-sep { color: #D9E2EA; margin: 0 3px; }
+  }
+  .r2-contact a {
+    color: #555555;
+    text-decoration: none;
+  }
+  .r2-contact a:hover {
+    color: #2f6f9f;
+    text-decoration: underline;
+  }
+  .r2-sep {
+    color: #d9e2ea;
+    margin: 0 3px;
+  }
 
-/* ── SECTIONS ── */
-.r2-section { margin-bottom: 16px; }
+  /* ── SECTIONS ── */
+  .r2-section {
+    margin-bottom: 16px;
+  }
 
-.r2-section-title {
+  .r2-section-title {
     font-size: 8pt;
     font-weight: 700;
     color: #123047;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 1.5px solid #D9E2EA;
+    border-bottom: 1.5px solid #d9e2ea;
     padding-bottom: 3px;
     margin-bottom: 10px;
-}
+  }
 
-/* ── SUMMARY ── */
-.r2-summary p {
+  /* ── SUMMARY ── */
+  .r2-summary p {
     font-size: 9pt;
     color: #222222;
     line-height: 1.55;
-}
+  }
 
-/* ── KEY ACHIEVEMENTS — single column ── */
-.r2-achievements {
+  /* ── KEY ACHIEVEMENTS — single column ── */
+  .r2-achievements {
     break-inside: avoid;
     page-break-inside: avoid;
-}
-.r2-achievements ul {
+  }
+  .r2-achievements ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-.r2-achievements ul li {
+  }
+  .r2-achievements ul li {
     font-size: 9pt;
     color: #222222;
     padding-left: 14px;
     position: relative;
     line-height: 1.5;
     margin-bottom: 4px;
-}
-.r2-achievements ul li::before {
+  }
+  .r2-achievements ul li::before {
     content: "▸";
     position: absolute;
     left: 0;
-    color: #2F6F9F;
+    color: #2f6f9f;
     font-size: 8pt;
     top: 1px;
-}
+  }
 
-/* ── PROJECTS ── */
-.r2-project {
+  /* ── PROJECTS ── */
+  .r2-project {
     margin-bottom: 9px;
     padding-left: 10px;
-    border-left: 2px solid #D9E2EA;
-}
-.r2-project-header {
+    border-left: 2px solid #d9e2ea;
+  }
+  .r2-project-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 2px;
     gap: 12px;
-}
-.r2-project-name {
+  }
+  .r2-project-name {
     font-size: 9.5pt;
     font-weight: 700;
     color: #123047;
-}
-.r2-project-period {
+  }
+  .r2-project-period {
     font-size: 8pt;
     color: #555555;
     white-space: nowrap;
     flex-shrink: 0;
-}
-.r2-project p {
+  }
+  .r2-project p {
     font-size: 8.5pt;
     color: #444444;
     line-height: 1.5;
-}
+  }
 
-/* ── EXPERIENCE ── */
-.r2-exp {
+  /* ── EXPERIENCE ── */
+  .r2-exp {
     margin-bottom: 13px;
     padding-left: 10px;
-    border-left: 2.5px solid #D9E2EA;
-}
-.r2-exp-header {
+    border-left: 2.5px solid #d9e2ea;
+  }
+  .r2-exp-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 12px;
     margin-bottom: 1px;
-}
-.r2-exp-company {
+  }
+  .r2-exp-company {
     font-size: 10pt;
     font-weight: 700;
     color: #123047;
-}
-.r2-exp-period {
+  }
+  .r2-exp-period {
     font-size: 8pt;
     color: #555555;
     white-space: nowrap;
     flex-shrink: 0;
-}
-.r2-exp-role {
+  }
+  .r2-exp-role {
     font-size: 9pt;
     font-weight: 600;
-    color: #2F6F9F;
+    color: #2f6f9f;
     margin-bottom: 1px;
     line-height: 1.3;
-}
-.r2-exp-meta {
+  }
+  .r2-exp-meta {
     font-size: 8pt;
     color: #555555;
     font-style: italic;
     margin-bottom: 5px;
     line-height: 1.3;
-}
-.r2-exp ul {
+  }
+  .r2-exp ul {
     list-style: disc;
     padding-left: 15px;
     margin: 0;
-}
-.r2-exp ul li {
+  }
+  .r2-exp ul li {
     font-size: 8.5pt;
     color: #222222;
     margin-bottom: 3px;
     line-height: 1.5;
-}
-.r2-compact-exp {
+  }
+  .r2-compact-exp {
     font-size: 8.5pt;
     color: #444444;
     margin-top: 4px;
     line-height: 1.5;
-}
+  }
 
-/* ── STACK TÉCNICO ── */
-.r2-stack-row {
+  /* ── STACK TÉCNICO ── */
+  .r2-stack-row {
     font-size: 9pt;
     margin-bottom: 5px;
     line-height: 1.5;
-}
-.r2-stack-label {
+  }
+  .r2-stack-label {
     font-weight: 700;
     color: #123047;
-}
-.r2-stack-items { color: #444444; }
+  }
+  .r2-stack-items {
+    color: #444444;
+  }
 
-/* ── COMPACT FOOTER SECTIONS ── */
-.r2-compact-section { margin-bottom: 14px; }
+  /* ── COMPACT FOOTER SECTIONS ── */
+  .r2-compact-section {
+    margin-bottom: 14px;
+  }
 
-.r2-edu-inline {
+  .r2-edu-inline {
     font-size: 9pt;
     color: #222222;
     margin-bottom: 4px;
     line-height: 1.5;
-}
-.r2-edu-inline span { color: #555555; }
+  }
+  .r2-edu-inline span {
+    color: #555555;
+  }
 
-.r2-certs-inline {
+  .r2-certs-inline {
     font-size: 9pt;
     color: #444444;
     line-height: 1.6;
-}
+  }
 
-.r2-langs-inline {
+  .r2-langs-inline {
     font-size: 9pt;
     color: #444444;
     line-height: 1.5;
-}
+  }
 
-.r2-honor-inline {
+  .r2-honor-inline {
     font-size: 9pt;
     color: #444444;
     line-height: 1.5;
-}
+  }
 
-/* ── DOWNLOAD ── */
-.r2-download-wrap { text-align: center; margin-top: 22px; }
-.r2-download-btn {
+  /* ── DOWNLOAD ── */
+  .r2-download-wrap {
+    text-align: center;
+    margin-top: 22px;
+  }
+  .r2-download-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -271,336 +301,589 @@ body { background: #f8fafc; }
     font-size: 9pt;
     cursor: pointer;
     font-family: inherit;
-}
-.r2-download-btn:hover { background: #0F2A3D; }
+  }
+  .r2-download-btn:hover {
+    background: #0f2a3d;
+  }
 
-/* ── PRINT ── */
-@media print {
-    body { background: white; }
-    .r2 {
-        box-shadow: none;
-        padding: 18px 28px;
-        max-width: 100%;
-        font-size: 9pt;
+  /* ── PRINT ── */
+  @media print {
+    body {
+      background: white;
     }
-    .r2-lang-toggle, .r2-download-wrap { display: none !important; }
-    .r2-name { font-size: 17pt; }
-    .r2-section { margin-bottom: 12px; }
-    .r2-exp { margin-bottom: 10px; }
+    .r2 {
+      box-shadow: none;
+      padding: 18px 28px;
+      max-width: 100%;
+      font-size: 9pt;
+    }
+    .r2-lang-toggle,
+    .r2-download-wrap {
+      display: none !important;
+    }
+    .r2-name {
+      font-size: 17pt;
+    }
+    .r2-section {
+      margin-bottom: 12px;
+    }
+    .r2-exp {
+      margin-bottom: 10px;
+    }
 
     /* Show URLs in contact links — URL already visible in text, suppress ::after */
-    .r2-contact a[href]::after { content: none; }
-}
+    .r2-contact a[href]::after {
+      content: none;
+    }
+  }
 </style>
 
 <!-- Language Toggle -->
 <div class="r2-lang-toggle">
-    <button id="langToggle" onclick="toggleLanguage()">EN</button>
+  <button id="langToggle" onclick="toggleLanguage()">EN</button>
 </div>
 
 <div class="r2">
+  <!-- ════ HEADER ════ -->
+  <div class="r2-header">
+    <div class="r2-name">Oscar Giovanni Bocanegra Hurtado</div>
+    <div class="r2-title">
+      Senior Data &amp; AI Engineer | GenAI · Data Mesh · Microsoft Fabric · AWS
+      · Python
+    </div>
+    <div class="r2-contact">
+      <span>Bogotá, Colombia</span>
+      <span class="r2-sep">·</span>
+      <span>+57 312 412 4433</span>
+      <span class="r2-sep">·</span>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <span class="r2-sep">·</span>
+      <span>LinkedIn:</span>
+      <a
+        href="https://www.linkedin.com/in/{{ site.linkedin_username }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        >linkedin.com/in/{{ site.linkedin_username }}</a
+      >
+      <span class="r2-sep">·</span>
+      <span>GitHub:</span>
+      <a
+        href="https://github.com/{{ site.github_username }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        >github.com/{{ site.github_username }}</a
+      >
+    </div>
+  </div>
 
-    <!-- ════ HEADER ════ -->
-    <div class="r2-header">
-        <div class="r2-name">Oscar Giovanni Bocanegra Hurtado</div>
-        <div class="r2-title">Senior Data &amp; AI Engineer | GenAI · Data Mesh · Microsoft Fabric · AWS · Python</div>
-        <div class="r2-contact">
-            <span>Bogotá, Colombia</span>
-            <span class="r2-sep">·</span>
-            <span>+57 312 412 4433</span>
-            <span class="r2-sep">·</span>
-            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-            <span class="r2-sep">·</span>
-            <span>LinkedIn:</span> <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">linkedin.com/in/{{ site.linkedin_username }}</a>
-            <span class="r2-sep">·</span>
-            <span>GitHub:</span> <a href="https://github.com/{{ site.github_username }}" target="_blank">github.com/{{ site.github_username }}</a>
-        </div>
+  <!-- ════ EXTRACTO PROFESIONAL ════ -->
+  <div class="r2-section r2-summary">
+    <div class="r2-section-title lang-es">Extracto Profesional</div>
+    <div class="r2-section-title lang-en">Professional Summary</div>
+    <p class="lang-es">
+      Ingeniero Senior Data &amp; AI con
+      <strong>+13 años de experiencia</strong> diseñando soluciones de datos,
+      automatización, cloud e IA generativa para entornos empresariales y
+      financieros. Especializado en arquitecturas
+      <strong>Data Hub / Data Mesh</strong>, pipelines ETL/ELT, APIs en Python,
+      AWS, Microsoft Fabric, Airflow, LLMs, RAG y LangChain. He liderado
+      iniciativas de modernización cloud, gobierno de datos e IA aplicada a
+      procesos empresariales, logrando hasta
+      <strong>40% de reducción de tareas manuales</strong> y
+      <strong>30% de mejora en eficiencia operativa</strong>.
+    </p>
+    <p class="lang-en">
+      Senior Data &amp; AI Engineer with
+      <strong>13+ years of experience</strong> designing data, automation, cloud
+      and generative AI solutions for enterprise and financial environments.
+      Specialized in <strong>Data Hub and Data Mesh</strong> architectures,
+      ETL/ELT pipelines, Python APIs, AWS, Microsoft Fabric, Airflow, LLMs, RAG
+      and LangChain. Led cloud modernization, data governance, and applied AI
+      initiatives for enterprise processes, achieving up to
+      <strong>40% reduction in manual tasks</strong> and
+      <strong>30% improvement in operational efficiency</strong>.
+    </p>
+  </div>
+
+  <!-- ════ LOGROS CLAVE ════ -->
+  <div class="r2-section r2-achievements">
+    <div class="r2-section-title lang-es">Logros Clave</div>
+    <div class="r2-section-title lang-en">Key Achievements</div>
+    <ul class="lang-es">
+      <li>
+        Liderazgo en estrategia <strong>Data Hub / Data Mesh</strong> con
+        Microsoft Fabric, OneLake y Microsoft Purview.
+      </li>
+      <li>
+        <strong>40%</strong> reducción de tareas manuales — automatización de
+        pipelines PySpark + Python.
+      </li>
+      <li>
+        <strong>30%</strong> reducción de costos operativos — implementación de
+        Data Lake financiero para ATH Colombia.
+      </li>
+      <li>
+        <strong>25%</strong> reducción en tiempos de entrega — optimización de
+        procesos de datos.
+      </li>
+      <li>
+        <strong>20%</strong> mejora en eficiencia operativa — soluciones cloud
+        con Python, Docker y MongoDB.
+      </li>
+    </ul>
+    <ul class="lang-en">
+      <li>
+        Leadership in <strong>Data Hub / Data Mesh</strong> strategy with
+        Microsoft Fabric, OneLake and Microsoft Purview.
+      </li>
+      <li>
+        <strong>40%</strong> reduction in manual tasks — PySpark + Python
+        pipeline automation.
+      </li>
+      <li>
+        <strong>30%</strong> reduction in operational costs — financial Data
+        Lake implementation for ATH Colombia.
+      </li>
+      <li>
+        <strong>25%</strong> reduction in delivery times — data process
+        optimization.
+      </li>
+      <li>
+        <strong>20%</strong> improvement in operational efficiency — cloud
+        solutions with Python, Docker and MongoDB.
+      </li>
+    </ul>
+  </div>
+
+  <!-- ════ PROYECTOS DESTACADOS ════ -->
+  <div class="r2-section">
+    <div class="r2-section-title lang-es">Proyectos Destacados</div>
+    <div class="r2-section-title lang-en">Featured Projects</div>
+
+    <div class="r2-project">
+      <div class="r2-project-header">
+        <span class="r2-project-name lang-es"
+          >Data Hub &amp; Data Mesh sobre Microsoft Fabric</span
+        >
+        <span class="r2-project-name lang-en"
+          >Data Hub &amp; Data Mesh on Microsoft Fabric</span
+        >
+        <span class="r2-project-period lang-es">2025 – Presente</span>
+        <span class="r2-project-period lang-en">2025 – Present</span>
+      </div>
+      <p class="lang-es">
+        Diseño e implementación de estrategia Data Hub basada en Data Mesh con
+        Microsoft Fabric, OneLake y Microsoft Purview para gobierno,
+        catalogación y operación analítica empresarial.
+      </p>
+      <p class="lang-en">
+        Design and implementation of a Data Hub strategy based on Data Mesh
+        using Microsoft Fabric, OneLake and Microsoft Purview for governance,
+        cataloging and enterprise analytics.
+      </p>
     </div>
 
-    <!-- ════ EXTRACTO PROFESIONAL ════ -->
-    <div class="r2-section r2-summary">
-        <div class="r2-section-title lang-es">Extracto Profesional</div>
-        <div class="r2-section-title lang-en">Professional Summary</div>
-        <p class="lang-es">
-            Ingeniero Senior Data &amp; AI con <strong>+13 años de experiencia</strong> diseñando soluciones de datos, automatización, cloud e IA generativa para entornos empresariales y financieros. Especializado en arquitecturas <strong>Data Hub / Data Mesh</strong>, pipelines ETL/ELT, APIs en Python, AWS, Microsoft Fabric, Airflow, LLMs, RAG y LangChain. He liderado iniciativas de modernización cloud, gobierno de datos e IA aplicada a procesos empresariales, logrando hasta <strong>40% de reducción de tareas manuales</strong> y <strong>30% de mejora en eficiencia operativa</strong>.
-        </p>
-        <p class="lang-en">
-            Senior Data &amp; AI Engineer with <strong>13+ years of experience</strong> designing data, automation, cloud and generative AI solutions for enterprise and financial environments. Specialized in <strong>Data Hub and Data Mesh</strong> architectures, ETL/ELT pipelines, Python APIs, AWS, Microsoft Fabric, Airflow, LLMs, RAG and LangChain. Led cloud modernization, data governance, and applied AI initiatives for enterprise processes, achieving up to <strong>40% reduction in manual tasks</strong> and <strong>30% improvement in operational efficiency</strong>.
-        </p>
+    <div class="r2-project">
+      <div class="r2-project-header">
+        <span class="r2-project-name lang-es"
+          >Automatización de pipelines con LLMs</span
+        >
+        <span class="r2-project-name lang-en"
+          >Pipeline Automation with LLMs</span
+        >
+        <span class="r2-project-period lang-es">2025 – Presente</span>
+        <span class="r2-project-period lang-en">2025 – Present</span>
+      </div>
+      <p class="lang-es">
+        Prototipos con OpenAI, Claude y modelos open source para generación,
+        validación y documentación automática de pipelines ETL/ELT con Python,
+        Airflow y CI/CD.
+      </p>
+      <p class="lang-en">
+        Prototypes with OpenAI, Claude and open source models for automatic
+        generation, validation and documentation of ETL/ELT pipelines with
+        Python, Airflow and CI/CD.
+      </p>
     </div>
 
-    <!-- ════ LOGROS CLAVE ════ -->
-    <div class="r2-section r2-achievements">
-        <div class="r2-section-title lang-es">Logros Clave</div>
-        <div class="r2-section-title lang-en">Key Achievements</div>
-        <ul class="lang-es">
-            <li>Liderazgo en estrategia <strong>Data Hub / Data Mesh</strong> con Microsoft Fabric, OneLake y Microsoft Purview.</li>
-            <li><strong>40%</strong> reducción de tareas manuales — automatización de pipelines PySpark + Python.</li>
-            <li><strong>30%</strong> reducción de costos operativos — implementación de Data Lake financiero para ATH Colombia.</li>
-            <li><strong>25%</strong> reducción en tiempos de entrega — optimización de procesos de datos.</li>
-            <li><strong>20%</strong> mejora en eficiencia operativa — soluciones cloud con Python, Docker y MongoDB.</li>
-        </ul>
-        <ul class="lang-en">
-            <li>Leadership in <strong>Data Hub / Data Mesh</strong> strategy with Microsoft Fabric, OneLake and Microsoft Purview.</li>
-            <li><strong>40%</strong> reduction in manual tasks — PySpark + Python pipeline automation.</li>
-            <li><strong>30%</strong> reduction in operational costs — financial Data Lake implementation for ATH Colombia.</li>
-            <li><strong>25%</strong> reduction in delivery times — data process optimization.</li>
-            <li><strong>20%</strong> improvement in operational efficiency — cloud solutions with Python, Docker and MongoDB.</li>
-        </ul>
+    <div class="r2-project">
+      <div class="r2-project-header">
+        <span class="r2-project-name lang-es"
+          >Data Lake financiero — ATH Colombia</span
+        >
+        <span class="r2-project-name lang-en"
+          >Financial Data Lake — ATH Colombia</span
+        >
+        <span class="r2-project-period">2019 – 2021</span>
+      </div>
+      <p class="lang-es">
+        Liderazgo técnico en Data Lake para entorno financiero regulado,
+        logrando 30% de reducción de costos operativos y mejorando
+        disponibilidad, trazabilidad y analítica de datos.
+      </p>
+      <p class="lang-en">
+        Technical leadership in Data Lake for regulated financial environment,
+        achieving 30% reduction in operational costs and improving data
+        availability, traceability and analytics.
+      </p>
+    </div>
+  </div>
+
+  <!-- ════ EXPERIENCIA PROFESIONAL ════ -->
+  <div class="r2-section">
+    <div class="r2-section-title lang-es">Experiencia Profesional</div>
+    <div class="r2-section-title lang-en">Professional Experience</div>
+
+    <!-- SMX -->
+    <div class="r2-exp">
+      <div class="r2-exp-header">
+        <span class="r2-exp-company"
+          >SMX Services &amp; Consulting, Inc. — Senior Data Engineer / Data
+          &amp; AI Engineer</span
+        >
+        <span class="r2-exp-period lang-es">Ene 2024 – Presente</span>
+        <span class="r2-exp-period lang-en">Jan 2024 – Present</span>
+      </div>
+      <div class="r2-exp-meta lang-es">Estados Unidos · Remoto</div>
+      <div class="r2-exp-meta lang-en">United States · Remote</div>
+      <ul class="lang-es">
+        <li>
+          Lidero implementación de estrategia Data Hub / Data Mesh con
+          <strong>Microsoft Fabric</strong>, OneLake y Purview.
+        </li>
+        <li>
+          Desarrollo prototipos con <strong>LLMs</strong> para automatizar
+          generación, validación y documentación de pipelines.
+        </li>
+        <li>
+          Impulso adopción de <strong>Azure AI Foundry</strong> para casos de
+          uso de IA generativa empresarial.
+        </li>
+        <li>
+          Lidero migración de soluciones on-premise a AWS mejorando
+          escalabilidad y eficiencia operativa.
+        </li>
+      </ul>
+      <ul class="lang-en">
+        <li>
+          Lead Data Hub / Data Mesh strategy with
+          <strong>Microsoft Fabric</strong>, OneLake and Purview.
+        </li>
+        <li>
+          Build <strong>LLM</strong>-based prototypes to automate pipeline
+          generation, validation, and documentation.
+        </li>
+        <li>
+          Drive adoption of <strong>Azure AI Foundry</strong> for enterprise
+          generative AI use cases.
+        </li>
+        <li>
+          Lead migration of on-premise solutions to AWS improving scalability
+          and operational efficiency.
+        </li>
+      </ul>
     </div>
 
-    <!-- ════ PROYECTOS DESTACADOS ════ -->
-    <div class="r2-section">
-        <div class="r2-section-title lang-es">Proyectos Destacados</div>
-        <div class="r2-section-title lang-en">Featured Projects</div>
-
-        <div class="r2-project">
-            <div class="r2-project-header">
-                <span class="r2-project-name lang-es">Data Hub &amp; Data Mesh sobre Microsoft Fabric</span>
-                <span class="r2-project-name lang-en">Data Hub &amp; Data Mesh on Microsoft Fabric</span>
-                <span class="r2-project-period lang-es">2025 – Presente</span>
-                <span class="r2-project-period lang-en">2025 – Present</span>
-            </div>
-            <p class="lang-es">Diseño e implementación de estrategia Data Hub basada en Data Mesh con Microsoft Fabric, OneLake y Microsoft Purview para gobierno, catalogación y operación analítica empresarial.</p>
-            <p class="lang-en">Design and implementation of a Data Hub strategy based on Data Mesh using Microsoft Fabric, OneLake and Microsoft Purview for governance, cataloging and enterprise analytics.</p>
-        </div>
-
-        <div class="r2-project">
-            <div class="r2-project-header">
-                <span class="r2-project-name lang-es">Automatización de pipelines con LLMs</span>
-                <span class="r2-project-name lang-en">Pipeline Automation with LLMs</span>
-                <span class="r2-project-period lang-es">2025 – Presente</span>
-                <span class="r2-project-period lang-en">2025 – Present</span>
-            </div>
-            <p class="lang-es">Prototipos con OpenAI, Claude y modelos open source para generación, validación y documentación automática de pipelines ETL/ELT con Python, Airflow y CI/CD.</p>
-            <p class="lang-en">Prototypes with OpenAI, Claude and open source models for automatic generation, validation and documentation of ETL/ELT pipelines with Python, Airflow and CI/CD.</p>
-        </div>
-
-        <div class="r2-project">
-            <div class="r2-project-header">
-                <span class="r2-project-name lang-es">Data Lake financiero — ATH Colombia</span>
-                <span class="r2-project-name lang-en">Financial Data Lake — ATH Colombia</span>
-                <span class="r2-project-period">2019 – 2021</span>
-            </div>
-            <p class="lang-es">Liderazgo técnico en Data Lake para entorno financiero regulado, logrando 30% de reducción de costos operativos y mejorando disponibilidad, trazabilidad y analítica de datos.</p>
-            <p class="lang-en">Technical leadership in Data Lake for regulated financial environment, achieving 30% reduction in operational costs and improving data availability, traceability and analytics.</p>
-        </div>
+    <!-- StratioBD -->
+    <div class="r2-exp">
+      <div class="r2-exp-header">
+        <span class="r2-exp-company">StratioBD — Big Data Engineer</span>
+        <span class="r2-exp-period lang-es">Abr 2022 – Ene 2024</span>
+        <span class="r2-exp-period lang-en">Apr 2022 – Jan 2024</span>
+      </div>
+      <div class="r2-exp-meta lang-es">Colombia, México, Ecuador · Remoto</div>
+      <div class="r2-exp-meta lang-en">Colombia, Mexico, Ecuador · Remote</div>
+      <ul class="lang-es">
+        <li>
+          Desarrollé pipelines con <strong>Python, PySpark</strong> y Big Data
+          para clientes financieros en México y Ecuador.
+        </li>
+        <li>
+          Automaticé procesos de ingesta y transformación logrando
+          <strong>40% reducción en tareas operativas</strong>.
+        </li>
+        <li>
+          Implementé modelos con CRISP-DM: <strong>30% mejora en KPIs</strong> y
+          <strong>25% reducción en tiempos de entrega</strong>.
+        </li>
+        <li>
+          Colaboré con equipos de negocio e infraestructura en entornos
+          financieros regulados.
+        </li>
+      </ul>
+      <ul class="lang-en">
+        <li>
+          Developed pipelines with <strong>Python, PySpark</strong> and Big Data
+          for financial clients in Mexico and Ecuador.
+        </li>
+        <li>
+          Automated ingestion and transformation processes achieving
+          <strong>40% reduction in operational tasks</strong>.
+        </li>
+        <li>
+          Implemented CRISP-DM models:
+          <strong>30% KPI accuracy improvement</strong> and
+          <strong>25% delivery time reduction</strong>.
+        </li>
+        <li>
+          Collaborated with business and infrastructure teams in regulated
+          financial environments.
+        </li>
+      </ul>
     </div>
 
-    <!-- ════ EXPERIENCIA PROFESIONAL ════ -->
-    <div class="r2-section">
-        <div class="r2-section-title lang-es">Experiencia Profesional</div>
-        <div class="r2-section-title lang-en">Professional Experience</div>
-
-        <!-- SMX -->
-        <div class="r2-exp">
-            <div class="r2-exp-header">
-                <span class="r2-exp-company">SMX Services &amp; Consulting, Inc. — Senior Data Engineer / Data &amp; AI Engineer</span>
-                <span class="r2-exp-period lang-es">Ene 2024 – Presente</span>
-                <span class="r2-exp-period lang-en">Jan 2024 – Present</span>
-            </div>
-            <div class="r2-exp-meta lang-es">Estados Unidos · Remoto</div>
-            <div class="r2-exp-meta lang-en">United States · Remote</div>
-            <ul class="lang-es">
-                <li>Lidero implementación de estrategia Data Hub / Data Mesh con <strong>Microsoft Fabric</strong>, OneLake y Purview.</li>
-                <li>Desarrollo prototipos con <strong>LLMs</strong> para automatizar generación, validación y documentación de pipelines.</li>
-                <li>Impulso adopción de <strong>Azure AI Foundry</strong> para casos de uso de IA generativa empresarial.</li>
-                <li>Lidero migración de soluciones on-premise a AWS mejorando escalabilidad y eficiencia operativa.</li>
-            </ul>
-            <ul class="lang-en">
-                <li>Lead Data Hub / Data Mesh strategy with <strong>Microsoft Fabric</strong>, OneLake and Purview.</li>
-                <li>Build <strong>LLM</strong>-based prototypes to automate pipeline generation, validation, and documentation.</li>
-                <li>Drive adoption of <strong>Azure AI Foundry</strong> for enterprise generative AI use cases.</li>
-                <li>Lead migration of on-premise solutions to AWS improving scalability and operational efficiency.</li>
-            </ul>
-        </div>
-
-        <!-- StratioBD -->
-        <div class="r2-exp">
-            <div class="r2-exp-header">
-                <span class="r2-exp-company">StratioBD — Big Data Engineer</span>
-                <span class="r2-exp-period lang-es">Abr 2022 – Ene 2024</span>
-                <span class="r2-exp-period lang-en">Apr 2022 – Jan 2024</span>
-            </div>
-            <div class="r2-exp-meta lang-es">Colombia, México, Ecuador · Remoto</div>
-            <div class="r2-exp-meta lang-en">Colombia, Mexico, Ecuador · Remote</div>
-            <ul class="lang-es">
-                <li>Desarrollé pipelines con <strong>Python, PySpark</strong> y Big Data para clientes financieros en México y Ecuador.</li>
-                <li>Automaticé procesos de ingesta y transformación logrando <strong>40% reducción en tareas operativas</strong>.</li>
-                <li>Implementé modelos con CRISP-DM: <strong>30% mejora en KPIs</strong> y <strong>25% reducción en tiempos de entrega</strong>.</li>
-                <li>Colaboré con equipos de negocio e infraestructura en entornos financieros regulados.</li>
-            </ul>
-            <ul class="lang-en">
-                <li>Developed pipelines with <strong>Python, PySpark</strong> and Big Data for financial clients in Mexico and Ecuador.</li>
-                <li>Automated ingestion and transformation processes achieving <strong>40% reduction in operational tasks</strong>.</li>
-                <li>Implemented CRISP-DM models: <strong>30% KPI accuracy improvement</strong> and <strong>25% delivery time reduction</strong>.</li>
-                <li>Collaborated with business and infrastructure teams in regulated financial environments.</li>
-            </ul>
-        </div>
-
-        <!-- Consulting eSoluzion -->
-        <div class="r2-exp">
-            <div class="r2-exp-header">
-                <span class="r2-exp-company">Consulting eSoluzion — Lead Big Data Engineer</span>
-                <span class="r2-exp-period lang-es">Jun 2021 – Abr 2022</span>
-                <span class="r2-exp-period lang-en">Jun 2021 – Apr 2022</span>
-            </div>
-            <div class="r2-exp-meta lang-es">España · Remoto</div>
-            <div class="r2-exp-meta lang-en">Spain · Remote</div>
-            <ul class="lang-es">
-                <li>Lideré pipelines Big Data para <strong>BBVA España</strong> con Python, PySpark, AWS, GCP, HDFS, AVRO y PARQUET.</li>
-                <li>Diseñé procesos de integración entre plataformas cloud y sistemas legacy.</li>
-                <li>Contribuí a evolución Data Driven mediante optimización del ciclo de vida del dato.</li>
-            </ul>
-            <ul class="lang-en">
-                <li>Led Big Data pipelines for <strong>BBVA Spain</strong> with Python, PySpark, AWS, GCP, HDFS, AVRO and PARQUET.</li>
-                <li>Designed integration processes between cloud platforms and legacy systems.</li>
-                <li>Contributed to the organization's data-driven transformation by optimizing the data lifecycle.</li>
-            </ul>
-        </div>
-
-        <!-- SETI -->
-        <div class="r2-exp" style="break-before: page; page-break-before: always;">
-            <div class="r2-exp-header">
-                <span class="r2-exp-company">SETI S.A.S — Data Technical Team Leader</span>
-                <span class="r2-exp-period lang-es">Oct 2019 – May 2021</span>
-                <span class="r2-exp-period lang-en">Oct 2019 – May 2021</span>
-            </div>
-            <div class="r2-exp-meta">Bogotá, Colombia</div>
-            <ul class="lang-es">
-                <li>Lideré implementación de Data Lake para <strong>ATH Colombia</strong> reduciendo <strong>30% costos operativos</strong>.</li>
-                <li>Diseñé dashboards y modelos predictivos coordinando equipos multidisciplinarios con cumplimiento normativo.</li>
-            </ul>
-            <ul class="lang-en">
-                <li>Led Data Lake implementation for <strong>ATH Colombia</strong> reducing operational costs by <strong>30%</strong>.</li>
-                <li>Designed dashboards and predictive models coordinating multidisciplinary teams with regulatory compliance.</li>
-            </ul>
-        </div>
-
-        <!-- BBVA -->
-        <div class="r2-exp">
-            <div class="r2-exp-header">
-                <span class="r2-exp-company">BBVA Colombia — Lead / Principal Software Development Engineer</span>
-                <span class="r2-exp-period lang-es">Ago 2014 – Sep 2019</span>
-                <span class="r2-exp-period lang-en">Aug 2014 – Sep 2019</span>
-            </div>
-            <div class="r2-exp-meta">Colombia</div>
-            <ul class="lang-es">
-                <li>Lideré diseño del <strong>Gestor Documental BBVA Colombia</strong> — arquitectura en capas con Docker + Ansible.</li>
-                <li>Implementé DevOps y CI/CD; coordiné equipos de desarrollo, QA e infraestructura.</li>
-                <li><strong>20% mejora</strong> en eficiencia operativa con Python, Java, Docker y MongoDB.</li>
-            </ul>
-            <ul class="lang-en">
-                <li>Led design of <strong>BBVA Colombia Document Management Platform</strong> — layered architecture with Docker + Ansible.</li>
-                <li>Implemented DevOps and CI/CD; coordinated development, QA and infrastructure teams.</li>
-                <li><strong>20% improvement</strong> in operational efficiency with Python, Java, Docker and MongoDB.</li>
-            </ul>
-        </div>
-
-        <!-- Experiencia anterior -->
-        <div class="r2-exp">
-            <div class="r2-exp-header">
-                <span class="r2-exp-company lang-es">Experiencia anterior (2012 – 2014)</span>
-                <span class="r2-exp-company lang-en">Earlier Experience (2012 – 2014)</span>
-            </div>
-            <p class="r2-compact-exp lang-es">
-                <strong>GLOKAL CONSULTING</strong> (2013–2014) · Desarrollador TI — análisis, diseño y desarrollo full-stack para clientes corporativos. &nbsp;|&nbsp;
-                <strong>ANTSS LTDA</strong> (2012) · Desarrollador TI — proyecto EBSA, stack Java/ZK/Oracle con metodología RUP.
-            </p>
-            <p class="r2-compact-exp lang-en">
-                <strong>GLOKAL CONSULTING</strong> (2013–2014) · IT Developer — full-stack analysis and development for corporate clients. &nbsp;|&nbsp;
-                <strong>ANTSS LTDA</strong> (2012) · IT Developer — EBSA energy project, Java/ZK/Oracle with RUP methodology.
-            </p>
-        </div>
+    <!-- Consulting eSoluzion -->
+    <div class="r2-exp">
+      <div class="r2-exp-header">
+        <span class="r2-exp-company"
+          >Consulting eSoluzion — Lead Big Data Engineer</span
+        >
+        <span class="r2-exp-period lang-es">Jun 2021 – Abr 2022</span>
+        <span class="r2-exp-period lang-en">Jun 2021 – Apr 2022</span>
+      </div>
+      <div class="r2-exp-meta lang-es">España · Remoto</div>
+      <div class="r2-exp-meta lang-en">Spain · Remote</div>
+      <ul class="lang-es">
+        <li>
+          Lideré pipelines Big Data para <strong>BBVA España</strong> con
+          Python, PySpark, AWS, GCP, HDFS, AVRO y PARQUET.
+        </li>
+        <li>
+          Diseñé procesos de integración entre plataformas cloud y sistemas
+          legacy.
+        </li>
+        <li>
+          Contribuí a evolución Data Driven mediante optimización del ciclo de
+          vida del dato.
+        </li>
+      </ul>
+      <ul class="lang-en">
+        <li>
+          Led Big Data pipelines for <strong>BBVA Spain</strong> with Python,
+          PySpark, AWS, GCP, HDFS, AVRO and PARQUET.
+        </li>
+        <li>
+          Designed integration processes between cloud platforms and legacy
+          systems.
+        </li>
+        <li>
+          Contributed to the organization's data-driven transformation by
+          optimizing the data lifecycle.
+        </li>
+      </ul>
     </div>
 
-    <!-- ════ STACK TÉCNICO ════ -->
-    <div class="r2-section">
-        <div class="r2-section-title lang-es">Stack Técnico</div>
-        <div class="r2-section-title lang-en">Tech Stack</div>
-        <div class="r2-stack-row">
-            <span class="r2-stack-label">Data Engineering: </span>
-            <span class="r2-stack-items">Python · SQL · PySpark · Airflow · ETL/ELT · Data Lakes · Data Warehousing · Data Quality · APIs</span>
-        </div>
-        <div class="r2-stack-row">
-            <span class="r2-stack-label">AI Engineering / GenAI: </span>
-            <span class="r2-stack-items">OpenAI · Claude · Llama · LangChain · RAG · Embeddings · Hugging Face · Ollama · Azure AI Foundry</span>
-        </div>
-        <div class="r2-stack-row">
-            <span class="r2-stack-label">Cloud &amp; DevOps: </span>
-            <span class="r2-stack-items">AWS · GCP · Docker · Docker Swarm · Ansible · CI/CD · GitHub Actions · Linux</span>
-        </div>
-        <div class="r2-stack-row">
-            <span class="r2-stack-label">Microsoft Data &amp; AI: </span>
-            <span class="r2-stack-items">Microsoft Fabric · OneLake · Microsoft Purview · Data Hub / Data Mesh · Power BI</span>
-        </div>
-        <div class="r2-stack-row">
-            <span class="r2-stack-label lang-es">Bases de Datos &amp; Storage: </span>
-            <span class="r2-stack-label lang-en">Databases &amp; Storage: </span>
-            <span class="r2-stack-items">PostgreSQL · SQL Server · MongoDB · HDFS · AVRO · PARQUET</span>
-        </div>
+    <!-- SETI -->
+    <div class="r2-exp" style="break-before: page; page-break-before: always">
+      <div class="r2-exp-header">
+        <span class="r2-exp-company"
+          >SETI S.A.S — Data Technical Team Leader</span
+        >
+        <span class="r2-exp-period lang-es">Oct 2019 – May 2021</span>
+        <span class="r2-exp-period lang-en">Oct 2019 – May 2021</span>
+      </div>
+      <div class="r2-exp-meta">Bogotá, Colombia</div>
+      <ul class="lang-es">
+        <li>
+          Lideré implementación de Data Lake para
+          <strong>ATH Colombia</strong> reduciendo
+          <strong>30% costos operativos</strong>.
+        </li>
+        <li>
+          Diseñé dashboards y modelos predictivos coordinando equipos
+          multidisciplinarios con cumplimiento normativo.
+        </li>
+      </ul>
+      <ul class="lang-en">
+        <li>
+          Led Data Lake implementation for
+          <strong>ATH Colombia</strong> reducing operational costs by
+          <strong>30%</strong>.
+        </li>
+        <li>
+          Designed dashboards and predictive models coordinating
+          multidisciplinary teams with regulatory compliance.
+        </li>
+      </ul>
     </div>
 
-    <!-- ════ EDUCACIÓN ════ -->
-    <div class="r2-compact-section">
-        <div class="r2-section-title lang-es">Educación</div>
-        <div class="r2-section-title lang-en">Education</div>
-        <div class="r2-edu-inline lang-es">
-            Máster en Inteligencia Artificial — <span>UNIR</span> | 2023–2025
-        </div>
-        <div class="r2-edu-inline lang-en">
-            Master's in Artificial Intelligence — <span>UNIR</span> | 2023–2025
-        </div>
-        <div class="r2-edu-inline lang-es">
-            Master Executive BI y Big Data — <span>Instituto Europeo de Posgrado</span> | 2019–2020
-        </div>
-        <div class="r2-edu-inline lang-en">
-            Executive Master BI &amp; Big Data — <span>European Institute of Postgraduate Studies</span> | 2019–2020
-        </div>
-        <div class="r2-edu-inline lang-es">
-            Ingeniería de Sistemas — <span>Fundación Universitaria San Martín</span> | 2012–2018
-        </div>
-        <div class="r2-edu-inline lang-en">
-            B.S. in Systems Engineering — <span>Fundación Universitaria San Martín</span> | 2012–2018
-        </div>
+    <!-- BBVA -->
+    <div class="r2-exp">
+      <div class="r2-exp-header">
+        <span class="r2-exp-company"
+          >BBVA Colombia — Lead / Principal Software Development Engineer</span
+        >
+        <span class="r2-exp-period lang-es">Ago 2014 – Sep 2019</span>
+        <span class="r2-exp-period lang-en">Aug 2014 – Sep 2019</span>
+      </div>
+      <div class="r2-exp-meta">Colombia</div>
+      <ul class="lang-es">
+        <li>
+          Lideré diseño del <strong>Gestor Documental BBVA Colombia</strong> —
+          arquitectura en capas con Docker + Ansible.
+        </li>
+        <li>
+          Implementé DevOps y CI/CD; coordiné equipos de desarrollo, QA e
+          infraestructura.
+        </li>
+        <li>
+          <strong>20% mejora</strong> en eficiencia operativa con Python, Java,
+          Docker y MongoDB.
+        </li>
+      </ul>
+      <ul class="lang-en">
+        <li>
+          Led design of
+          <strong>BBVA Colombia Document Management Platform</strong> — layered
+          architecture with Docker + Ansible.
+        </li>
+        <li>
+          Implemented DevOps and CI/CD; coordinated development, QA and
+          infrastructure teams.
+        </li>
+        <li>
+          <strong>20% improvement</strong> in operational efficiency with
+          Python, Java, Docker and MongoDB.
+        </li>
+      </ul>
     </div>
 
-    <!-- ════ CERTIFICACIONES ════ -->
-    <div class="r2-compact-section">
-        <div class="r2-section-title lang-es">Certificaciones</div>
-        <div class="r2-section-title lang-en">Certifications</div>
-        <div class="r2-certs-inline">
-            AWS Certified Cloud Practitioner · Microsoft Azure Fundamentals · Stratio Generative AI · Elastic Stack 7 Training · Scrum Fundamentals Certified
-        </div>
+    <!-- Experiencia anterior -->
+    <div class="r2-exp">
+      <div class="r2-exp-header">
+        <span class="r2-exp-company lang-es"
+          >Experiencia anterior (2012 – 2014)</span
+        >
+        <span class="r2-exp-company lang-en"
+          >Earlier Experience (2012 – 2014)</span
+        >
+      </div>
+      <p class="r2-compact-exp lang-es">
+        <strong>GLOKAL CONSULTING</strong> (2013–2014) · Desarrollador TI —
+        análisis, diseño y desarrollo full-stack para clientes corporativos.
+        &nbsp;|&nbsp; <strong>ANTSS LTDA</strong> (2012) · Desarrollador TI —
+        proyecto EBSA, stack Java/ZK/Oracle con metodología RUP.
+      </p>
+      <p class="r2-compact-exp lang-en">
+        <strong>GLOKAL CONSULTING</strong> (2013–2014) · IT Developer —
+        full-stack analysis and development for corporate clients. &nbsp;|&nbsp;
+        <strong>ANTSS LTDA</strong> (2012) · IT Developer — EBSA energy project,
+        Java/ZK/Oracle with RUP methodology.
+      </p>
     </div>
+  </div>
 
-    <!-- ════ IDIOMAS ════ -->
-    <div class="r2-compact-section">
-        <div class="r2-section-title lang-es">Idiomas</div>
-        <div class="r2-section-title lang-en">Languages</div>
-        <div class="r2-langs-inline lang-es">Español nativo · Inglés técnico A2-B1 en progreso</div>
-        <div class="r2-langs-inline lang-en">Spanish: Native · English: Technical A2–B1, improving</div>
+  <!-- ════ STACK TÉCNICO ════ -->
+  <div class="r2-section">
+    <div class="r2-section-title lang-es">Stack Técnico</div>
+    <div class="r2-section-title lang-en">Tech Stack</div>
+    <div class="r2-stack-row">
+      <span class="r2-stack-label">Data Engineering: </span>
+      <span class="r2-stack-items"
+        >Python · SQL · PySpark · Airflow · ETL/ELT · Data Lakes · Data
+        Warehousing · Data Quality · APIs</span
+      >
     </div>
-
-    <!-- ════ RECONOCIMIENTOS ════ -->
-    <div class="r2-compact-section">
-        <div class="r2-section-title lang-es">Reconocimiento</div>
-        <div class="r2-section-title lang-en">Recognition</div>
-        <div class="r2-honor-inline lang-es">
-            <strong>Evaluador BBVA Open Talent 2018</strong> — mayor competición Fintech del mundo. Evaluación y calificación de startups innovadoras.
-        </div>
-        <div class="r2-honor-inline lang-en">
-            <strong>BBVA Open Talent Evaluator 2018</strong> — world's largest Fintech competition. Evaluation and rating of innovative startups.
-        </div>
+    <div class="r2-stack-row">
+      <span class="r2-stack-label">AI Engineering / GenAI: </span>
+      <span class="r2-stack-items"
+        >OpenAI · Claude · Llama · LangChain · RAG · Embeddings · Hugging Face ·
+        Ollama · Azure AI Foundry</span
+      >
     </div>
-
-    <!-- Download -->
-    <div class="r2-download-wrap">
-        <button onclick="downloadCV()" class="r2-download-btn">
-            <i class="fas fa-download"></i>
-            <span id="downloadText" class="lang-es">Descargar CV</span>
-            <span class="lang-en">Download CV</span>
-        </button>
+    <div class="r2-stack-row">
+      <span class="r2-stack-label">Cloud &amp; DevOps: </span>
+      <span class="r2-stack-items"
+        >AWS · GCP · Docker · Docker Swarm · Ansible · CI/CD · GitHub Actions ·
+        Linux</span
+      >
     </div>
+    <div class="r2-stack-row">
+      <span class="r2-stack-label">Microsoft Data &amp; AI: </span>
+      <span class="r2-stack-items"
+        >Microsoft Fabric · OneLake · Microsoft Purview · Data Hub / Data Mesh ·
+        Power BI</span
+      >
+    </div>
+    <div class="r2-stack-row">
+      <span class="r2-stack-label lang-es">Bases de Datos &amp; Storage: </span>
+      <span class="r2-stack-label lang-en">Databases &amp; Storage: </span>
+      <span class="r2-stack-items"
+        >PostgreSQL · SQL Server · MongoDB · HDFS · AVRO · PARQUET</span
+      >
+    </div>
+  </div>
 
+  <!-- ════ EDUCACIÓN ════ -->
+  <div class="r2-compact-section">
+    <div class="r2-section-title lang-es">Educación</div>
+    <div class="r2-section-title lang-en">Education</div>
+    <div class="r2-edu-inline lang-es">
+      Máster en Inteligencia Artificial — <span>UNIR</span> | 2023–2025
+    </div>
+    <div class="r2-edu-inline lang-en">
+      Master's in Artificial Intelligence — <span>UNIR</span> | 2023–2025
+    </div>
+    <div class="r2-edu-inline lang-es">
+      Master Executive BI y Big Data —
+      <span>Instituto Europeo de Posgrado</span> | 2020–2022
+    </div>
+    <div class="r2-edu-inline lang-en">
+      Executive Master BI &amp; Big Data —
+      <span>European Institute of Postgraduate Studies</span> | 2020–2022
+    </div>
+    <div class="r2-edu-inline lang-es">
+      Ingeniería de Sistemas — <span>Fundación Universitaria San Martín</span> |
+      2012–2018
+    </div>
+    <div class="r2-edu-inline lang-en">
+      B.S. in Systems Engineering —
+      <span>Fundación Universitaria San Martín</span> | 2012–2018
+    </div>
+  </div>
+
+  <!-- ════ CERTIFICACIONES ════ -->
+  <div class="r2-compact-section">
+    <div class="r2-section-title lang-es">Certificaciones</div>
+    <div class="r2-section-title lang-en">Certifications</div>
+    <div class="r2-certs-inline">
+      AWS Certified Cloud Practitioner · Microsoft Azure Fundamentals · Stratio
+      Generative AI · Elastic Stack 7 Training · Scrum Fundamentals Certified
+    </div>
+  </div>
+
+  <!-- ════ IDIOMAS ════ -->
+  <div class="r2-compact-section">
+    <div class="r2-section-title lang-es">Idiomas</div>
+    <div class="r2-section-title lang-en">Languages</div>
+    <div class="r2-langs-inline lang-es">
+      Español nativo · Inglés técnico A2-B1 en progreso
+    </div>
+    <div class="r2-langs-inline lang-en">
+      Spanish: Native · English: Technical A2–B1, improving
+    </div>
+  </div>
+
+  <!-- ════ RECONOCIMIENTOS ════ -->
+  <div class="r2-compact-section">
+    <div class="r2-section-title lang-es">Reconocimiento</div>
+    <div class="r2-section-title lang-en">Recognition</div>
+    <div class="r2-honor-inline lang-es">
+      <strong>Evaluador BBVA Open Talent 2018</strong> — mayor competición
+      Fintech del mundo. Evaluación y calificación de startups innovadoras.
+    </div>
+    <div class="r2-honor-inline lang-en">
+      <strong>BBVA Open Talent Evaluator 2018</strong> — world's largest Fintech
+      competition. Evaluation and rating of innovative startups.
+    </div>
+  </div>
+
+  <!-- Download -->
+  <div class="r2-download-wrap">
+    <button onclick="downloadCV()" class="r2-download-btn">
+      <i class="fas fa-download"></i>
+      <span id="downloadText" class="lang-es">Descargar CV</span>
+      <span class="lang-en">Download CV</span>
+    </button>
+  </div>
 </div>
