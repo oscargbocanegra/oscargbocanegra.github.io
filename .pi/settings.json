@@ -1,0 +1,36 @@
+{
+	"defaultProvider": "github-copilot",
+	"defaultModel": "claude-sonnet-4.6",
+	"defaultThinkingLevel": "medium",
+	"subagents": {
+		"agentOverrides": {
+			"sdd-init": {
+				"model": "github-copilot/gpt-5.3-codex"
+			},
+			"sdd-explore": {
+				"model": "github-copilot/gpt-5.3-codex"
+			},
+			"sdd-proposal": {
+				"model": "github-copilot/gpt-5.5"
+			},
+			"sdd-spec": {
+				"model": "github-copilot/gpt-5.3-codex"
+			},
+			"sdd-design": {
+				"model": "github-copilot/gpt-5.5"
+			},
+			"sdd-tasks": {
+				"model": "github-copilot/gpt-5.3-codex"
+			},
+			"sdd-apply": {
+				"model": "github-copilot/gpt-5.3-codex"
+			},
+			"sdd-verify": {
+				"model": "github-copilot/gpt-5.5"
+			},
+			"sdd-archive": {
+				"model": "github-copilot/gpt-5.4-mini"
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+strict_tdd: false
+context: |
+  oscargbocanegra.github.io is a GitHub Pages/Jekyll portfolio site served from docs/.
+  Detected stack: static HTML pages in docs/ plus Jekyll configuration in docs/_config.yml.
+  No package manager, build tool, linter, type checker, formatter, or automated test runner was detected.
+  Validation is manual: inspect rendered pages locally and verify links/content in docs/.
+rules:
+  proposal:
+    require_problem_statement: true
+  spec:
+    require_acceptance_criteria: true
+  design:
+    require_tradeoffs: true
+  tasks:
+    protect_review_workload: true
+  apply:
+    test_command: ""
+  verify:
+    test_command: ""
+testing:
+  detected: "2026-05-21"
+  runner:
+    command: ""
+    framework: ""
+  layers:
+    unit: ""
+    integration: ""
+    e2e: ""
+  commands:
+    unit: []
+    integration: []
+    e2e: []
+  coverage:
+    command: ""
+    commands: []
+quality:
+  lint: ""
+  lint_commands: []
+  typecheck: ""
+  typecheck_commands: []
+  format: ""
+  format_commands: []
