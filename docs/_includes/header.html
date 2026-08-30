@@ -1,44 +1,20 @@
 <header class="header-modern">
-    <div class="container">
-        <div class="header-content">
-            <div class="logo">
-                <h1>{{ site.author }}</h1>
-                <p>AI & Big Data Engineer | Data Platforms | Applied LLM Systems</p>
-            </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="{{ '/index.html' | relative_url }}"
-                           {% if page.url == '/index.html' or page.url == '/' %}class="active"{% endif %}>
-                           Inicio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ '/about.html' | relative_url }}"
-                           {% if page.url contains 'about' %}class="active"{% endif %}>
-                           Sobre Mí
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ '/projects.html' | relative_url }}"
-                           {% if page.url contains 'projects' %}class="active"{% endif %}>
-                           Proyectos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ '/contact.html' | relative_url }}"
-                           {% if page.url contains 'contact' %}class="active"{% endif %}>
-                           Contacto
-                        </a>
-                    </li>
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+  <div class="container">
+    <div class="header-content">
+      <a class="logo" href="{{ '/index.html' | relative_url }}" aria-label="Oscar Bocanegra home">
+        <h1>{{ site.author }}</h1>
+        <p>AI &amp; Data Solutions Architect</p>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="{{ '/index.html' | relative_url }}" {% if page.url == '/index.html' or page.url == '/' %}class="active"{% endif %}>Home</a></li>
+          <li><a href="{{ '/about.html' | relative_url }}" {% if page.url contains 'about' %}class="active"{% endif %}>About</a></li>
+          <li><a href="{{ '/projects.html' | relative_url }}" {% if page.url contains 'projects' %}class="active"{% endif %}>Technical Work</a></li>
+          <li><a href="{{ '/resume.html' | relative_url }}" {% if page.url contains 'resume' %}class="active"{% endif %}>Resume</a></li>
+          <li><a href="{{ '/contact.html' | relative_url }}" {% if page.url contains 'contact' %}class="active"{% endif %}>Contact</a></li>
+          <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark theme"><i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i></button></li>
+        </ul>
+      </nav>
     </div>
+  </div>
 </header>

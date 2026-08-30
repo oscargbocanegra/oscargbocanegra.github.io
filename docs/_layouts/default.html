@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 {% include head.html %}
 <body>
-    {% include header.html %}
-    <main>
-        {{ content }}
-    </main>
-    {% include footer.html %}
-    <script src="{{ '/js/scripts.js' | relative_url }}"></script>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  {% include header.html %}
+  <main id="main-content">{{ content }}</main>
+  {% include footer.html %}
+  <script src="{{ '/js/scripts.js' | relative_url }}"></script>
 </body>
 </html>

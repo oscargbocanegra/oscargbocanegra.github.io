@@ -1,14 +1,10 @@
-title: "Oscar Bocanegra | Data Engineer & AI Specialist"
+title: "Oscar Bocanegra | AI & Data Solutions Architect"
 author: "Oscar Giovanni Bocanegra"
 email: "oscargiovanni@gmail.com"
-description: "Portafolio profesional de Oscar Bocanegra, especialista en Data Engineering e Inteligencia Artificial con amplia experiencia en soluciones empresariales."
-
+description: "Senior AI & Data Engineer and Solutions Architect for production-ready AI, data platforms, RAG, and intelligent automation."
 github_username: oscargbocanegra
 linkedin_username: oscargbocanegra
-twitter_username: oscargbocanegra
-
 url: "https://oscargbocanegra.github.io"
 baseurl: ""
-
 plugins:
   - jekyll-sitemap
