@@ -1,4 +1,4 @@
-{% assign is_es = false %}{% if page.lang == 'es' %}{% assign is_es = true %}{% endif %}
+{% assign is_es = nil %}{% if page.lang == 'es' %}{% assign is_es = true %}{% endif %}
 {% if is_es %}{% assign home_url = '/es/' %}{% assign services_url = '/es/services.html' %}{% assign projects_url = '/es/projects.html' %}{% assign about_url = '/es/about.html' %}{% assign resume_url = '/es/resume.html' %}{% assign work_url = '/es/work-with-me.html' %}{% assign locale_url = page.alternate_url | default: '/' %}{% else %}{% assign home_url = '/' %}{% assign services_url = '/services.html' %}{% assign projects_url = '/projects.html' %}{% assign about_url = '/about.html' %}{% assign resume_url = '/resume.html' %}{% assign work_url = '/work-with-me.html' %}{% assign locale_url = page.alternate_url | default: '/es/' %}{% endif %}
 <header class="site-header">
   <div class="container site-header__inner">
