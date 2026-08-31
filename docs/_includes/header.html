@@ -1,20 +1,25 @@
-<header class="header-modern">
-  <div class="container">
-    <div class="header-content">
-      <a class="logo" href="{{ '/index.html' | relative_url }}" aria-label="Oscar Bocanegra home">
-        <h1>{{ site.author }}</h1>
-        <p>AI &amp; Data Solutions Architect</p>
-      </a>
-      <nav aria-label="Primary navigation">
-        <ul>
-          <li><a href="{{ '/index.html' | relative_url }}" {% if page.url == '/index.html' or page.url == '/' %}class="active"{% endif %}>Home</a></li>
-          <li><a href="{{ '/about.html' | relative_url }}" {% if page.url contains 'about' %}class="active"{% endif %}>About</a></li>
-          <li><a href="{{ '/projects.html' | relative_url }}" {% if page.url contains 'projects' %}class="active"{% endif %}>Technical Work</a></li>
-          <li><a href="{{ '/resume.html' | relative_url }}" {% if page.url contains 'resume' %}class="active"{% endif %}>Resume</a></li>
-          <li><a href="{{ '/contact.html' | relative_url }}" {% if page.url contains 'contact' %}class="active"{% endif %}>Contact</a></li>
-          <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark theme"><i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i></button></li>
-        </ul>
-      </nav>
+{% assign is_es = page.lang == 'es' %}
+{% if is_es %}{% assign home_url = '/es/' %}{% assign services_url = '/es/services.html' %}{% assign projects_url = '/es/projects.html' %}{% assign about_url = '/es/about.html' %}{% assign resume_url = '/es/resume.html' %}{% assign work_url = '/es/work-with-me.html' %}{% assign locale_url = page.alternate_url | default: '/' %}{% else %}{% assign home_url = '/' %}{% assign services_url = '/services.html' %}{% assign projects_url = '/projects.html' %}{% assign about_url = '/about.html' %}{% assign resume_url = '/resume.html' %}{% assign work_url = '/work-with-me.html' %}{% assign locale_url = page.alternate_url | default: '/es/' %}{% endif %}
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-brand" href="{{ home_url | relative_url }}" aria-label="{{ site.author }} — {% if is_es %}Inicio{% else %}Home{% endif %}">
+      <span class="site-brand__name">{{ site.author }}</span>
+      <span class="site-brand__role">AI &amp; Data Solutions Architect</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><span class="sr-only">{% if is_es %}Abrir navegación{% else %}Open navigation{% endif %}</span><span aria-hidden="true">Menu</span></button>
+    <nav id="primary-navigation" class="primary-nav" aria-label="{% if is_es %}Navegación principal{% else %}Primary navigation{% endif %}">
+      <ul>
+        <li><a href="{{ home_url | relative_url }}" {% if page.section == 'home' %}aria-current="page"{% endif %}>{% if is_es %}Inicio{% else %}Home{% endif %}</a></li>
+        <li><a href="{{ services_url | relative_url }}" {% if page.section == 'services' %}aria-current="page"{% endif %}>{% if is_es %}Servicios{% else %}Services{% endif %}</a></li>
+        <li><a href="{{ projects_url | relative_url }}" {% if page.section == 'projects' %}aria-current="page"{% endif %}>{% if is_es %}Casos de estudio{% else %}Case Studies{% endif %}</a></li>
+        <li><a href="{{ about_url | relative_url }}" {% if page.section == 'about' %}aria-current="page"{% endif %}>{% if is_es %}Acerca de{% else %}About{% endif %}</a></li>
+        <li><a href="{{ resume_url | relative_url }}" {% if page.section == 'resume' %}aria-current="page"{% endif %}>{% if is_es %}Currículum{% else %}Resume{% endif %}</a></li>
+        <li><a class="nav-cta" href="{{ work_url | relative_url }}" {% if page.section == 'work-with-me' %}aria-current="page"{% endif %}>{% if is_es %}Trabajá Conmigo{% else %}Work With Me{% endif %}</a></li>
+      </ul>
+    </nav>
+    <div class="site-tools">
+      <div class="locale-switcher" aria-label="{% if is_es %}Selector de idioma{% else %}Language selector{% endif %}">{% if is_es %}<a class="locale-link" href="{{ locale_url | relative_url }}" lang="en" hreflang="en" data-locale="en">EN</a><span class="locale-current" lang="es" aria-current="page">ES</span>{% else %}<span class="locale-current" lang="en" aria-current="page">EN</span><a class="locale-link" href="{{ locale_url | relative_url }}" lang="es" hreflang="es" data-locale="es">ES</a>{% endif %}</div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="{% if is_es %}Cambiar tema de color{% else %}Change color theme{% endif %}" aria-pressed="false"><span aria-hidden="true">◐</span></button>
     </div>
   </div>
 </header>

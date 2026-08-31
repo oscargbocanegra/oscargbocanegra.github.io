@@ -1,11 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include head.html %}
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  {% include header.html %}
-  <main id="main-content">{{ content }}</main>
-  {% include footer.html %}
-  <script src="{{ '/js/scripts.js' | relative_url }}"></script>
-</body>
-</html>
+<!doctype html><html lang="{{ page.lang | default: 'en' }}">{% include head.html %}<body class="page--{{ page.lang | default: 'en' }}"><a class="skip-link" href="#main-content">{% if page.lang == 'es' %}Saltar al contenido{% else %}Skip to content{% endif %}</a>{% include header.html %}<main id="main-content" tabindex="-1">{{ content }}</main>{% include footer.html %}<script src="{{ '/js/scripts.js' | relative_url }}" defer></script></body></html>

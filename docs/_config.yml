@@ -1,10 +1,12 @@
 title: "Oscar Bocanegra | AI & Data Solutions Architect"
 author: "Oscar Giovanni Bocanegra"
 email: "oscargiovanni@gmail.com"
-description: "Senior AI & Data Engineer and Solutions Architect for production-ready AI, data platforms, RAG, and intelligent automation."
+description: "Senior AI and data engineering for practical architecture, delivery planning, and technical evidence."
 github_username: oscargbocanegra
 linkedin_username: oscargbocanegra
 url: "https://oscargbocanegra.github.io"
 baseurl: ""
+lang: en
+locale: en_US
 plugins:
   - jekyll-sitemap
