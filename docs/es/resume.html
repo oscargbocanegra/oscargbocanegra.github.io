@@ -339,6 +339,24 @@ description: "Executive resume for Oscar Giovanni Bocanegra, Senior Data & AI En
       content: none;
     }
   }
+
+  /* Small-screen reading layout. Keep the resume responsive instead of clipping it. */
+  @media (max-width: 520px) {
+    .r2 {
+      max-width: 100%;
+      padding: 26px 18px;
+      font-size: 10pt;
+      overflow-wrap: anywhere;
+    }
+    .r2-header { margin-bottom: 16px; padding-bottom: 12px; }
+    .r2-name { font-size: 17pt; overflow-wrap: anywhere; }
+    .r2-title { font-size: 9.5pt; }
+    .r2-contact { display: grid; grid-template-columns: 1fr; gap: 3px; align-items: start; }
+    .r2-contact .r2-sep { display: none; }
+    .r2-contact a, .r2 p, .r2 li { overflow-wrap: anywhere; }
+    .r2-project-header, .r2-exp-header { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; align-items: start; }
+    .r2-project-period, .r2-exp-period { white-space: normal; }
+  }
 </style>
 
 <div class="r2">
