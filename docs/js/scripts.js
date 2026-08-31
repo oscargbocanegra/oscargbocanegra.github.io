@@ -40,9 +40,11 @@
     event.preventDefault();
     if (!intake.reportValidity()) return;
     const fields = new FormData(intake);
-    const labels = { problem: "Problem", outcome: "Intended outcome", constraints: "Constraints", state: "Current state" };
-    const body = [...fields.entries()].map(([name, value]) => `${labels[name] || name}: ${value}`).join("\n\n");
     const isSpanish = document.documentElement.lang === "es";
+    const labels = isSpanish
+      ? { name: "Nombre", email: "Correo profesional", problem: "Problema o iniciativa", outcome: "Resultado esperado", constraints: "Restricciones", state: "Estado actual" }
+      : { name: "Name", email: "Professional email", problem: "Problem or initiative", outcome: "Intended outcome", constraints: "Constraints", state: "Current state" };
+    const body = [...fields.entries()].map(([name, value]) => `${labels[name] || name}: ${value}`).join("\n\n");
     const subject = isSpanish ? "Conversación sobre proyecto de IA y datos" : "AI and Data Project Discussion";
     const status = document.getElementById("intake-status");
     if (status) status.textContent = isSpanish ? "Se está abriendo tu aplicación de correo. Revisá el mensaje antes de enviarlo." : "Your email application is being opened. Review the message before sending.";
