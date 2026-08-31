@@ -1,146 +1,87 @@
 # Portfolio maintenance guide
 
-This file explains how to update the portfolio without reintroducing the content drift and UX issues already cleaned up.
+Use this guide to keep the English and Spanish portfolio routes, shared shell, resume, and evidence boundaries aligned.
 
 ## Quick path
 
-1. Decide whether the change is **content**, **presentation**, or **behavior**.
-2. Edit the smallest source of truth.
-3. Check every public page that repeats the same claim.
-4. Validate navigation, links, and the direct canonical CV path.
+1. Classify the change as content, presentation, or behavior.
+2. Edit the smallest owning source.
+3. Review the corresponding English and Spanish pages plus repeated claims.
+4. Build with Jekyll and manually check the affected routes and interactions.
 
 ## Source of truth
 
-| Topic                           | Source of truth               |
-| ------------------------------- | ----------------------------- |
-| Site metadata                   | `docs/_config.yml`            |
-| Shared navigation               | `docs/_includes/header.html`  |
-| Shared footer/social links      | `docs/_includes/footer.html`  |
-| Homepage stats and highlights   | `docs/index.html`             |
-| Professional background         | `docs/about.html`             |
-| Contact channels                | `docs/contact.html`           |
-| Shared site-level profile facts | `docs/_data/site_profile.yml` |
-| Canonical CV                    | `docs/resume.html`            |
-| Resume-specific styles          | `docs/css/resume.css`         |
+| Concern | Source |
+| --- | --- |
+| Site metadata and URL | `docs/_config.yml` |
+| Shared profile facts | `docs/_data/site_profile.yml` |
+| Primary navigation and language switcher | `docs/_includes/header.html` |
+| Footer navigation and social links | `docs/_includes/footer.html` |
+| Shared head, CSS link, and SEO metadata | `docs/_includes/head.html` |
+| Shared layout | `docs/_layouts/default.html` |
+| Global menu, theme, and intake behavior | `docs/js/scripts.js` |
+| Shared styling | `docs/css/style.css` |
+| Canonical English resume | `docs/resume.html` |
+| Canonical Spanish resume | `docs/es/resume.html` |
+| Legacy resume redirects | `docs/resume-old.html`, `docs/resume2.html` |
 
-## CV policy
+## Routes and conversion path
 
-- `docs/index.html` remains the main landing page.
-- `docs/resume.html` remains the canonical standalone CV kept online, but it stays hidden from public navigation.
-- `docs/resume-old.html` and `docs/resume2.html` exist only to preserve old URLs and redirect to the canonical page.
-- Do not fork the CV into additional standalone pages.
-- Shared landing/about facts should live in `docs/_data/site_profile.yml`.
-- If the CV changes, review whether the same claim should also change in:
-  - `docs/_data/site_profile.yml`
-  - `docs/contact.html` (if contact/value proposition changes)
+Primary navigation is Home, Services, Case Studies (`projects.html`), About, Resume, and Work With Me, with matching `/es/` routes. Keep each route's `alternate_url` and language metadata correct when changing a page.
 
-## Public claim consistency checklist
+Work With Me is the current conversion page. Its intake form uses JavaScript to prepare a `mailto:` draft; without JavaScript, the page provides a `<noscript>` explanation and direct email/LinkedIn alternatives. No server-side submission or website data retention is implemented. `contact.html` remains a compatibility direct-contact page with email, LinkedIn, and GitHub links; do not document it as the primary conversion flow.
 
-Review these together whenever you update experience, education, certifications, or positioning:
+## Resume policy
 
-- `docs/_data/site_profile.yml`
-- `docs/resume.html`
-- years of experience
-- current role/title
-- education dates and completion status
-- certification names
-- highlighted technologies
-- project claims and business outcomes
+- Keep `docs/resume.html` and `docs/es/resume.html` as the maintained bilingual resume pages.
+- Keep `docs/resume-old.html` and `docs/resume2.html` as legacy English redirect pages only.
+- Do not create additional resume variants or edit legacy redirects into content pages.
+- When experience, dates, technologies, or positioning changes, check the resume against Home, About, Services, Case Studies, and Work With Me.
+- Preserve the site's evidence boundary: independent public technical work is not automatically client delivery, production deployment, or a measured commercial outcome.
 
-## Contact page policy
+## Change workflow
 
-The contact page is intentionally honest:
+### Content
 
-- use direct channels that actually work
-- do not add a form unless it really sends messages
-- if a form is reintroduced, document the provider and failure mode in `README.md`
+Update facts, dates, copy, project descriptions, or calls to action. Check duplicated claims and the matching Spanish route.
 
-## External link rule
+### Presentation
 
-Any external link that uses `target="_blank"` must also include:
+Update shared styles or layout only when the change applies broadly. Check desktop and mobile navigation, the language switcher, the theme control, and resume-specific styling when relevant.
 
-```html
-rel="noopener noreferrer"
-```
+### Behavior
 
-## Editing workflow
-
-### Content changes
-
-Use for:
-
-- role updates
-- dates
-- copy fixes
-- project descriptions
-- CTA wording
-
-Check:
-
-- duplicated claims across pages
-- Spanish wording consistency
-- canonical CV still aligned
-
-### Presentation changes
-
-Use for:
-
-- styles
-- layout tweaks
-- spacing
-- navigation visibility
-- whether CV visibility should stay hidden from public navigation
-
-Check:
-
-- header/footer still consistent
-- `docs/css/resume.css` if the change affects the CV page
-- mobile layout if affected
-- no accidental changes to shared components
-
-### Behavior changes
-
-Use for:
-
-- filters
-- theme toggle
-- animation tweaks
-- any contact interactions
-
-Check:
-
-- `docs/js/scripts.js`
-- visible page behavior in affected screens
-- no dead selectors left behind
+For menu, theme, filters, animation, or Work With Me intake changes, inspect `docs/js/scripts.js` and manually test the affected page. Do not describe the mailto flow as a hosted form or promise delivery, storage, pricing, availability, or response times.
 
 ## Pre-publish checklist
 
-- [ ] Main nav works
-- [ ] Footer links work
-- [ ] `resume.html` is still reachable directly and remains the canonical CV path
-- [ ] Contact page still reflects actual supported contact paths
-- [ ] Project filters still work
-- [ ] No inconsistent claims across public pages
-- [ ] No accidental new CV variant was introduced
+- [ ] Primary header and footer links work in English and Spanish.
+- [ ] `alternate_url` values and bilingual route pairs remain correct.
+- [ ] `docs/resume.html` remains the canonical English resume target.
+- [ ] Legacy resume URLs still redirect after a Jekyll render.
+- [ ] Case Studies filters and theme/menu behavior still work.
+- [ ] Work With Me prepares a mailto draft, and its no-JavaScript fallback remains accurate.
+- [ ] Contact remains a compatibility direct-contact page.
+- [ ] External links opened in a new tab include `rel="noopener noreferrer"`.
+- [ ] Public claims remain supported and evidence boundaries remain explicit.
 
 ## Local preview and build
-
-Preferred local preview path:
 
 ```bash
 bundle install
 bundle exec jekyll serve --source docs --destination .tmp/jekyll-preview
 ```
 
-Minimal CI build check now lives in:
+CI runs:
 
-- `.github/workflows/build.yml`
+```bash
+bundle exec jekyll build --source docs --destination .tmp/jekyll-build
+```
 
-## Recommended next improvements
+The build check confirms Jekyll rendering only. Link coverage, visual layout, browser interactions, external destinations, and mail-client behavior require manual review. Generated `.tmp/` and `docs/_site/` output is not source and should not be edited or treated as proof of those checks.
 
-These are still good candidates after the operational hardening pass:
+## Current improvement candidates
 
-1. Add non-flaky advisory link checking in CI.
-2. Reduce remaining duplicated content between homepage/about/CV where practical.
-3. Add a favicon and richer social preview assets if branding becomes a priority.
-4. Expand SEO metadata only if discoverability becomes a product goal.
+1. Add non-flaky advisory link checking to CI.
+2. Reduce duplicated claims across pages where that can be done without weakening bilingual content.
+3. Expand SEO or social-preview metadata only when the product goal and evidence justify it.
