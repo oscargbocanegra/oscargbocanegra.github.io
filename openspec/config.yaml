@@ -1,9 +1,12 @@
 strict_tdd: false
 context: |
-  oscargbocanegra.github.io is a GitHub Pages/Jekyll portfolio site served from docs/.
-  Detected stack: static HTML pages in docs/ plus Jekyll configuration in docs/_config.yml.
-  No package manager, build tool, linter, type checker, formatter, or automated test runner was detected.
-  Validation is manual: inspect rendered pages locally and verify links/content in docs/.
+  oscargbocanegra.github.io is an English-first bilingual GitHub Pages/Jekyll portfolio sourced from docs/.
+  Stack: Jekyll 3.10.0 through github-pages 232, pinned by Gemfile/Gemfile.lock and configured in docs/_config.yml.
+  Site structure: Liquid/Jekyll layouts and includes under docs/_layouts/ and docs/_includes/, plus HTML/CSS/JavaScript.
+  Build: bundle exec jekyll build --source docs --destination .tmp/jekyll-build; CI proof is .github/workflows/build.yml.
+  Local Ruby, Bundler, and Jekyll executables are unavailable in this environment; CI is the supported build proof.
+  No automated unit, integration, or E2E runner, coverage tool, linter, type checker, or formatter is configured.
+  Manual review remains required for rendered EN/ES routes, links, responsive behavior, accessibility, redirects, and mailto flow.
 rules:
   proposal:
     require_problem_statement: true
@@ -17,11 +20,18 @@ rules:
     test_command: ""
   verify:
     test_command: ""
+    build_command: "bundle exec jekyll build --source docs --destination .tmp/jekyll-build"
+    build_proof: "GitHub Actions workflow .github/workflows/build.yml; local execution unavailable in the detected environment"
 testing:
-  detected: "2026-05-21"
+  detected: "2026-08-31"
   runner:
     command: ""
-    framework: ""
+    framework: "No automated test runner detected"
+  build:
+    command: "bundle exec jekyll build --source docs --destination .tmp/jekyll-build"
+    ci_workflow: ".github/workflows/build.yml"
+    local_available: false
+    supported_proof: "GitHub Actions"
   layers:
     unit: ""
     integration: ""

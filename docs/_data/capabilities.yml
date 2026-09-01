@@ -1,0 +1,66 @@
+- id: ai-engineering
+  order: 1
+  en:
+    title: AI Engineering
+    summary: Architecture and implementation support for practical AI systems, including retrieval, agent workflows, evaluation, and operational boundaries.
+  es:
+    title: Ingeniería de IA
+    summary: Acompañamiento de arquitectura e implementación para sistemas de IA prácticos, incluidos recuperación, flujos de agentes, evaluación y límites operativos.
+  evidence_boundary:
+    en: Scope statement only; it does not assert client delivery, production deployment, or commercial outcomes.
+    es: Declaración de alcance únicamente; no afirma entrega a clientes, despliegue en producción ni resultados comerciales.
+- id: data-engineering
+  order: 2
+  en:
+    title: Data Engineering
+    summary: Data ingestion, transformation, quality, and reliability considerations for analytics and AI-dependent workloads.
+  es:
+    title: Ingeniería de Datos
+    summary: Consideraciones de ingesta, transformación, calidad y confiabilidad de datos para analítica y cargas de trabajo dependientes de IA.
+  evidence_boundary:
+    en: Scope statement only; it does not assert client delivery, production deployment, or commercial outcomes.
+    es: Declaración de alcance únicamente; no afirma entrega a clientes, despliegue en producción ni resultados comerciales.
+- id: data-ai-platforms
+  order: 3
+  en:
+    title: Data & AI Platforms
+    summary: Platform design for governed data, shared services, and AI workloads with clear integration and operating considerations.
+  es:
+    title: Plataformas de Datos e IA
+    summary: Diseño de plataformas para datos gobernados, servicios compartidos y cargas de IA con consideraciones claras de integración y operación.
+  evidence_boundary:
+    en: Scope statement only; it does not assert client delivery, production deployment, or commercial outcomes.
+    es: Declaración de alcance únicamente; no afirma entrega a clientes, despliegue en producción ni resultados comerciales.
+- id: architecture-governance
+  order: 4
+  en:
+    title: Architecture & Governance
+    summary: Decision structures, system boundaries, and governance considerations that help teams make technical trade-offs explicit.
+  es:
+    title: Arquitectura y Gobierno
+    summary: Estructuras de decisión, límites de sistemas y consideraciones de gobierno que ayudan a los equipos a hacer explícitas las decisiones técnicas.
+  evidence_boundary:
+    en: Scope statement only; it does not assert client delivery, production deployment, or commercial outcomes.
+    es: Declaración de alcance únicamente; no afirma entrega a clientes, despliegue en producción ni resultados comerciales.
+- id: cloud-integration
+  order: 5
+  en:
+    title: Cloud & Integration
+    summary: Cloud architecture, service integration, and observability considerations for connected data and AI systems.
+  es:
+    title: Cloud e Integración
+    summary: Consideraciones de arquitectura cloud, integración de servicios y observabilidad para sistemas conectados de datos e IA.
+  evidence_boundary:
+    en: Scope statement only; it does not assert client delivery, production deployment, or commercial outcomes.
+    es: Declaración de alcance únicamente; no afirma entrega a clientes, despliegue en producción ni resultados comerciales.
+- id: delivery-technical-leadership
+  order: 6
+  en:
+    title: Delivery & Technical Leadership
+    summary: Technical planning, decision support, and delivery coordination for teams navigating complex AI and data initiatives.
+  es:
+    title: Entrega y Liderazgo Técnico
+    summary: Planificación técnica, apoyo a decisiones y coordinación de entrega para equipos que navegan iniciativas complejas de IA y datos.
+  evidence_boundary:
+    en: Scope statement only; it does not assert client delivery, production deployment, or commercial outcomes.
+    es: Declaración de alcance únicamente; no afirma entrega a clientes, despliegue en producción ni resultados comerciales.
