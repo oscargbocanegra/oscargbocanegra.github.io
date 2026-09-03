@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+repo_root=$(git rev-parse --show-toplevel)
+if command -v pwsh >/dev/null 2>&1; then
+  powershell_bin=pwsh
+elif command -v powershell >/dev/null 2>&1; then
+  powershell_bin=powershell
+else
+  echo "Cannot run documentation hook: PowerShell is required." >&2
+  exit 1
+fi
+
+"$powershell_bin" -NoProfile -ExecutionPolicy Bypass -File "$repo_root/scripts/sync-agent-guides.ps1"
+git add AGENTS.md CLAUDE.md .agent.md
+"$powershell_bin" -NoProfile -ExecutionPolicy Bypass -File "$repo_root/scripts/check-change-documentation.ps1"

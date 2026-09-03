@@ -8,6 +8,11 @@ docs/.jekyll-metadata
 vendor/
 .tmp/
 
+# Local agent tooling and scratch files
+.agents/
+.write-test.tmp
+skills-lock.json
+
 # OS
 .DS_Store
 Thumbs.db

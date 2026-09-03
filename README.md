@@ -74,3 +74,7 @@ Generated output under `.tmp/` or `docs/_site/` is disposable and is not the con
 - Confirm that public claims remain consistent with the evidence boundary stated on the site and in the canonical resume.
 
 See [`MAINTENANCE.md`](./MAINTENANCE.md) for the maintainer workflow.
+
+## Documentation and agent guides
+
+Architecture, verified current state, and durable decisions live in [`docs/`](./docs/). Start with [`docs/architecture.md`](./docs/architecture.md), [`docs/current-state.md`](./docs/current-state.md), and [`docs/decisions/`](./docs/decisions/). `AGENTS.md`, `CLAUDE.md`, and `.agent.md` are synchronized copies; enable the versioned hook with `git config core.hooksPath .githooks` so changes are mirrored before commit.
