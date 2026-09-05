@@ -33,3 +33,10 @@ The site has no application server, form-data persistence, or server-side Work W
 - English and Spanish route pairs must remain aligned.
 - Public claims must stay within repository evidence.
 - Generated output is disposable and never a source of truth.
+
+## Data-driven Deep Architecture layer
+
+- Visual source of truth: `docs/assets/css/design-tokens.css` mirrors the supplied `DESIGN.md` tokens; `docs/assets/css/main.css` owns the responsive component styling.
+- Structured portfolio content: `docs/_data/navigation.yml`, `services.yml`, `case_studies.yml`, and `metrics.yml` own bilingual navigation, service descriptions, public technical proof, and validated historical outcomes.
+- Reusable rendering: `docs/_includes/service_card.html`, `metric_card.html`, and `cta_banner.html` plus `docs/_layouts/page.html` and `case_study.html` render repeated content through Liquid data loops.
+- Compatibility: `/projects.html` remains the existing case-study route and `/case-studies.html` is a semantic alias. Existing `/resume.html`, legacy resume routes, anchors, and the mailto-based Work With Me flow remain available.

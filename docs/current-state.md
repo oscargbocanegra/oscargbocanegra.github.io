@@ -24,3 +24,9 @@ For each change, document the resulting state in the owning file:
 | Current behavior or validation boundary | `docs/current-state.md` |
 | Durable choice with tradeoffs | `docs/decisions/NNN-<decision>.md` |
 | Contributor or agent guidance | `AGENTS.md` (then let the hook mirror it) |
+
+## Deep Architecture refactor state
+
+- The shared site now defaults to the single dark Deep Architecture visual system; the previous light-theme toggle is intentionally removed to preserve design fidelity.
+- Services, metrics, navigation, and case-study details are rendered from bilingual `_data/` files rather than repeated page markup.
+- The Jekyll build could not be executed in this environment because Ruby/Bundler are unavailable; this remains an explicit validation gap, not a PASS.

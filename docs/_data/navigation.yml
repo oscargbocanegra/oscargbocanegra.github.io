@@ -1,0 +1,38 @@
+en:
+  menu_label: "Open navigation"
+  primary_label: "Primary navigation"
+  locale_label: "Language selector"
+  home: { label: "Home", url: "/" }
+  links:
+    - { label: "Home", url: "/", section: home }
+    - { label: "Services", url: "/services.html", section: services }
+    - { label: "Case Studies", url: "/projects.html", section: projects }
+    - { label: "About", url: "/about.html", section: about }
+    - { label: "Resume", url: "/resume.html", section: resume }
+  cta:
+    label: "Work With Me"
+    url: "/work-with-me.html"
+    eyebrow: "Start with context"
+    heading: "Need senior support on an AI or data decision?"
+    description: "Share the problem, intended outcome, constraints, and current state."
+  footer_label: "Footer navigation"
+  footer_statement: "AI and data architecture and engineering."
+es:
+  menu_label: "Abrir navegación"
+  primary_label: "Navegación principal"
+  locale_label: "Selector de idioma"
+  home: { label: "Inicio", url: "/es/" }
+  links:
+    - { label: "Inicio", url: "/es/", section: home }
+    - { label: "Servicios", url: "/es/services.html", section: services }
+    - { label: "Casos de estudio", url: "/es/projects.html", section: projects }
+    - { label: "Acerca de", url: "/es/about.html", section: about }
+    - { label: "Currículum", url: "/es/resume.html", section: resume }
+  cta:
+    label: "Trabajá conmigo"
+    url: "/es/work-with-me.html"
+    eyebrow: "Empezar con contexto"
+    heading: "¿Necesitás apoyo senior en una decisión de IA o datos?"
+    description: "Compartí el problema, el resultado esperado, las restricciones y el estado actual."
+  footer_label: "Navegación del pie de página"
+  footer_statement: "Arquitectura e ingeniería de IA y datos."
