@@ -1,0 +1,12 @@
+architecture_review:
+  label_en: "NEED AN INDEPENDENT ARCHITECTURE REVIEW?"
+  label_es: "¿NECESITÁS UNA REVISIÓN DE ARQUITECTURA INDEPENDIENTE?"
+  heading_en: "Need an Independent Architecture Review?"
+  heading_es: "¿Necesitás una revisión de arquitectura independiente?"
+  description_en: "Evaluate your ongoing GenAI platform, OneLake migration, or AI agent system against a production benchmark. Receive a 72-hour gap analysis report."
+  description_es: "Evaluá tu plataforma GenAI, migración a OneLake o sistema de agentes de IA frente a un benchmark de producción. Recibí un informe de brechas en 72 horas."
+  button_en: "Discuss an Architecture Review"
+  button_es: "Conversemos sobre una revisión de arquitectura"
+  response_en: "12-hour Architect Response"
+  response_es: "Respuesta del arquitecto en 12 horas"
+  email_subject: "Architecture Review"

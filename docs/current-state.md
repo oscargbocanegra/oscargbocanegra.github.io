@@ -30,3 +30,9 @@ For each change, document the resulting state in the owning file:
 - The shared site now defaults to the single dark Deep Architecture visual system; the previous light-theme toggle is intentionally removed to preserve design fidelity.
 - Services, metrics, navigation, and case-study details are rendered from bilingual `_data/` files rather than repeated page markup.
 - The Jekyll build could not be executed in this environment because Ruby/Bundler are unavailable; this remains an explicit validation gap, not a PASS.
+
+## QA remediation state
+
+- The homepage now includes the requested metrics grid, six-service architecture offering grid, structured commitment framework, and architecture-review CTA.
+- Metrics and service content are rendered through reusable includes and YAML data files on both English and Spanish homepages.
+- Jekyll build and production verification must be run against the resulting commit before claiming final conformance.

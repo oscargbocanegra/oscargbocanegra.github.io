@@ -1,150 +1,143 @@
-- id: enterprise-rag
-  order: 1
+- id: "rag_architecture"
   en:
-    title: Enterprise RAG Solutions
-    summary: Retrieval design, evaluation, access patterns, and operational considerations for enterprise knowledge use cases.
-    evidence_boundary: Service scope only; no completed public client RAG case study is claimed.
-    proof_url: /projects.html#lab-infra
-    proof_label: View public technical work
-    problem_heading: Problem and fit
-    problem: A RAG or GenAI idea needs a workable retrieval, evaluation, integration, and operating model before it can move beyond a prototype.
-    scope_heading: Scope
-    scope: Architecture and implementation guidance for retrieval, knowledge access, evaluation, and integration.
-    deliverables_heading: Deliverables
-    deliverables: [Target architecture and system boundaries, Retrieval and knowledge-access approach, Integration and operational considerations]
-    technology_heading: Technology and engagement
-    technology: Generative AI, LLMs, RAG, embeddings, vector databases, APIs, and observability. Fixed-scope architecture work, contract delivery, or fractional architecture support.
+    tag: "01 // AI & DATA"
+    timeline: "2-4 WEEKS"
+    title: "Enterprise RAG & Context Architectures"
+    summary: "Production-grade hybrid vector architectures, multi-stage retrieval, reranking pipelines, and guardrails for high-stakes enterprise LLM applications."
+    deliverables_label: "KEY DELIVERABLES"
+    deliverables:
+      - "Sub-100ms hybrid vector-keyword retrieval"
+      - "Guardrails, evaluation pipelines & hallucination checks"
+      - "Production-ready vector database topology"
+    tech_stack: ["Python", "Vector DBs", "LangChain", "LlamaIndex"]
   es:
-    title: Soluciones RAG Empresariales
-    summary: Diseño de recuperación, evaluación, acceso y operación para casos empresariales de conocimiento.
-    evidence_boundary: Solo alcance del servicio; no se afirma un caso público de cliente RAG completado.
-    proof_url: /es/projects.html#lab-infra
-    proof_label: Ver trabajo técnico público
-    problem_heading: Problema y encaje
-    problem: Una iniciativa RAG o de IA generativa necesita un modelo viable de recuperación, evaluación, integración y operación antes de superar el prototipo.
-    scope_heading: Alcance
-    scope: Guía de arquitectura e implementación para recuperación, acceso al conocimiento, evaluación e integración.
-    deliverables_heading: Entregables
-    deliverables: [Arquitectura objetivo y límites del sistema, Enfoque de recuperación y acceso al conocimiento, Consideraciones de integración y operación]
-    technology_heading: Tecnología y modalidad
-    technology: IA generativa, LLM, RAG, embeddings, bases vectoriales, APIs y observabilidad. Trabajo definido, entrega por contrato o arquitectura fraccional.
-- id: ai-agents
-  order: 2
+    tag: "01 // IA Y DATOS"
+    timeline: "2-4 SEMANAS"
+    title: "Arquitecturas RAG Empresariales y de Contexto"
+    summary: "Arquitecturas vectoriales híbridas, recuperación multietapa, pipelines de reranking y guardrails para aplicaciones empresariales LLM de alta criticidad."
+    deliverables_label: "ENTREGABLES CLAVE"
+    deliverables:
+      - "Recuperación híbrida vectorial y por palabras clave sub-100ms"
+      - "Guardrails, pipelines de evaluación y controles de alucinación"
+      - "Topología de base vectorial lista para producción"
+    tech_stack: ["Python", "Bases vectoriales", "LangChain", "LlamaIndex"]
+
+- id: "multi_agent"
   en:
-    title: AI Agents and Automation
-    summary: Workflow design, tool boundaries, integration contracts, and controls before automation touches critical processes.
-    evidence_boundary: No public agent case study is represented as completed without separately validated evidence.
-    proof_url: /projects.html
-    proof_label: View public technical work
-    problem_heading: Problem and fit
-    problem: An automation idea needs defined workflow steps, tool boundaries, integration contracts, and safeguards before it reaches important business processes.
-    scope_heading: Scope
-    scope: Agent workflows and tool integrations designed with operational control in mind.
-    deliverables_heading: Deliverables
-    deliverables: [Workflow and tool-boundary design, Integration contracts and control points, Implementation guidance for the agreed slice]
-    technology_heading: Technology and engagement
-    technology: AI agents, LLM applications, APIs, Model Context Protocol examples, and observability. Fixed-scope design or implementation support, contract delivery, or fractional architecture support.
+    tag: "02 // AI AGENTS"
+    timeline: "3-6 WEEKS"
+    title: "Autonomous Multi-Agent Workflows"
+    summary: "Orchestrated agent networks for complex multi-step reasoning, tool execution, and state management in enterprise workflows."
+    deliverables_label: "KEY DELIVERABLES"
+    deliverables:
+      - "State-machine agent control with LangGraph"
+      - "Deterministic tool execution & error fallback"
+      - "Distributed telemetry with OpenTelemetry"
+    tech_stack: ["LangGraph", "Autogen", "OpenAI API", "FastAPI"]
   es:
-    title: Agentes de IA y Automatización
-    summary: Diseño de flujos, límites de herramientas, contratos de integración y controles antes de automatizar procesos críticos.
-    evidence_boundary: Ningún caso público de agentes se presenta como completado sin evidencia validada por separado.
-    proof_url: /es/projects.html
-    proof_label: Ver trabajo técnico público
-    problem_heading: Problema y encaje
-    problem: Una idea de automatización necesita pasos de flujo, límites de herramientas, contratos de integración y salvaguardas antes de llegar a procesos relevantes.
-    scope_heading: Alcance
-    scope: Flujos de agentes e integraciones de herramientas diseñados con control operativo.
-    deliverables_heading: Entregables
-    deliverables: [Diseño de flujo y límites de herramientas, Contratos de integración y puntos de control, Guía de implementación para el alcance acordado]
-    technology_heading: Tecnología y modalidad
-    technology: Agentes de IA, aplicaciones LLM, APIs, ejemplos de Model Context Protocol y observabilidad. Diseño o implementación definida, entrega por contrato o arquitectura fraccional.
-- id: data-platform
-  order: 3
+    tag: "02 // AGENTES DE IA"
+    timeline: "3-6 SEMANAS"
+    title: "Flujos Autónomos Multiagente"
+    summary: "Redes de agentes orquestados para razonamiento complejo en múltiples pasos, ejecución de herramientas y gestión de estado en flujos empresariales."
+    deliverables_label: "ENTREGABLES CLAVE"
+    deliverables:
+      - "Control de agentes mediante máquinas de estado con LangGraph"
+      - "Ejecución determinista de herramientas y fallback de errores"
+      - "Telemetría distribuida con OpenTelemetry"
+    tech_stack: ["LangGraph", "Autogen", "OpenAI API", "FastAPI"]
+
+- id: "data_platforms"
   en:
-    title: Data Platform Engineering
-    summary: Foundations for ingestion, transformation, data quality, and AI-dependent workloads.
-    evidence_boundary: The featured platform is independent technical work, not a client engagement or measured commercial outcome.
-    proof_url: /projects.html#lab-infra
-    proof_label: View the platform case study
-    problem_heading: Problem and fit
-    problem: Data workloads need dependable foundations for ingestion, transformation, governance, and the AI workloads that depend on them.
-    scope_heading: Scope
-    scope: Hands-on support for scalable data pipelines, distributed processing, and data-platform foundations.
-    deliverables_heading: Deliverables
-    deliverables: [Platform and pipeline architecture guidance, Integration and operational design, Implementation support for the agreed scope]
-    technology_heading: Technology and engagement
-    technology: Python, Spark, PySpark, ETL/ELT, data lakes, lakehouse patterns, cloud, and containerized platforms. Fixed-scope projects, contract delivery, or fractional architecture support.
+    tag: "03 // DATA INFRA"
+    timeline: "4-8 WEEKS"
+    title: "Modern Data Platforms & Fabric"
+    summary: "Unified Lakehouse, OneLake, and Data Mesh architectures designed to eliminate silos and accelerate enterprise AI readiness."
+    deliverables_label: "KEY DELIVERABLES"
+    deliverables:
+      - "Microsoft Fabric & OneLake Architecture"
+      - "Medallion (Bronze/Silver/Gold) PySpark pipelines"
+      - "Purview data governance & lineage automation"
+    tech_stack: ["MS Fabric", "PySpark", "Delta Lake", "AWS Glue"]
   es:
-    title: Ingeniería de Plataformas de Datos
-    summary: Fundamentos para ingesta, transformación, calidad de datos y cargas de trabajo dependientes de IA.
-    evidence_boundary: La plataforma destacada es trabajo técnico independiente, no un proyecto de cliente ni un resultado comercial medido.
-    proof_url: /es/projects.html#lab-infra
-    proof_label: Ver el caso de plataforma
-    problem_heading: Problema y encaje
-    problem: Las cargas de datos necesitan bases confiables para ingesta, transformación, gobierno y las cargas de IA que dependen de ellas.
-    scope_heading: Alcance
-    scope: Apoyo práctico para pipelines escalables, procesamiento distribuido y fundamentos de plataforma de datos.
-    deliverables_heading: Entregables
-    deliverables: [Guía de arquitectura de plataforma y pipelines, Diseño de integración y operación, Apoyo de implementación para el alcance acordado]
-    technology_heading: Tecnología y modalidad
-    technology: Python, Spark, PySpark, ETL/ELT, data lakes, lakehouse, cloud y plataformas contenerizadas. Proyectos definidos, entrega por contrato o arquitectura fraccional.
-- id: microsoft-fabric
-  order: 4
+    tag: "03 // INFRA DE DATOS"
+    timeline: "4-8 SEMANAS"
+    title: "Plataformas Modernas de Datos y Fabric"
+    summary: "Arquitecturas unificadas de Lakehouse, OneLake y Data Mesh diseñadas para eliminar silos y acelerar la preparación empresarial para IA."
+    deliverables_label: "ENTREGABLES CLAVE"
+    deliverables:
+      - "Arquitectura de Microsoft Fabric y OneLake"
+      - "Pipelines PySpark Medallion (Bronze/Silver/Gold)"
+      - "Gobierno de datos y automatización de linaje con Purview"
+    tech_stack: ["MS Fabric", "PySpark", "Delta Lake", "AWS Glue"]
+
+- id: "streaming_events"
   en:
-    title: Microsoft Fabric Architecture
-    summary: Architecture guidance for Fabric, OneLake, governance, and platform integration.
-    evidence_boundary: Enterprise experience is summarized in the resume, not represented as a public client case study.
-    proof_url: /resume.html
-    proof_label: Review professional background
-    problem_heading: Problem and fit
-    problem: A Fabric initiative needs an architecture that connects OneLake, governance, and data-platform integration to the way teams will build and operate it.
-    scope_heading: Scope
-    scope: Architecture guidance for Microsoft Fabric, OneLake, governance, and data-platform integration.
-    deliverables_heading: Deliverables
-    deliverables: [Target architecture and integration patterns, Governance and operating considerations, Technology and implementation guidance]
-    technology_heading: Technology and engagement
-    technology: Microsoft Fabric, OneLake, Microsoft Purview, lakehouse architecture, Python, PySpark, and APIs. Fixed-scope architecture work, contract delivery, or fractional architecture support.
+    tag: "04 // STREAMING"
+    timeline: "3-6 WEEKS"
+    title: "Real-Time Streaming & Event Data"
+    summary: "Low-latency event processing pipelines for continuous data ingestion, real-time analytics, and event-driven AI workflows."
+    deliverables_label: "KEY DELIVERABLES"
+    deliverables:
+      - "Kafka / EventHubs event-driven topology"
+      - "Spark Streaming sub-second micro-batching"
+      - "Automated dead-letter-queue error handling"
+    tech_stack: ["Apache Kafka", "Spark Streaming", "AWS Lambda", "Kinesis"]
   es:
-    title: Arquitectura Microsoft Fabric
-    summary: Guía de arquitectura para Fabric, OneLake, gobierno e integración de plataformas.
-    evidence_boundary: La experiencia empresarial se resume en el CV; no se representa como caso público de cliente.
-    proof_url: /es/resume.html
-    proof_label: Ver trayectoria profesional
-    problem_heading: Problema y encaje
-    problem: Una iniciativa Fabric necesita una arquitectura que conecte OneLake, gobierno e integración de datos con la forma en que el equipo construirá y operará.
-    scope_heading: Alcance
-    scope: Guía de arquitectura para Microsoft Fabric, OneLake, gobierno e integración de plataforma de datos.
-    deliverables_heading: Entregables
-    deliverables: [Arquitectura objetivo y patrones de integración, Consideraciones de gobierno y operación, Guía tecnológica y de implementación]
-    technology_heading: Tecnología y modalidad
-    technology: Microsoft Fabric, OneLake, Microsoft Purview, lakehouse, Python, PySpark y APIs. Arquitectura definida, entrega por contrato o arquitectura fraccional.
-- id: fractional-architect
-  order: 5
+    tag: "04 // STREAMING"
+    timeline: "3-6 SEMANAS"
+    title: "Streaming en Tiempo Real y Datos de Eventos"
+    summary: "Pipelines de procesamiento de eventos de baja latencia para ingesta continua, analítica en tiempo real y flujos de IA orientados a eventos."
+    deliverables_label: "ENTREGABLES CLAVE"
+    deliverables:
+      - "Topología orientada a eventos con Kafka / EventHubs"
+      - "Micro-lotes sub-segundo con Spark Streaming"
+      - "Gestión automatizada de errores mediante dead-letter queue"
+    tech_stack: ["Apache Kafka", "Spark Streaming", "AWS Lambda", "Kinesis"]
+
+- id: "fractional_advisory"
   en:
-    title: Fractional AI and Data Architect
-    summary: Ongoing technical direction for architecture decisions across AI and data initiatives.
-    evidence_boundary: Public repositories document independent work; the resume provides professional history. Neither is a client endorsement or ROI claim.
-    proof_url: /about.html
-    proof_label: Learn about the approach
-    problem_heading: Problem and fit
-    problem: An active initiative needs senior technical direction across architecture decisions, integration, governance, and delivery without separating strategy from implementation.
-    scope_heading: Scope
-    scope: Senior technical direction for AI and data decisions, connected to engineering execution.
-    deliverables_heading: Deliverables
-    deliverables: [Architecture direction and decision support, Integration, governance, and operational guidance, Collaboration on implementation choices]
-    technology_heading: Technology and engagement
-    technology: AI and data architecture, RAG, agents, data platforms, Microsoft Fabric, cloud, integration, and observability. Fractional architecture support, contract delivery, or a defined architecture engagement.
+    tag: "05 // ADVISORY"
+    timeline: "MONTHLY"
+    title: "Fractional AI / Chief Architect Advisory"
+    summary: "Strategic architecture oversight for engineering leadership. Guidance on vendor selection, RFC reviews, cost control, and AI roadmap execution."
+    deliverables_label: "KEY DELIVERABLES"
+    deliverables:
+      - "Ongoing RFC & architecture reviews"
+      - "LLM/Data infrastructure FinOps & cost audit"
+      - "Engineering team capability mentoring"
+    tech_stack: ["GenAI Roadmap", "FinOps", "Architecture Governance"]
   es:
-    title: Arquitecto Fraccional de IA y Datos
-    summary: Dirección técnica continua para decisiones de arquitectura en iniciativas de IA y datos.
-    evidence_boundary: Los repositorios documentan trabajo independiente y el CV aporta trayectoria; ninguno es recomendación de cliente ni afirmación de ROI.
-    proof_url: /es/about.html
-    proof_label: Conocer el enfoque
-    problem_heading: Problema y encaje
-    problem: Una iniciativa activa necesita dirección técnica senior en arquitectura, integración, gobierno y entrega sin separar la estrategia de la implementación.
-    scope_heading: Alcance
-    scope: Dirección técnica senior para decisiones de IA y datos, conectada con la ejecución de ingeniería.
-    deliverables_heading: Entregables
-    deliverables: [Dirección de arquitectura y apoyo a decisiones, Guía de integración, gobierno y operación, Colaboración en decisiones de implementación]
-    technology_heading: Tecnología y modalidad
-    technology: Arquitectura de IA y datos, RAG, agentes, plataformas de datos, Microsoft Fabric, cloud, integración y observabilidad. Arquitectura fraccional, entrega por contrato o trabajo definido de arquitectura.
+    tag: "05 // ASESORÍA"
+    timeline: "MENSUAL"
+    title: "Asesoría Fraccional de IA / Arquitectura Principal"
+    summary: "Supervisión estratégica de arquitectura para líderes de ingeniería, con guía en selección de proveedores, revisiones RFC, control de costos y ejecución del roadmap de IA."
+    deliverables_label: "ENTREGABLES CLAVE"
+    deliverables:
+      - "Revisiones continuas de RFC y arquitectura"
+      - "Auditoría FinOps de infraestructura LLM y datos"
+      - "Mentoría de capacidades del equipo de ingeniería"
+    tech_stack: ["Roadmap GenAI", "FinOps", "Gobierno de Arquitectura"]
+
+- id: "rapid_poc"
+  en:
+    tag: "06 // POC SPRINT"
+    timeline: "2-3 WEEKS"
+    title: "High-Stakes Rapid PoC Sprints"
+    summary: "Rapid prototyping to de-risk ambitious AI or Data initiatives. Build production-grade working prototypes before committing full budgets."
+    deliverables_label: "KEY DELIVERABLES"
+    deliverables:
+      - "Production-ready functional proof-of-concept"
+      - "Latency, cost & accuracy benchmark analysis"
+      - "Clear production handover documentation"
+    tech_stack: ["Fast PoC", "Python", "Docker", "Cloud Deploy"]
+  es:
+    tag: "06 // SPRINT DE POC"
+    timeline: "2-3 SEMANAS"
+    title: "Sprints Rápidos de PoC de Alta Criticidad"
+    summary: "Prototipado rápido para reducir el riesgo de iniciativas ambiciosas de IA o datos. Prototipos funcionales con calidad de producción antes de comprometer presupuestos completos."
+    deliverables_label: "ENTREGABLES CLAVE"
+    deliverables:
+      - "Prueba de concepto funcional lista para producción"
+      - "Análisis comparativo de latencia, costo y precisión"
+      - "Documentación clara de transición a producción"
+    tech_stack: ["PoC rápido", "Python", "Docker", "Despliegue cloud"]

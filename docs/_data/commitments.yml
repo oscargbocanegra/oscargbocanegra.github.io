@@ -1,0 +1,26 @@
+- id: "advisory"
+  title_en: "Technical Advisory & Governance"
+  title_es: "Asesoría Técnica y Gobierno"
+  summary_en: "For leaders needing ongoing architectural guidance, RFC reviews, and vendor evaluation."
+  summary_es: "Para líderes que necesitan guía arquitectónica continua, revisión de RFC y evaluación de proveedores."
+  cta_en: "Cost-Retained Slot →"
+  cta_es: "Reservar espacio retenido →"
+  featured: false
+
+- id: "blueprint"
+  title_en: "Architecture Blueprint & Roadmap"
+  title_es: "Blueprint de Arquitectura y Roadmap"
+  summary_en: "Fixed-scope architectural study, system design, data topology, and vendor-neutral implementation plan."
+  summary_es: "Estudio arquitectónico de alcance definido, diseño de sistemas, topología de datos y plan de implementación neutral respecto de proveedores."
+  cta_en: "Initiate Blueprint Phase →"
+  cta_es: "Iniciar fase Blueprint →"
+  featured: true
+
+- id: "poc"
+  title_en: "Embedded Hands-On PoC Sprint"
+  title_es: "Sprint de PoC Práctico Embebido"
+  summary_en: "Embedded directly as Lead Architect to demonstrate a fully working production-grade proof of concept."
+  summary_es: "Participación directa como Arquitecto Líder para demostrar una prueba de concepto funcional con calidad de producción."
+  cta_en: "Reserve PoC Sprint →"
+  cta_es: "Reservar sprint de PoC →"
+  featured: false

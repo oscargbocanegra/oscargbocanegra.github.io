@@ -1,1 +1,9 @@
-{% assign metric = include.metric %}{% assign content = metric[page.lang] | default: metric.en %}<article class="metric-card"><div class="metric-card__value">{{ metric.value }}</div><p class="metric-card__label">{{ content.label }}</p><p class="metric-card__label">{{ content.evidence }}</p></article>
+{% assign metric = include.metric %}
+{% if page.lang == 'es' %}
+  {% assign metric_label = metric.label_es %}
+  {% assign metric_sub = metric.sub_es %}
+{% else %}
+  {% assign metric_label = metric.label_en %}
+  {% assign metric_sub = metric.sub_en %}
+{% endif %}
+<article class="metric-card surface-card border-subtle"><span class="metric-card__value code-metric">{{ metric.value }}</span><span class="metric-card__label label-caps">{{ metric_label }}</span><p class="metric-card__sub body-sm">{{ metric_sub }}</p></article>

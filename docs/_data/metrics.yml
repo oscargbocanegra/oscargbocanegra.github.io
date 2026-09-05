@@ -1,16 +1,27 @@
-- id: delivery-time
-  value: -25%
-  en: { label: Reduced delivery times, evidence: Selected validated historical outcome from prior professional experience. }
-  es: { label: Reducción de tiempos de entrega, evidence: Resultado histórico validado seleccionado de experiencia profesional previa. }
-- id: task-automation
-  value: +40%
-  en: { label: Previously manual tasks automated, evidence: Selected validated historical outcome from prior professional experience. }
-  es: { label: Tareas antes manuales automatizadas, evidence: Resultado histórico validado seleccionado de experiencia profesional previa. }
-- id: kpi-accuracy
-  value: +30%
-  en: { label: Improved KPI accuracy, evidence: Selected validated historical outcome from prior professional experience. }
-  es: { label: Mejora en precisión de KPI, evidence: Resultado histórico validado seleccionado de experiencia profesional previa. }
-- id: operational-costs
-  value: -30%
-  en: { label: Reduced operational costs, evidence: Selected validated historical outcome from prior professional experience. }
-  es: { label: Reducción de costos operativos, evidence: Resultado histórico validado seleccionado de experiencia profesional previa. }
+- id: "availability"
+  value: "99.99%"
+  label_en: "P99 AVAILABILITY"
+  label_es: "DISPONIBILIDAD P99"
+  sub_en: "Fault-tolerant distributed systems"
+  sub_es: "Sistemas distribuidos tolerantes a fallos"
+
+- id: "delivery"
+  value: "14-28d"
+  label_en: "POC TIME-TO-VALUE"
+  label_es: "TIEMPO A VALOR DE POC"
+  sub_en: "Production-ready architecture"
+  sub_es: "Arquitectura lista para producción"
+
+- id: "volume"
+  value: "10PB+"
+  label_en: "DATA SUPPLY MANAGED"
+  label_es: "DATOS ADMINISTRADOS"
+  sub_en: "Lakehouse, Data Lake & Workflows"
+  sub_es: "Lakehouse, Data Lakes y Flujos"
+
+- id: "efficiency"
+  value: "+42%"
+  label_en: "MODEL EFFICIENCY"
+  label_es: "EFICIENCIA DE MODELO"
+  sub_en: "Via prompt compression & Routing"
+  sub_es: "Vía compresión de prompts y enrutamiento"

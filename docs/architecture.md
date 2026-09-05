@@ -40,3 +40,9 @@ The site has no application server, form-data persistence, or server-side Work W
 - Structured portfolio content: `docs/_data/navigation.yml`, `services.yml`, `case_studies.yml`, and `metrics.yml` own bilingual navigation, service descriptions, public technical proof, and validated historical outcomes.
 - Reusable rendering: `docs/_includes/service_card.html`, `metric_card.html`, and `cta_banner.html` plus `docs/_layouts/page.html` and `case_study.html` render repeated content through Liquid data loops.
 - Compatibility: `/projects.html` remains the existing case-study route and `/case-studies.html` is a semantic alias. Existing `/resume.html`, legacy resume routes, anchors, and the mailto-based Work With Me flow remain available.
+
+## QA conformance remediation
+
+- Homepage now renders four data-driven quantitative metric tiles, six bilingual architectural engagement practices, three bilingual commitment models, and a bilingual architecture-review CTA.
+- `docs/_data/metrics.yml`, `services.yml`, `commitments.yml`, and `cta.yml` are the source of truth for those sections.
+- The existing case-study layout uses the Liquid `modulo` filter assignment for row styling; no inline `modulo` operator remains.
