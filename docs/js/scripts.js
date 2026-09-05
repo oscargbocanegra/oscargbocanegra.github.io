@@ -1,19 +1,4 @@
 (() => {
-  const root = document.documentElement;
-  const themeToggle = document.getElementById("theme-toggle");
-  const savedTheme = localStorage.getItem("theme");
-  const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  const setTheme = (theme) => {
-    root.dataset.theme = theme;
-    if (themeToggle) themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
-  };
-  setTheme(savedTheme || preferredTheme);
-  themeToggle?.addEventListener("click", () => {
-    const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", nextTheme);
-    setTheme(nextTheme);
-  });
-
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".primary-nav");
   toggle?.addEventListener("click", () => {
@@ -24,16 +9,6 @@
     nav.classList.remove("is-open");
     toggle?.setAttribute("aria-expanded", "false");
   }));
-
-  document.querySelectorAll(".locale-link[data-locale]").forEach((link) => {
-    link.addEventListener("click", () => localStorage.setItem("locale", link.dataset.locale));
-  });
-
-  const savedLocale = localStorage.getItem("locale");
-  const isDefaultRootRoute = window.location.pathname === "/";
-  if (savedLocale === "es" && isDefaultRootRoute) {
-    window.location.replace(`/es/${window.location.search}${window.location.hash}`);
-  }
 
   const intake = document.getElementById("project-intake");
   intake?.addEventListener("submit", (event) => {

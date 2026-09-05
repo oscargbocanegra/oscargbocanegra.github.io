@@ -1,0 +1,26 @@
+- id: lab-infra
+  repository_url: https://github.com/oscargbocanegra/lab-infra-ia-bigdata
+  en:
+    status: Public repository
+    title: "Lab Infra: AI and Big Data Platform"
+    type: Independent public technical work
+    summary: A self-hosted lab documenting an AI and data platform across infrastructure, data processing, AI workloads, and operations.
+    evidence_heading: What the public materials support
+    evidence: [Architecture, topology, and deployment documentation, Integration of data-platform and AI concerns, Technical decisions and operational materials]
+    repository_label: Open repository
+    boundary_heading: Evidence boundary
+    evidence_boundary: Independent public technical work — repository validation pending (S3.20).
+    not_claimed_label: "Not claimed:"
+    not_claimed: Client delivery, production deployment, or measured commercial outcomes.
+  es:
+    status: Repositorio público
+    title: "Lab Infra: Plataforma de IA y Big Data"
+    type: Trabajo técnico público independiente
+    summary: Un laboratorio autogestionado que documenta una plataforma de IA y datos en infraestructura, procesamiento, cargas de IA y operaciones.
+    evidence_heading: Qué respaldan los materiales públicos
+    evidence: [Documentación de arquitectura, topología y despliegue, Integración de datos e IA, Decisiones técnicas y materiales operativos]
+    repository_label: Abrir repositorio
+    boundary_heading: Límite de evidencia
+    evidence_boundary: Trabajo técnico público independiente — validación de repositorio pendiente (S3.20).
+    not_claimed_label: "No se afirma:"
+    not_claimed: Entrega a clientes, despliegue en producción ni resultados comerciales medidos.

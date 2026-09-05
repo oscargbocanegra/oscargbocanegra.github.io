@@ -1,0 +1,16 @@
+- id: delivery-time
+  value: -25%
+  en: { label: Reduced delivery times, evidence: Selected validated historical outcome from prior professional experience. }
+  es: { label: Reducción de tiempos de entrega, evidence: Resultado histórico validado seleccionado de experiencia profesional previa. }
+- id: task-automation
+  value: +40%
+  en: { label: Previously manual tasks automated, evidence: Selected validated historical outcome from prior professional experience. }
+  es: { label: Tareas antes manuales automatizadas, evidence: Resultado histórico validado seleccionado de experiencia profesional previa. }
+- id: kpi-accuracy
+  value: +30%
+  en: { label: Improved KPI accuracy, evidence: Selected validated historical outcome from prior professional experience. }
+  es: { label: Mejora en precisión de KPI, evidence: Resultado histórico validado seleccionado de experiencia profesional previa. }
+- id: operational-costs
+  value: -30%
+  en: { label: Reduced operational costs, evidence: Selected validated historical outcome from prior professional experience. }
+  es: { label: Reducción de costos operativos, evidence: Resultado histórico validado seleccionado de experiencia profesional previa. }

@@ -1,0 +1,1 @@
+{% assign metric = include.metric %}{% assign content = metric[page.lang] | default: metric.en %}<article class="metric-card"><div class="metric-card__value">{{ metric.value }}</div><p class="metric-card__label">{{ content.label }}</p><p class="metric-card__label">{{ content.evidence }}</p></article>
