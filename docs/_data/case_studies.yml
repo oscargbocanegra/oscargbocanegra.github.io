@@ -9,7 +9,7 @@
     evidence: [Architecture, topology, and deployment documentation, Integration of data-platform and AI concerns, Technical decisions and operational materials]
     repository_label: Open repository
     boundary_heading: Evidence boundary
-    evidence_boundary: Independent public technical work — repository validation pending (S3.20).
+    evidence_boundary: Independent public technical work — claims are limited to the documented materials in the public GitHub repository.
     not_claimed_label: "Not claimed:"
     not_claimed: Client delivery, production deployment, or measured commercial outcomes.
   es:
@@ -21,6 +21,6 @@
     evidence: [Documentación de arquitectura, topología y despliegue, Integración de datos e IA, Decisiones técnicas y materiales operativos]
     repository_label: Abrir repositorio
     boundary_heading: Límite de evidencia
-    evidence_boundary: Trabajo técnico público independiente — validación de repositorio pendiente (S3.20).
+    evidence_boundary: Trabajo técnico público independiente — las afirmaciones se limitan a los materiales documentados en el repositorio público de GitHub.
     not_claimed_label: "No se afirma:"
     not_claimed: Entrega a clientes, despliegue en producción ni resultados comerciales medidos.
