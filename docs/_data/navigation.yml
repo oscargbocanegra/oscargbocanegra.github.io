@@ -7,6 +7,7 @@ en:
     - { label: "Home", url: "/", section: home }
     - { label: "Services", url: "/services.html", section: services }
     - { label: "Case Studies", url: "/projects.html", section: projects }
+    - { label: "Technical Lab", url: "/lab.html", section: lab }
     - { label: "About", url: "/about.html", section: about }
     - { label: "Resume", url: "/resume.html", section: resume }
   cta:
@@ -26,6 +27,7 @@ es:
     - { label: "Inicio", url: "/es/", section: home }
     - { label: "Servicios", url: "/es/services.html", section: services }
     - { label: "Casos de estudio", url: "/es/projects.html", section: projects }
+    - { label: "Laboratorio técnico", url: "/es/lab.html", section: lab }
     - { label: "Acerca de", url: "/es/about.html", section: about }
     - { label: "Currículum", url: "/es/resume.html", section: resume }
   cta:
