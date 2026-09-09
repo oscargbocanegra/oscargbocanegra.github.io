@@ -9,6 +9,8 @@
 - Legacy English resume URLs remain redirect sources and must be checked after a Jekyll render.
 - `AGENTS.md`, `CLAUDE.md`, and `.agent.md` are governed as one synchronized instruction set.
 - The shared interface uses the existing color tokens; the latest refinement improves hierarchy, spacing, card interaction, navigation affordances, touch targets, and mobile layout without changing the palette.
+- The application shell now provides reusable `stack`, `cluster`, and `surface` primitives, keyboard-close behavior for the mobile menu, minimum 44px interactive targets, and a document-level horizontal overflow guard.
+- The shared header renders the authorized `docs/assets/img/foto_profile.jpg` portrait at 44px with a circular crop and descriptive alternative text on English and Spanish routes.
 
 ## Validation boundaries
 

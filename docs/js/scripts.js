@@ -1,14 +1,23 @@
 (() => {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".primary-nav");
+  const closeNav = () => {
+    nav?.classList.remove("is-open");
+    toggle?.setAttribute("aria-expanded", "false");
+  };
   toggle?.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(isOpen));
   });
   nav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-    nav.classList.remove("is-open");
-    toggle?.setAttribute("aria-expanded", "false");
+    closeNav();
   }));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav?.classList.contains("is-open")) {
+      closeNav();
+      toggle?.focus();
+    }
+  });
 
   const intake = document.getElementById("project-intake");
   intake?.addEventListener("submit", (event) => {

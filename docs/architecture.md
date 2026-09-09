@@ -36,7 +36,7 @@ The site has no application server, form-data persistence, or server-side Work W
 
 ## Data-driven Deep Architecture layer
 
-- Visual source of truth: `docs/assets/css/design-tokens.css` mirrors the supplied `DESIGN.md` tokens; `docs/assets/css/main.css` owns the responsive component styling.
+- Visual source of truth: `docs/assets/css/design-tokens.css` mirrors the supplied `DESIGN.md` tokens; `docs/assets/css/main.css` owns the responsive component styling, shared layout primitives, portrait treatment, touch targets, focus-visible treatment, and overflow guard. The authorized profile portrait is `docs/assets/img/foto_profile.jpg` and is rendered by `docs/_includes/header.html`.
 - Structured portfolio content: `docs/_data/navigation.yml`, `services.yml`, `case_studies.yml`, and `metrics.yml` own bilingual navigation, service descriptions, public technical proof, and validated historical outcomes.
 - Reusable rendering: `docs/_includes/service_card.html`, `metric_card.html`, and `cta_banner.html` plus `docs/_layouts/page.html` and `case_study.html` render repeated content through Liquid data loops.
 - Compatibility: `/projects.html` remains the existing case-study route and `/case-studies.html` is a semantic alias. Existing `/resume.html`, legacy resume routes, anchors, and the mailto-based Work With Me flow remain available.
