@@ -123,3 +123,5 @@ p, ul, ol { margin-top: 0; }
 .cta-content h2, .cta-content p { margin-bottom: var(--space-md); }
 @media (max-width: 960px) { .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .commitments-grid { grid-template-columns: 1fr; } .cta-container { align-items: flex-start; flex-direction: column; } }
 @media (max-width: 720px) { .display-xl { font-size: 36px; line-height: 44px; letter-spacing: -.02em; } .headline-lg { font-size: 28px; line-height: 36px; letter-spacing: -.01em; } .services-grid, .metrics-grid { grid-template-columns: 1fr; } .cta-section { width: calc(100% - 2 * var(--grid-margin-mobile)); } }
+
+.footer-nav,.footer-links{flex-direction:row;align-items:center;flex-wrap:wrap;gap:var(--space-md)}@media(max-width:720px){.footer-nav,.footer-links{flex-direction:column;align-items:flex-start;gap:var(--space-sm)}}
