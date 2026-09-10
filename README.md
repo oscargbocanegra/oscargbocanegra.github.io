@@ -1,4 +1,4 @@
-# Oscar Bocanegra ºw^~)Þt AI & Data Portfolio
+# Oscar Bocanegra AI & Data Portfolio
 
 ## Overview
 
