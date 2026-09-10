@@ -24,3 +24,30 @@
     evidence_boundary: Trabajo técnico público independiente — las afirmaciones se limitan a los materiales documentados en el repositorio público de GitHub.
     not_claimed_label: "No se afirma:"
     not_claimed: Entrega a clientes, despliegue en producción ni resultados comerciales medidos.
+
+- id: fabric-projects-training
+  repository_url: https://github.com/oscargbocanegra/Fabric_MIcrosoft_Projects_Training
+  en:
+    status: Hardening labs
+    title: "Microsoft Fabric Projects Training"
+    type: Public technical evidence / engineering lab
+    summary: A governed catalog of hands-on Microsoft Fabric learning and reference projects for data engineering, analytics, governance, and applied AI.
+    evidence_heading: What the public catalog supports
+    evidence: [Microsoft Fabric and OneLake, Bronze/Silver/Gold layered architecture, Data ingestion, transformation, quality and traceability, Semantic modeling, Warehouse and Power BI, Wind Turbine Power Analysis and Smart Device Analytics as Hardening labs]
+    repository_label: View repository
+    boundary_heading: Evidence boundary
+    evidence_boundary: Public learning and technical experimentation repository — claims are limited to the catalog and documentation published in the GitHub repository.
+    not_claimed_label: "Not claimed:"
+    not_claimed: Client delivery, production deployment, Reference maturity, SLA, uptime, commercial outcomes, or runtime measurements beyond published evidence.
+  es:
+    status: Laboratorios Hardening
+    title: "Microsoft Fabric Projects Training"
+    type: Evidencia técnica pública / laboratorio de ingeniería
+    summary: Un catálogo gobernado de proyectos prácticos de aprendizaje y referencia sobre Microsoft Fabric para ingeniería de datos, analítica, gobierno e IA aplicada.
+    evidence_heading: Qué respalda el catálogo público
+    evidence: [Microsoft Fabric y OneLake, Arquitectura por capas Bronze/Silver/Gold, Ingesta, transformación, calidad y trazabilidad de datos, Modelado semántico, Warehouse y Power BI, Wind Turbine Power Analysis y Smart Device Analytics como laboratorios Hardening]
+    repository_label: Ver repositorio
+    boundary_heading: Límite de evidencia
+    evidence_boundary: Repositorio público de aprendizaje y experimentación técnica — las afirmaciones se limitan al catálogo y la documentación publicados en el repositorio de GitHub.
+    not_claimed_label: "No se afirma:"
+    not_claimed: Entrega a clientes, despliegue en producción, madurez Reference, SLA, uptime, resultados comerciales ni mediciones runtime fuera de la evidencia publicada.
