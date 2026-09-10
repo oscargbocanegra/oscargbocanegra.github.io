@@ -1070,3 +1070,37 @@ body.lang-en-active .lang-es { display: none; }
         break-inside: avoid;
     }
 }
+
+/* DEV-017 executive resume presentation */
+.r2 {
+  max-width: 1120px;
+  padding: 0;
+  color: #e5edf5;
+  background: #0b1220;
+  border: 1px solid #26364a;
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
+  overflow: hidden;
+}
+.r2-header {
+  margin: 0;
+  padding: 3rem clamp(1.25rem, 5vw, 4rem) 2.25rem;
+  background: linear-gradient(135deg, #111d31, #0b1220);
+  border-bottom: 1px solid #2b4058;
+}
+.r2-name { color: #f5f8fb; font-size: clamp(2rem, 5vw, 3.4rem); letter-spacing: -.04em; }
+.r2-title { color: #67e8f9; font-family: "JetBrains Mono", monospace; font-size: 1rem; }
+.r2-contact, .r2-contact a { color: #a9bacb; }
+.r2 > .lang-en, .r2 > .lang-es { padding: 2rem clamp(1.25rem, 5vw, 4rem); }
+.r2-section { margin: 0 0 1.25rem; padding: 1.35rem; background: #111d31; border: 1px solid #26364a; border-radius: 14px; }
+.r2-section-title { color: #67e8f9; border-bottom-color: #2b4058; font-family: "JetBrains Mono", monospace; }
+.r2-summary p, .r2-section p, .r2-exp ul li, .r2-project p { color: #c6d3df; }
+.r2-exp { margin: 0 0 1rem; padding: 1rem 1rem 1rem 1.25rem; border-left: 3px solid #6366f1; background: #0d1728; border-radius: 0 10px 10px 0; }
+.r2-exp-company, .r2-project-name, .r2-stack-label { color: #f5f8fb; }
+.r2-exp-role { color: #67e8f9; }
+.r2-exp-period, .r2-project-period { color: #9fb1c3; }
+.r2-project { padding: 1rem; background: #0d1728; border: 1px solid #26364a; border-radius: 10px; }
+.r2-download-wrap { margin: 0; padding: 0 clamp(1.25rem, 5vw, 4rem) 2.5rem; }
+.r2-download-btn { min-height: 44px; background: #6366f1; border-radius: 10px; padding: .8rem 1.25rem; }
+.r2-download-btn:hover, .r2-download-btn:focus-visible { background: #818cf8; }
+@media (max-width: 520px) { .r2-header { padding-top: 2rem; } .r2 > .lang-en, .r2 > .lang-es { padding: 1rem; } .r2-section { padding: 1rem; } .r2-download-wrap { padding: 0 1rem 1.5rem; } }
