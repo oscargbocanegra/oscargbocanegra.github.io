@@ -34,4 +34,16 @@
     if (status) status.textContent = isSpanish ? "Se está abriendo tu aplicación de correo. Revisá el mensaje antes de enviarlo." : "Your email application is being opened. Review the message before sending.";
     window.location.href = `mailto:oscargiovanni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
+  document.querySelectorAll(".resume-filters").forEach((toolbar) => {
+    const cards = toolbar.parentElement.querySelectorAll(".resume-skill-card");
+    toolbar.querySelectorAll("[data-skill-filter]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.skillFilter;
+        toolbar.querySelectorAll("[data-skill-filter]").forEach((item) => {
+          const active = item === button; item.classList.toggle("is-active", active); item.setAttribute("aria-pressed", String(active));
+        });
+        cards.forEach((card) => card.classList.toggle("is-filtered", filter !== "all" && card.dataset.skillDomain !== filter));
+      });
+    });
+  });
 })();
