@@ -20,3 +20,7 @@ Thumbs.db
 .atl/
 .pi-lens/
 .pi/gentle-ai/
+
+# DEV-PORTFOLIO-TOBE-026 local Playwright evidence
+.tmp/qa-evidence/
+node_modules/

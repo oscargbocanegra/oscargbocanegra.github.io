@@ -7,6 +7,7 @@
 - The primary navigation covers Home, Services, Case Studies, About, Resume, and Work With Me.
 - Work With Me prepares a `mailto:` draft in the visitor's configured email client; it does not submit to a server or retain form data.
 - Legacy English resume URLs remain redirect sources and must be checked after a Jekyll render.
+- DEV-026 adds a local Playwright production QA harness at `tests/portfolio-qa.spec.ts`; run `npm run test:portfolio-qa` against `https://oscargbocanegra.pages.dev` at 1440x900, 768x1024, and 390x844. Its temporary screenshots and reports remain ignored under `.tmp/qa-evidence/`.
 - `AGENTS.md`, `CLAUDE.md`, and `.agent.md` are governed as one synchronized instruction set.
 - The shared interface uses the existing color tokens; the latest refinement improves hierarchy, spacing, card interaction, navigation affordances, touch targets, and mobile layout without changing the palette.
 - The application shell now provides reusable `stack`, `cluster`, and `surface` primitives, keyboard-close behavior for the mobile menu, minimum 44px interactive targets, and a document-level horizontal overflow guard.

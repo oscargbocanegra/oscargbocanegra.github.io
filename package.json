@@ -1,0 +1,11 @@
+{
+  "name": "oscargbocanegra-portfolio-qa",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test:portfolio-qa": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  }
+}
