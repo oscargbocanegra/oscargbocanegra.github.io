@@ -1,80 +1,202 @@
-# oscargbocanegra.github.io
+# Oscar Bocanegra ºw^~)Þt AI & Data Portfolio
 
-English-first portfolio for Oscar Bocanegra, published by GitHub Pages from the `docs/` directory.
+## Overview
 
-## Quick path
+Bilingual EN/ES Jekyll portfolio for Oscar Giovanni Bocanegra, focused on AI and data architecture, engineering, platforms, technical evidence, professional experience, and project conversations.
 
-1. Edit the tracked source under `docs/`.
-2. Keep the English and Spanish routes aligned where both exist.
-3. Build with Jekyll and manually check navigation, links, and key interactions.
-4. Push only after reviewing the resulting site and the repository status.
+The official production site is deployed on Cloudflare Pages.
 
-## Current site structure
+## Live site
 
-The shared Jekyll shell is used by the portfolio pages through `_layouts/default.html`, `_includes/head.html`, `_includes/header.html`, and `_includes/footer.html`.
+https://oscargbocanegra.pages.dev/
 
-| Public area | English route | Spanish route |
-| --- | --- | --- |
-| Home | `/` | `/es/` |
-| Services | `/services.html` | `/es/services.html` |
-| Case Studies | `/projects.html` | `/es/projects.html` |
-| About | `/about.html` | `/es/about.html` |
-| Resume | `/resume.html` | `/es/resume.html` |
-| Work With Me | `/work-with-me.html` | `/es/work-with-me.html` |
+## Key characteristics
 
-These six areas are the primary navigation. `docs/contact.html` is retained as a compatibility direct-contact page; it is not the primary conversion path. The current conversion path is Work With Me, whose form prepares a `mailto:` draft in the visitor's configured email application. JavaScript builds the subject and body; the `<noscript>` fallback explains the direct email and LinkedIn alternatives. The site does not submit form data to a server or retain it.
+- Bilingual English/Spanish routes.
+- Responsive shared application shell.
+- Deep Architecture design system.
+- Services, Case Studies, Technical Lab, About, Resume, and Work With Me areas.
+- Public technical work presented within explicit evidence boundaries.
+- Playwright production QA harness.
 
-`docs/resume.html` and `docs/es/resume.html` are the canonical bilingual resume pages. `docs/resume-old.html` and `docs/resume2.html` preserve legacy English URLs and redirect to `/resume.html` after Jekyll renders their Liquid redirect source.
+## Architecture and technology
 
-## Repository layout
+- Jekyll and Liquid render the static site from docs/.
+- HTML, CSS, and vanilla JavaScript provide the interface.
+- Node.js runs the Playwright QA harness.
+- Playwright is pinned in package.json.
+- Cloudflare Pages publishes the generated Jekyll output.
+- No frontend framework is used.
 
-| Path | Purpose |
-| --- | --- |
-| `docs/` | GitHub Pages publish root and Jekyll source |
-| `docs/_config.yml` | Site metadata, URL, language defaults, and Jekyll plugins |
-| `docs/_layouts/` | Shared page layouts |
-| `docs/_includes/` | Shared head, header, and footer markup |
-| `docs/*.html`, `docs/es/*.html` | English and Spanish content pages |
-| `docs/css/style.css` | Shared site and responsive styling |
-| `docs/css/resume.css` | Resume-specific styling |
-| `docs/js/scripts.js` | Shared navigation, theme, and Work With Me behavior |
-| `docs/_data/site_profile.yml` | Shared profile facts used by portfolio content |
-| `.github/workflows/build.yml` | CI Jekyll build check |
+## Repository structure
 
-## Editing rules
+    docs/
+      _config.yml           Jekyll configuration
+      _data/                navigation, profile, services, and project data
+      _includes/            shared head, header, footer, cards, and CTA markup
+      _layouts/             shared page layouts
+      assets/               images, documents, and shared CSS
+      css/                  page-specific CSS, including Resume
+      js/                   shared navigation and interaction behavior
+      es/                   Spanish route counterparts
+      *.html                English route sources
 
-- Update shared metadata in `docs/_config.yml` and shared profile facts in `docs/_data/site_profile.yml`.
-- Keep page-specific claims in their owning page, and review repeated claims across Home, About, Case Studies, Services, Work With Me, and Resume.
-- Treat `docs/resume.html` as the canonical English resume source and `docs/es/resume.html` as its Spanish counterpart. Do not add resume variants or repurpose legacy redirect pages.
-- Keep navigation in `docs/_includes/header.html` and footer links in `docs/_includes/footer.html`.
-- Do not describe the public Lab Infra case study as client delivery, production deployment, or a measured commercial outcome; the site labels it as independent public technical work.
+    tests/
+      portfolio-qa.spec.ts  Playwright shell and responsive QA
 
-## Local preview and build
+    playwright.config.ts    QA projects and production base URL
+    package.json            Node/Playwright command
+    Gemfile                 Ruby/Jekyll dependencies
+    MAINTENANCE.md          maintainer workflow
 
-The repository pins its local Jekyll toolchain through `Gemfile` (`github-pages` and `webrick`). With Ruby and Bundler available:
+## Local development
 
-```bash
-bundle install
-bundle exec jekyll serve --source docs --destination .tmp/jekyll-preview
-```
+### Requirements
 
-The CI build uses the same source explicitly:
+- Ruby and Bundler for Jekyll.
+- Node.js and npm for Playwright QA.
 
-```bash
-bundle exec jekyll build --source docs --destination .tmp/jekyll-build
-```
+### Install dependencies
 
-Generated output under `.tmp/` or `docs/_site/` is disposable and is not the content source. Opening Liquid redirect files directly without a Jekyll render does not verify their redirect behavior.
+    bundle install
+    npm install
 
-## Validation boundaries
+### Run Jekyll locally
 
-- CI currently proves that the Jekyll site builds; it does not prove visual quality, every link, external service availability, or email-client behavior.
-- Navigation, bilingual route pairing, external links, project filters, theme/menu behavior, and the Work With Me mailto flow still require manual browser review.
-- Confirm that external links opened in a new tab retain `rel="noopener noreferrer"`.
-- Confirm that public claims remain consistent with the evidence boundary stated on the site and in the canonical resume.
+    bundle exec jekyll serve --source docs --destination .tmp/jekyll-preview
 
-See [`MAINTENANCE.md`](./MAINTENANCE.md) for the maintainer workflow.
+Build without serving:
 
-## Documentation and agent guides
+    bundle exec jekyll build --source docs --destination .tmp/jekyll-build
 
-Architecture, verified current state, and durable decisions live in [`docs/`](./docs/). Start with [`docs/architecture.md`](./docs/architecture.md), [`docs/current-state.md`](./docs/current-state.md), and [`docs/decisions/`](./docs/decisions/). `AGENTS.md`, `CLAUDE.md`, and `.agent.md` are synchronized copies; enable the versioned hook with `git config core.hooksPath .githooks` so changes are mirrored before commit.
+Generated .tmp/ and docs/_site/ output is disposable.
+
+## QA and testing
+
+The production QA harness is located at tests/portfolio-qa.spec.ts.
+
+Run the exact package script:
+
+    npm run test:portfolio-qa
+
+The configured target is:
+
+    https://oscargbocanegra.pages.dev
+
+The harness covers the primary EN/ES routes, legacy Resume redirects, shared shell structure, language selectors, CTA presence, placeholder detection, horizontal overflow, mobile menu semantics, and page/console errors.
+
+Configured viewports:
+
+- Desktop: 1440x900
+- Tablet: 768x1024
+- Mobile: 390x844
+
+Temporary screenshots and JSON reports are written under .tmp/qa-evidence/ and are ignored by Git.
+
+The latest known DEV-026 execution result was 45/45 PASS. This is historical evidence, not a permanent guarantee; rerun the command after relevant changes.
+
+## Responsive validation
+
+The Playwright projects exercise desktop, tablet, and mobile layouts. Checks include:
+
+- horizontal overflow;
+- header and navigation;
+- language selector;
+- footer;
+- mobile menu and ARIA state;
+- CTA presence;
+- placeholder copy;
+- page errors and console errors.
+
+Additional interactions, links, filters, and the Work With Me mailto flow require targeted browser review.
+
+## Design system
+
+The interface follows the Deep Architecture system implemented by the shared design tokens and CSS:
+
+- dark slate surfaces;
+- Inter for body text;
+- JetBrains Mono for labels and technical metadata;
+- indigo/cyan accents;
+- shared grid, spacing, borders, radius, and surfaces;
+- focus-visible states and responsive touch targets;
+- reduced-motion handling where implemented.
+
+## Content and evidence governance
+
+Professional experience, education, credentials, and public project descriptions must remain aligned with authorized sources.
+
+Public repositories and Technical Lab entries are technical evidence. They must not be presented as client delivery, production deployment, commercial outcomes, or measured claims unless independently supported.
+
+Do not add invented clients, metrics, certifications, dates, capabilities, or results.
+
+## Deployment
+
+The operational flow is:
+
+    local change
+      -> local validation
+      -> focused commit
+      -> push to main
+      -> Cloudflare Pages automatic deployment
+      -> production validation
+
+Cloudflare Pages is the official production path. GitHub Pages is not used as production evidence.
+
+## Accessibility
+
+The shared interface includes:
+
+- semantic headings and navigation landmarks;
+- focus-visible styles;
+- keyboard-aware navigation behavior;
+- responsive layouts and minimum interactive targets;
+- reduced-motion CSS handling where defined.
+
+This README does not claim complete WCAG conformance.
+
+## Internationalization
+
+English is the canonical route set at the docs/ root. Spanish counterparts are under docs/es/.
+
+Examples:
+
+- /resume.html and /es/resume.html
+- /services.html and /es/services.html
+- /projects.html and /es/projects.html
+- /lab.html and /es/lab.html
+
+The shared header provides the language selector.
+
+## Contribution and change workflow
+
+- Start from a reviewed working tree.
+- Make focused changes in the owning source files.
+- Preserve EN/ES route alignment.
+- Run applicable validation before committing.
+- Keep temporary reports and generated output out of commits.
+- Do not bypass repository hooks.
+- Review staged paths before committing.
+
+## Documentation
+
+- MAINTENANCE.md ºw^~)Þt maintainer workflow.
+- docs/current-state.md+§uçâçT verified repository state and validation boundaries.
+- docs/architecture.md+§uçâçT architecture and source ownership.
+- docs/decisions/ ºw^~)Þt durable project decisions.
+- AGENTS.md+§uçâçT repository contribution and agent guidance.
+
+## Security and secrets
+
+Do not commit passwords, tokens, API keys, or other credentials. Keep temporary artifacts and dependency directories ignored where configured. Public project links are evidence references, not secret storage.
+
+## License
+
+No public license has been defined in this repository.
+
+## Author and contact
+
+- Oscar Giovanni Bocanegra
+- GitHub: https://github.com/oscargbocanegra
+- LinkedIn: https://www.linkedin.com/in/oscargbocanegra/
+- Work With Me: https://oscargbocanegra.pages.dev/work-with-me.html
